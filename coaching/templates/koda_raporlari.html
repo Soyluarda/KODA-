@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+<section class="page-section">
+        <div class="container">
+
+            <h2 class="h-size bluer hinty">Mali Raporlar</h2>
+            <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingZero">
+      <h2 class="mb-0">
+        <button class="btn btn-link hinty bluer n-size" type="button" data-toggle="collapse" data-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+            Gelir- Gider Tabloları
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseZero" class="collapse" aria-labelledby="headingZero" data-parent="#accordionExample">
+      <div class="card-body">
+
+
+           <p> <a href="{% static 'koda_gelir_gider_2017.pdf' %}" class="monty n-size" style="color:#e55869 !important; font-weight: normal;"target="_blank"> 2017 yılı gelir- gider raporu </a> </p>
+
+            <p> <a href="{% static 'koda_gelir_gider_2018.pdf' %}" class="monty n-size" style="color:#e55869 !important; font-weight: normal;" target="_blank"> 2018 yılı gelir- gider raporu </a></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link hinty bluer n-size" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+           İç Denetim Raporları
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+
+
+           <p> <a href="{% static 'koda_ic_denetim_2018.pdf' %}" class="monty n-size" style="color:#e55869 !important; font-weight: normal;" target="_blank"> 2018 yılı iç denetim raporu </a> </p>
+
+            <p> <a href="{% static 'koda_ic_denetim_2019.pdf' %}" class="monty n-size" style="color:#e55869 !important; font-weight: normal;"  target="_blank"> 2019 yılı iç denetim raporu </a></p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed hinty bluer n-size" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Bağımsız Denetim Raporları
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+            <a href="{% static 'bagimsiz_ic_denetim.pdf' %}" style="color:#e55869 !important; font-weight: normal;"  class="monty n-size" target="_blank"> 2018- 2019 bağımsız denetim raporu </a>
+      </div>
+    </div>
+  </div>
+</div>
+              <div class="card">
+    <div class="card-header" id="headingFour">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed hinty bluer n-size" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Beyannameler
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+            <p class="monty n-size bluer"> Öğretmen Gözünden Köy Okulları ve Köy Öğrencileri
+KODA olarak hazırladığımız bu rapor; yürüttüğümüz çalışmaların, somut ihtiyaçlara yanıt olabilmesi arzusundan doğmuştur. Rapor; 2016 yılında yapılan saha araştırma verilerini kapsamaktadır. KODA bu araştırma ile önceliğin; öğretmenlere ve onların kişisel ve mesleki değerlendirmelerine verilmesini amaçlamıştır. Katkı olmasını dileriz..
+</p><br>
+            <a href="{% static 'problemler_ve_cozum_onerileri.pdf' %}" class="monty n-size" style="color:#e55869 !important; font-weight: normal;" target="_blank"> Saha Araştırma Raporu </a>
+          <br> <br>
+          <a href="{% static '2018_2023_stratejik_plan.pdf' %}" style="color:#e55869 !important; font-weight: normal;" class="monty n-size" target="_blank"> 2018- 2023 Stratejik Plan </a>
+
+      </div>
+    </div>
+  </div>
+                
+                  <div class="card">
+    <div class="card-header" id="headingSix">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed hinty bluer n-size" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            Çocuk Atölyeleri Rehberi
+        </button>
+      </h2>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+      <div class="card-body">
+
+            <a href="{% static 'cocuk_atolyeleri_rehberi.pdf' %}" class="monty n-size" style="color:#e55869 !important; font-weight: normal;" target="_blank"> 2019- 2020 </a>
+
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+{% endblock %}

@@ -1,0 +1,258 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+
+.section-heading{
+  color:#034080 !important;
+
+}
+.nav-link{
+  color:#034080 !important;
+}
+.js-scroll-trigger {
+  color:#034080 !important;
+}
+    .navbar-inner {
+    background:transparent;
+}
+   .navbar-trans {
+    background-color: rgba(255,255,255, 0.5);
+}
+.dropdown-toggle::after{
+    display: none !important;
+    overflow:hidden !important;
+}
+
+.hinty {
+font-family:Hind !important;
+text-align:left !important;
+}
+
+.monty {
+font-family:montserrat !important;
+text-align:left !important;
+}
+
+.bluer {
+    color:#034080 !important;
+}
+
+.n-size {
+font-size:16px !important;
+}
+.h-size {
+font-size:28px !important;
+}
+
+
+
+
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1024">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>KODA </title>
+  <link href="{% static 'img/koda_logo.png' %}" rel="icon" type="image/x-icon" />
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/agency.min.css' %}" rel="stylesheet">
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body id="page-top">
+
+ <header class="masthead">
+  <nav class="navbar navbar-expand-lg navbar-trans fixed-top" >
+    <div class="container">
+    <a class="navbar-brand" href="{% url 'index' %}">
+          <img src="{% static 'img/koda_degisim.png' %}" style="widht:50px; height:50px;" alt="">
+        </a>
+      <div class="collapse navbar-collapse monty" id="navbarResponsive">
+        <ul class="navbar-nav" style="font-weight:bold;font-size:14px;!important;">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink1"  role="button" data-toggle="dropdown" aria-expanded="true">
+                    Hakkımızda
+                  </a>
+                  <div class="dropdown-menu dropdown-toggle n-size" aria-labelledby="navbarDropdownMenuLink1" >
+                    <a class="navbar js-scroll-trigger"style="color:#034080 !important;font-weight: normal; font-size:14px;" href="{% url 'about' %}">Hakkımızda</a>
+                    <a class="navbar js-scroll-trigger"style="color:#034080 !important;font-weight: normal;font-size:14px;" href="{% url 'faaliyet_raporlari' %}">Faaliyet Raporlarımız</a>
+                    <a class="navbar js-scroll-trigger"style="color:#034080 !important;font-weight: normal;font-size:14px;" href="{% url 'degerlerimiz' %}">Değerlerimiz</a>
+                    <a class="navbar js-scroll-trigger"style="color:#034080 !important;font-weight: normal;font-size:14px;" href="{% url 'stratejimiz' %}">Stratejimiz</a>
+                    <a class="navbar js-scroll-trigger"style="color:#034080 !important;font-weight: normal;font-size:14px;" href="{% url 'team' %}">KODA Ekibi</a>
+                  </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown"  aria-expanded="true">
+                      Neler Yapıyoruz?
+                  </a>
+                  <div class="dropdown-menu dropdown-toggle" aria-labelledby="navbarDropdownMenuLink2">
+                    <a class="navbar js-scroll-trigger"style="color:#034080 !important; font-weight: normal;font-size:14px;" href="{% url 'koy_ogretmenleri' %}">Köy Öğretmenleri Projesi</a>
+                    <a class="navbar js-scroll-trigger"style="color:#034080 !important; font-weight: normal;font-size:14px;" href="#">BSMG Programı</a>
+                    <a class="navbar js-scroll-trigger"style="color:#034080 !important; font-weight: normal;font-size:14px;" href="{% url 'ruzgargulubultenleri' %}">Rüzgar Gülü Haber Bülteni</a>
+                    <a class="navbar js-scroll-trigger"style="color:#034080 !important; font-weight: normal;font-size:14px;" href="{% url 'gecmis_faaliyetler' %}">Geçmiş Faaliyetler</a>
+                    <a class="navbar js-scroll-trigger"style="color:#034080 !important; font-weight: normal;font-size:14px;" href="{% url 'koda_raporlari' %}">KODA Raporları</a>
+                    <a class="navbar js-scroll-trigger"style="color:#034080 !important; font-weight: normal;font-size:14px;" href="{% url 'neler_yapmiyoruz' %}">Neler Yapmıyoruz?</a>
+                  </div>
+          </li>
+           <li class="nav-item dropdown">
+             <a class="navbar js-scroll-trigger" href="{% url 'yayinlarimiz' %}">Yayınlarımız</a>
+          </li>
+           <li class="nav-item dropdown">
+                          <a class="navbar js-scroll-trigger" href="{% url 'bagis' %}">Nasıl Destek Olabilirsiniz?</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="navbar js-scroll-trigger" href="{% url 'contact' %}">Bize Ulaşın</a>
+          </li>
+
+            <li class="nav-item">
+                       <a href="https://acikacik.org/sivil-toplum-kurulusu/koy-okullari-degisim-agi-dernegi-"> <img src="{% static 'img/acikstk.png' %}" style="widht:50px; height:50px;" alt=""></a>
+            </li>
+
+          <li class="nav-item" >
+           <a href="{% url 'bagis' %}"> <button class="btn" style="background-color:transparent;border-color: #034080; color:#034080; margin-left:10%;"  href="{% url 'contact' %}">DESTEK OLUN</button></a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+    <div class="container">
+      <div class="intro-text">
+    </div>
+  </header>
+
+    {% block body %}
+
+    {% endblock %}
+
+
+<!-- Footer -->
+<footer class="page-footer font-small" style="background-color:#cbcbcb;">
+
+  <div>
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0 hinty bluer">Sosyal medyada bizi takip etmek ister misiniz?</h6> <br>
+                      <div class="social-links">
+          <a href="https://www.instagram.com/kodegisim/" class="instagram" style="color:#034080;">   <i class="fab fa-instagram fa-lg">&#160;
+&#160;</i></a>
+          <a href="https://www.facebook.com/kodegisim/?ref=br_rs class="facebook" style="color:#034080;">   <i class="fab fa-facebook fa-lg"> &#160;
+  </i></a>
+          <a href="https://www.twitter.com/kodegisim/" class="twitter" style="color:#034080;">   <i class="fab fa-twitter fa-lg"> &#160;
+  </i></a>
+          <a href="https://www.youtube.com/channel/UCyiAbqsWLe4U261oMXGTm9A" class="instagram" style="color:#034080;">   <i class="fab fa-youtube fa-lg">   &#160;
+
+</i></a>
+          <a href="https://www.linkedin.com/mwlite/company/kodegisim" class="linkedin" style="color:#034080;">   <i class="fab fa-linkedin fa-lg"> &#160;
+  </i></a>
+          <a href="https://medium.com/kodegisim" class="instagram" style="color:#034080;">   <i class="fab fa-medium fa-lg">   </i></a>
+
+        </div>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3 dark-grey-text">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-4 col-xl-4 mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold hinty bluer">HESAP BİLGİLERİMİZ</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto">
+        <a href="mailto:#"></a>
+        <br> <abbr title="Phone" class="monty">TL : TR720004600020888000430464</abbr>  <br><br>
+
+        <p class="monty">Önemli not: EFT yaparken alıcı kısmına "Köy Okulları Değişim Ağı Derneği" yazınız. KODA gibi kısaltmalar kullanmanız durumunda EFT talimatı banka tarafından geri çevrilmektedir.
+            <br><br> Detaylar için: https://www.kodegisim.org/bagis
+</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-4 col-xl-4 mb-4">
+      <!-- Grid column -->
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.053476284475!2d29.02984331564218!3d41.024085979299166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAxJzI2LjciTiAyOcKwMDEnNTUuMyJF!5e0!3m2!1str!2str!4v1578861495383!5m2!1str!2str"  width="360" height="280" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+      <!-- Grid column -->
+      </div>
+      <div class="col-md-4 col-lg-4 col-xl-4 mb-4" style="margin-left:5%;">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold hinty bluer">İLETİŞİM</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p class="monty">
+          <i class="fas fa-home mr-3"></i>Fatura ve kargo gönderim adresimiz:<br>
+
+
+Murat Reis Mah. Gazi Cad. No:79 Bağlarbaşı/Üsküdar İSTANBUL</p>
+        <p class="monty">
+          <i class="fas fa-envelope mr-3"></i> bilgi@kodegisim.org</p>
+        <p class="monty">
+          <i class="fas fa-phone mr-3"></i> 0216 343 73 43</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+  <!-- Portfolio Modals -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'js/contact_me.js' %}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/agency.min.js' %}"></script>
+
+</body>
+
+</html>

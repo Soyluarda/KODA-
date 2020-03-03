@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+
+
+
+
+<section class="page-section">
+        <div class="container">
+
+
+
+            <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingZero">
+      <h2 class="mb-0">
+        <button class="btn btn-link hinty bluer h-size" type="button" data-toggle="collapse" data-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+           KODA Faaliyet Raporları
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseZero" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+
+            <a class="monty bluer n-size" href="{% static 'faaliyet_raporu_ocak_2017.pdf' %}"   target="_blank"> KODA 2017 Ocak - Haziran Faaliyet Raporu </a>
+          <br><a class="monty bluer n-size" href="{% static 'faaliyet_raporu_2017_2018.pdf' %}" target="_blank"> KODA 2017-2018 Faaliyet Raporu </a>
+          <br><a class="monty bluer n-size" href="{% static '2018_2019_faaliyet_raporu.pdf' %}"  target="_blank"> KODA 2018-2019  Faaliyet Raporu </a>
+
+      </div>
+    </div>
+  </div>
+            </div>
+        </div>
+</section>
+
+
+{% endblock %}

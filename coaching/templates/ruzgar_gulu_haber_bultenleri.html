@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+<section class="page-section">
+        <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="section-heading hinty bluer h-size" style="text-align:center !important;">Rüzgar Gülü Haber Bültenleri </h2><br>
+           <!--     <form method="post" class="lang" key="form">
+                    {% csrf_token %}
+                    <div class="form-row">
+                  <div class="col-3"></div>
+                <div class="col-2">
+                    <input class="form-control monty n-size" type="text" id="name" name="name"  placeholder="Adı-Soyadı">
+                </div>
+                <div class="col-2">
+                    <input class="form-control monty n-size" type="text" id="email" name="email"  placeholder="E-mail">
+                </div>
+                      <button  type="submit" class="btn monty n-size" style="background-color:#00936F;color:white;">Abone ol!</button>
+
+              </div>
+            </form> -->
+            <h2 class="section-subheading "><br><br> <p style="color:#00936F;">2019</p>
+           <br></h2>
+
+  <a href="{% url 'icerik_gelistirme' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Temmuz</span></a>
+
+
+  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success monty n-size" style="background-color:#00936F;" ><span>Haziran</span></a>
+  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success" style="background-color:#00936F;" ><span>Mayıs</span></a>
+  <a href="{% url 'icerik_gelistirme' %}" class="btn btn-success" style="background-color:#00936F;"><span>Nisan</span></a>
+  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success" style="background-color:#00936F;"><span>Mart</span></a>
+  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success" style="background-color:#00936F;"><span>Şubat</span></a>
+  <a href="{% url 'icerik_gelistirme' %}" class="btn btn-success" style="background-color:#00936F;"><span>Ocak</span></a>
+
+            <h2 class="section-subheading "><br><br> <p style="color:#00936F;">2018</p>
+           <br></h2>
+
+  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Aralık</span></a>
+  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Kasım</span></a>
+  <a href="{% url 'icerik_gelistirme' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Ekim</span></a>
+  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success" style="background-color:#00936F;"><span>Eylül</span></a>
+  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Ağustos</span></a>
+  <a href="{% url 'icerik_gelistirme' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Temmuz</span></a>
+
+
+  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success" style="background-color:#00936F;"><span>Haziran</span></a>
+  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Mayıs</span></a>
+  <a href="{% url 'icerik_gelistirme' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Nisan</span></a>
+  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Mart</span></a>
+  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Şubat</span></a>
+  <a href="{% url 'icerik_gelistirme' %}" class="btn btn-success" style="background-color:#00936F;"><span>Ocak</span></a>
+
+
+
+<br>
+
+  </section>
+
+
+
+{% endblock %}

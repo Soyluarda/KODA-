@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+
+
+{% endblock %}
+
+{% block body %}
+
+<section class="page-section">
+        <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="hinty bluer h-size">Köy Öğretmenleri Projesi </h2><br>
+       <p class="monty bluer n-size">Köy Öğretmenleri Projesi kapsamda gerçekleştirdiğimiz üç ana faaliyetimiz bulunuyor.
+       “Köy Öğretmenleri Projesi”nin ana destekçisi Sabancı Vakfı’dır. Proje kapsamında yürütülen “Çocuk Atölyeleri”ni ise Dalyan Vakfı ve EMpower Vakfı da desteklemektedir.</p>
+
+  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success monty n-size" style="background-color:#034080 !important;"><span class="buttons">Öğretmen Toplulukları</span></a>
+  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success monty n-size" style="background-color:#034080 !important;"><span>Çocuk Atölyeleri</span></a>
+  <a href="{% url 'icerik_gelistirme' %}" class="btn btn-success monty n-size" style="background-color:#034080 !important;"><span>İçerik Geliştirme</span></a>
+
+
+
+<br>
+
+  </section>
+
+
+
+{% endblock %}

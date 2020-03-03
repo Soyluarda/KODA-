@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+
+{% block body %}
+ <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <br><br>
+          <img class=" img-fluid" src="{% static 'img/koda_degisim.png' %}" style="width:58%; height:80%;">
+        </div>
+      </div>
+           <br><br>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image" style="width:250px;height:250px;margin-left:-125px;">
+                <img class="rounded-circle img-fluid" src="{% static 'img/3.jpg' %}" style="width:100%; height:100%;">
+              </div>
+              <div class="timeline-panel" style="margin-left:-50px;margin-top:30px;">
+                <div class="timeline-heading">
+                   <h4 class="subheading hinty bluer h-size">KODA nedir?</h4>
+                </div>
+                <div class="timeline-body monty bluer n-size">
+                  <p>Köy Okulları Değişim Ağı (KODA), çoğu zaman yoksunluklarıyla gündeme gelen köy okullarının, aslında hayalimizdeki eğitim için büyük fırsatlar sunabileceği inancıyla yola çıkan bir dernektir.
+					</p>
+               </div>
+              </div>
+            </li>
+            <br><br><br>
+            <li class="timeline-inverted">
+              <div class="timeline-image"  style="width:250px;height:250px;margin-left:-125px;">
+                <img class="rounded-circle img-fluid" src="{% static 'img/1.jpg' %}" style="width:100%; height:100%;">
+              </div>
+              <div class="timeline-panel" style="margin-right:-45px;margin-top:55px;">
+                <div class="timeline-heading">
+                   <h4 class="subheading hinty bluer h-size">Biz kimiz?</h4>
+                </div>
+                <div class="timeline-body monty bluer n-size">
+                  <p>Köylerde eğitimin kalitesini artırmak için bir araya gelmiş öğretmenler ve gönüllüler topluluğuyuz.
+					</p>
+               </div>
+              </div>
+            </li>
+            <li>
+           <br><br><br>
+
+              <div class="timeline-image" style="width:250px;height:250px;margin-left:-125px;">
+                <img class="rounded-circle img-fluid" src="{% static 'img/2.jpg' %}" style="width:100%; height:100%;">
+              </div>
+              <div class="timeline-panel" style="margin-left:-50px;margin-top:50px;">
+                <div class="timeline-heading">
+                 <h4 class="subheading hinty bluer h-size">Neden varız?</h4>
+                </div>
+                <div class="timeline-body n-size">
+                  <p style="font-family:montserrat;color:#034080 !important;">Köylerde, çocuktan başlayarak tüm topluluğa yayılacak ve kırsal kalkınmayı destekleyecek yenilikçi bir eğitim anlayışını hayata geçirmek için.
+					</p>
+                </div>
+              </div>
+            </li>
+            <br><br><br>
+
+            <li class="timeline-inverted">
+              <div class="timeline-image" style="width:250px;height:250px;margin-left:-125px;">
+                <img class="rounded-circle img-fluid" src="{% static 'img//4.jpg' %}" style="width:100%; height:100%;">
+              </div>
+              <div class="timeline-panel" style="margin-right:-50px;margin-top:50px;">
+                <div class="timeline-heading">
+                 <h4 class="subheading hinty bluer h-size">Neler yapıyoruz?</h4>
+                </div>
+                <div class="timeline-body n-size">
+                  <p style="font-family:montserrat;color:#034080 !important;">Köy okullarında nitelikli, bütüncül, sürdürülebilir bir eğitim modelinin ortaya çıkması ve yaygınlaşması için çalışmalar yürütüyoruz.</p>
+               </div>
+              </div>
+            </li>
+             <br><br><br>
+
+            <li class="timeline-inverted">
+              <div class="timeline-image" style="width:200px;height:200px;margin-left:-100px; background-color:#00936F !important;">
+                <a href="{% url 'bagis' %}"><h4 class="monty" style="text-align:center !important;color:white;margin-top:50px;">Bu Ağın
+                    <br> Bir Parçası <br> Olun!
+                  </h4>
+                  </b>
+                  </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+          <a href="https://acikacik.org/sivil-toplum-kurulusu/koy-okullari-degisim-agi-dernegi-"> <img src="{% static 'img/acikstk.png' %}" style="widht:50px; height:50px; margin-right:20%;" alt=""></a>
+
+      </div>
+    </div>
+
+{% endblock %}
