@@ -1,97 +1,156 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
+
+<style>
+  .card-img-1 {
+    background-image: url("../static/img/3.jpg");
+  }
+
+  .card-img-2 {
+    background-image: url("../static/img/1.jpg");
+  }
+
+  .card-img-3 {
+    background-image: url("../static/img/2.jpg");
+  }
+
+  .card-img-4 {
+    background-image: url("../static/img/4.jpg");
+  }
+
+  .card-img-content {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  .card-circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0px auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    border: 5px solid #fff !important;
+  }
+
+  .card-shadow-green {
+    -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+    box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+  }
+  .card-shadow-green:hover {
+    -webkit-box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(179, 179, 179, .2);
+    box-shadow:  0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(28, 202, 167, .2);
+  }
+
+  .card-title-content {
+    padding: 1.2rem;
+  }
+
+  .card-title-content h6 {
+    font-size: 18px;
+  }
+
+  .card-title-content div {
+    font-size: 14px;
+  }
+
+  @media (min-width: 767.78px) and (max-width: 991.78px) {
+    .intro-card-row .col-md-3 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (max-width: 767.78px) {
+    .intro-card-row .col-md-3 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+</style>
 {% endblock %}
 
 {% block body %}
- <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <br><br>
-          <img class=" img-fluid" src="{% static 'img/koda_degisim.png' %}" style="width:58%; height:80%;">
+
+<div class="container" style="margin-top: 80px;">
+  <div class="row intro-card-row">
+    <div class="col-md-3 mb-4">
+      <div class="card-shadow-green text-center h-100" style="border-bottom:3px solid #e45769;">
+        <div class="card-img-content text-center py-4" style="background-color: 
+        #e45769;">
+          <div class="card-img-1 card-circle"></div>
+        </div>
+        <div class="card-title-content">
+          <h6 class="mb-3">KODA Nedir?</h6>
+          <div>
+            Köy Okulları Değişim Ağı (KODA), çoğu zaman yoksunluklarıyla gündeme gelen köy okullarının, aslında
+            hayalimizdeki eğitim için büyük fırsatlar sunabileceği inancıyla yola çıkan bir dernektir.
+          </div>
         </div>
       </div>
-           <br><br>
 
-      <div class="row">
-        <div class="col-lg-12">
-          <ul class="timeline">
-            <li>
-              <div class="timeline-image" style="width:250px;height:250px;margin-left:-125px;">
-                <img class="rounded-circle img-fluid" src="{% static 'img/3.jpg' %}" style="width:100%; height:100%;">
-              </div>
-              <div class="timeline-panel" style="margin-left:-50px;margin-top:30px;">
-                <div class="timeline-heading">
-                   <h4 class="subheading hinty bluer h-size">KODA nedir?</h4>
-                </div>
-                <div class="timeline-body monty bluer n-size">
-                  <p>Köy Okulları Değişim Ağı (KODA), çoğu zaman yoksunluklarıyla gündeme gelen köy okullarının, aslında hayalimizdeki eğitim için büyük fırsatlar sunabileceği inancıyla yola çıkan bir dernektir.
-					</p>
-               </div>
-              </div>
-            </li>
-            <br><br><br>
-            <li class="timeline-inverted">
-              <div class="timeline-image"  style="width:250px;height:250px;margin-left:-125px;">
-                <img class="rounded-circle img-fluid" src="{% static 'img/1.jpg' %}" style="width:100%; height:100%;">
-              </div>
-              <div class="timeline-panel" style="margin-right:-45px;margin-top:55px;">
-                <div class="timeline-heading">
-                   <h4 class="subheading hinty bluer h-size">Biz kimiz?</h4>
-                </div>
-                <div class="timeline-body monty bluer n-size">
-                  <p>Köylerde eğitimin kalitesini artırmak için bir araya gelmiş öğretmenler ve gönüllüler topluluğuyuz.
-					</p>
-               </div>
-              </div>
-            </li>
-            <li>
-           <br><br><br>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="card-shadow-green text-center h-100" style="border-bottom:3px solid #00926e;">
 
-              <div class="timeline-image" style="width:250px;height:250px;margin-left:-125px;">
-                <img class="rounded-circle img-fluid" src="{% static 'img/2.jpg' %}" style="width:100%; height:100%;">
-              </div>
-              <div class="timeline-panel" style="margin-left:-50px;margin-top:50px;">
-                <div class="timeline-heading">
-                 <h4 class="subheading hinty bluer h-size">Neden varız?</h4>
-                </div>
-                <div class="timeline-body n-size">
-                  <p style="font-family:montserrat;color:#034080 !important;">Köylerde, çocuktan başlayarak tüm topluluğa yayılacak ve kırsal kalkınmayı destekleyecek yenilikçi bir eğitim anlayışını hayata geçirmek için.
-					</p>
-                </div>
-              </div>
-            </li>
-            <br><br><br>
+        <div class="card-img-content text-center py-4" style="background-color:#00926e">
+          <div class="card-img-2 card-circle"></div>
 
-            <li class="timeline-inverted">
-              <div class="timeline-image" style="width:250px;height:250px;margin-left:-125px;">
-                <img class="rounded-circle img-fluid" src="{% static 'img//4.jpg' %}" style="width:100%; height:100%;">
-              </div>
-              <div class="timeline-panel" style="margin-right:-50px;margin-top:50px;">
-                <div class="timeline-heading">
-                 <h4 class="subheading hinty bluer h-size">Neler yapıyoruz?</h4>
-                </div>
-                <div class="timeline-body n-size">
-                  <p style="font-family:montserrat;color:#034080 !important;">Köy okullarında nitelikli, bütüncül, sürdürülebilir bir eğitim modelinin ortaya çıkması ve yaygınlaşması için çalışmalar yürütüyoruz.</p>
-               </div>
-              </div>
-            </li>
-             <br><br><br>
-
-            <li class="timeline-inverted">
-              <div class="timeline-image" style="width:200px;height:200px;margin-left:-100px; background-color:#00936F !important;">
-                <a href="{% url 'bagis' %}"><h4 class="monty" style="text-align:center !important;color:white;margin-top:50px;">Bu Ağın
-                    <br> Bir Parçası <br> Olun!
-                  </h4>
-                  </b>
-                  </a>
-              </div>
-            </li>
-          </ul>
         </div>
-          <a href="https://acikacik.org/sivil-toplum-kurulusu/koy-okullari-degisim-agi-dernegi-"> <img src="{% static 'img/acikstk.png' %}" style="widht:50px; height:50px; margin-right:20%;" alt=""></a>
-
+        <div class="card-title-content">
+          <h6 class="mb-3">Biz Kimiz?</h6>
+          <div>
+            Köylerde eğitimin kalitesini artırmak için bir araya gelmiş öğretmenler ve gönüllüler topluluğuyuz.
+          </div>
+        </div>
       </div>
     </div>
+    <div class="col-md-3 mb-4">
+      <div class="card-shadow-green text-center h-100" style="border-bottom:3px solid #fab537;">
+
+        <div class="card-img-content text-center py-4" style="background-color:#fab537">
+          <div class="card-img-3 card-circle"></div>
+
+        </div>
+        <div class="card-title-content">
+          <h6 class="mb-3">Neden Varız?</h6>
+          <div>
+            Köylerde, çocuktan başlayarak tüm topluluğa yayılacak ve kırsal kalkınmayı destekleyecek yenilikçi bir
+            eğitim anlayışını hayata geçirmek için.
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="card-shadow-green text-center h-100" style="border-bottom:3px solid #034080;">
+
+        <div class="card-img-content text-center py-4" style="background-color:#034080">
+          <div class="card-img-4 card-circle"></div>
+
+        </div>
+        <div class="card-title-content">
+          <h6 class="mb-3">Neler Yapıyoruz?</h6>
+          <div>
+            Köy okullarında nitelikli, bütüncül, sürdürülebilir bir eğitim modelinin ortaya çıkması ve yaygınlaşması
+            için çalışmalar yürütüyoruz.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <a href="{% url 'bagis' %}">
+    <h4 class="monty" style="text-align:center !important;color:white;margin-top:50px;">Bu Ağın
+      <br> Bir Parçası <br> Olun!
+    </h4>
+    </b>
+  </a> -->
+
+
+</div>
 
 {% endblock %}

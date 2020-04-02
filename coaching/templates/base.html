@@ -1,57 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <style>
 
-.section-heading{
-  color:#034080 !important;
-
-}
-.nav-link{
-  color:#034080 !important;
-}
-.js-scroll-trigger {
-  color:#034080 !important;
-}
-    .navbar-inner {
-    background:transparent;
-}
-   .navbar-trans {
-    background-color: rgba(255,255,255, 0.5);
-}
-.dropdown-toggle::after{
-    display: none !important;
-    overflow:hidden !important;
-}
-
-.hinty {
-font-family:Hind !important;
-text-align:left !important;
-}
-
-.monty {
-font-family:montserrat !important;
-text-align:left !important;
-}
-
-.bluer {
-    color:#034080 !important;
-}
-
-.n-size {
-font-size:16px !important;
-}
-.h-size {
-font-size:28px !important;
-}
-
-
-
-
-  </style>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=1024">
+  <!-- <meta name="viewport" content="width=1024"> -->
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -64,178 +18,526 @@ font-size:28px !important;
   <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
   <link href="{% static 'css/agency.min.css' %}" rel="stylesheet">
-    {% block head %}
-    {% endblock %}
+
+  <style>
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1340px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      header.masthead {
+        height: 400px !important;
+      }
+
+      #go-up-btn {
+        height: 40px !important;
+        line-height: 40px !important;
+        width: 120px !important;
+
+      }
+
+      #go-up {
+        top: 350px;
+      }
+
+      .navbar {
+        font-family: ProximaNovaSbold;
+        background: rgb(255, 255, 255, .9);
+      }
+
+      .navbar-nav {
+        padding-top: 15px !important;
+      }
+
+      .navbar-togle-logo {
+        display: inline-block !important;
+      }
+
+      .nav-item-logo {
+        display: none !important;
+      }
+
+      .nav-item .hover-link {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+
+      }
+
+      .dropdown-menu {
+        left: 10px !important;
+        color: #404040 !important;
+        margin: -.125rem 0 0;
+        text-align: left !important;
+        background: transparent;
+        border: none !important;
+      }
+
+      .dropdown-menu .js-scroll-trigger {
+        display: block;
+        padding: .3rem 1rem !important;
+        color: #404040 !important;
+        font-size: 14px;
+        border-left: 3px solid #fbb537;
+
+      }
+
+      .nav-item .hover-link:before {
+        background-color: transparent !important;
+      }
+    }
+
+    .dropdown-toggle::after {
+      display: none !important;
+    }
+
+
+
+
+    @media (min-width: 992px) {
+      .navbar {
+        justify-content: center !important;
+      }
+
+      .navbar-collapse {
+
+        flex-grow: inherit !important;
+      }
+
+      .nav-item {
+        font-size: 14px;
+      }
+
+    }
+
+    @media (min-width: 992px) and (max-width: 1055px) {
+
+      .nav-item {
+        font-size: 12.5px;
+      }
+
+    }
+
+    .btn:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0 !important;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      header.masthead {
+        height: 550px;
+      }
+
+      #go-up-btn {
+        height: 50px !important;
+        line-height: 50px !important;
+        width: 150px !important;
+
+      }
+
+      #go-up {
+        top: 490px !important;
+      }
+
+    }
+
+    @media (min-width: 1200px) {
+
+      #go-up {
+        top: 630px !important;
+      }
+
+    }
+
+
+    nav.black {
+      transition: background .9s ease-in-out, padding .5s ease-in-out;
+      background: rgb(255, 255, 255, .9) !important;
+      box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, .03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, .03), 0 0.25rem 0.53125rem rgba(4, 9, 20, .05), 0 0.125rem 0.1875rem rgba(4, 9, 20, .03);
+    }
+
+    #go-up {
+      /* top: 630px; */
+      float: right !important;
+      position: fixed !important;
+      right: -3px !important;
+      /* top: 50vh !important; */
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      z-index: 1000;
+    }
+
+    #go-up:hover {
+      right: 0px !important;
+
+    }
+
+    #go-up-btn {
+      width: 180px;
+      height: 60px;
+      cursor: pointer;
+      background: transparent;
+      text-align: center;
+      /* box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12) !important; */
+      color: white !important;
+      /* background-image: url("../static/img/DESTEKOL1.png"); */
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: center center;
+      background-size: cover;
+
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      z-index: 1000;
+      display: none;
+      left: -10px;
+      float: none;
+      min-width: 10rem;
+      padding: .5em !important;
+      color: #404040 !important;
+      margin: -.125rem 0 0;
+      text-align: center;
+      border-top: 3px solid #fbb537;
+    }
+
+    .dropdown-menu .js-scroll-trigger {
+      display: block;
+      padding: .3rem .3rem;
+      color: #404040 !important;
+      font-size: 14px;
+    }
+
+    .dropdown-menu .js-scroll-trigger:hover {
+      color: #737373 !important;
+    }
+
+    @font-face {
+      font-family: ProximaNovaSbold;
+      src: url("../static/Proxima-Nova-Sbold.otf");
+    }
+
+    .navbar {
+      font-family: ProximaNovaSbold;
+    }
+
+    .nav-link {
+      display: block;
+      padding: .5rem 1rem;
+    }
+
+    @media (min-width: 992px) {
+      .navbar-expand-lg .navbar-nav .nav-link {
+        padding: .5rem 1rem;
+
+      }
+    }
+
+    .nav-item {
+      display: inline-block;
+      list-style: outside none none;
+    }
+
+    .nav-item .hover-link {
+      color: rgba(255, 255, 255, 0.5);
+      position: relative;
+      text-decoration: none;
+      padding: .5rem 1rem;
+
+
+    }
+
+    .nav-item .hover-link:before,
+    .nav-item .hover-link:after {
+      position: absolute;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+    }
+
+    .nav-item .hover-link:before {
+      bottom: 0;
+      display: block;
+      height: 3px;
+      width: 0%;
+      content: "";
+      background-color: #fbb537;
+      left: 0;
+    }
+
+    .nav-item .hover-link:after {
+      left: 0;
+      top: 0;
+      position: absolute;
+      content: attr(data-hover);
+      color: #ffffff;
+      white-space: nowrap;
+      max-width: 0%;
+      overflow: hidden;
+    }
+
+    .nav-item .hover-link:hover:before {
+      opacity: 1;
+      width: 100%;
+    }
+
+    .nav-item .hover-link:hover:after {
+      max-width: 100%;
+    }
+
+
+    .nav-item .hover-link:hover:before {
+      opacity: 1;
+      width: 100%;
+    }
+
+    .nav-item .hover-link:hover:after {
+      max-width: 100%;
+    }
+
+
+
+
+    .section-heading {
+      color: #034080 !important;
+
+    }
+
+    .nav-link {
+      color: #404040 !important;
+      height: 100%;
+      align-items: center;
+      display: flex;
+    }
+
+    .js-scroll-trigger {
+      color: #404040 !important;
+      height: 100%;
+      align-items: center;
+      display: flex;
+      text-decoration: none !important;
+    }
+
+    .nav-item {
+      text-decoration: none
+    }
+
+    .navbar-inner {
+      background: transparent;
+    }
+
+    .navbar-trans {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* .dropdown-toggle::after{
+        display: none !important;
+        overflow:hidden !important;
+    } */
+
+    .hinty {
+      font-family: Hind !important;
+      text-align: left !important;
+    }
+
+    .monty {
+      font-family: montserrat !important;
+      text-align: left !important;
+    }
+
+    .bluer {
+      color: #034080 !important;
+    }
+
+    .n-size {
+      font-size: 16px !important;
+    }
+
+    .h-size {
+      font-size: 28px !important;
+    }
+
+    .btn-header-outline-primary {
+      color: #034080;
+      background-color: transparent;
+      border: 1px solid #034080;
+    }
+
+    .btn-header-outline-primary:hover {
+      color: #f0ecec;
+      background-color: #034080;
+      border-color: #034080;
+    }
+
+    .btn-header-outline-primary:not(:disabled):not(.disabled):active:focus {
+      box-shadow: 0 0 0 0;
+    }
+
+    .btn-header-outline-primary:not(:disabled):not(.disabled):active {
+      color: #f0ecec;
+      background-color: #034080;
+      border-color: #034080;
+    }
+
+    ul.navbar-nav li.dropdown:hover div.dropdown-menu {
+      display: block;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+    }
+
+    .fa-social-icon {
+      color: rgb(233, 97, 111, .89);
+    }
+
+    .fa-social-icon:hover {
+      color: rgb(233, 97, 111);
+    }
+  </style>
+  {% block head %}
+  {% endblock %}
 </head>
 
 <body id="page-top">
 
- <header class="masthead">
-  <nav class="navbar navbar-expand-lg navbar-trans fixed-top" >
-    <div class="container">
-    <a class="navbar-brand" href="{% url 'index' %}">
-          <img src="{% static 'img/koda_degisim.png' %}" style="widht:50px; height:50px;" alt="">
-        </a>
-      <div class="collapse navbar-collapse monty" id="navbarResponsive">
-        <ul class="navbar-nav" style="font-weight:bold;font-size:14px;!important;">
+  <header class="masthead">
+    <nav class="navbar navbar-expand-lg  d-flex align-items-center  fixed-top">
+
+
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <img src="{% static 'img/koda_degisim.png' %}" style="widht:50px; height:50px;" alt="">
+      </a>
+      <a href="https://acikacik.org/sivil-toplum-kurulusu/koy-okullari-degisim-agi-dernegi-" class="navbar-togle-logo"
+        style="display: none;"> <img src="{% static 'img/acikstk.png' %}" style="widht:50px; height:50px;" alt=""></a>
+      <button class="navbar-toggler btn" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+        <span class=""><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="navbarDropdownMenuLink1"  role="button" data-toggle="dropdown" aria-expanded="true">
-                    Hakkımızda
-                  </a>
-                  <div class="dropdown-menu dropdown-toggle n-size" aria-labelledby="navbarDropdownMenuLink1" >
-                    <a class="navbar js-scroll-trigger"style="color:#034080 !important;font-weight: normal; font-size:14px;" href="{% url 'about' %}">Hakkımızda</a>
-                    <a class="navbar js-scroll-trigger"style="color:#034080 !important;font-weight: normal;font-size:14px;" href="{% url 'faaliyet_raporlari' %}">Faaliyet Raporlarımız</a>
-                    <a class="navbar js-scroll-trigger"style="color:#034080 !important;font-weight: normal;font-size:14px;" href="{% url 'degerlerimiz' %}">Değerlerimiz</a>
-                    <a class="navbar js-scroll-trigger"style="color:#034080 !important;font-weight: normal;font-size:14px;" href="{% url 'stratejimiz' %}">Stratejimiz</a>
-                    <a class="navbar js-scroll-trigger"style="color:#034080 !important;font-weight: normal;font-size:14px;" href="{% url 'team' %}">KODA Ekibi</a>
-                  </div>
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown"
+              aria-expanded="true">
+              HAKKIMIZDA
+            </a>
+            <div class="dropdown-menu dropdown-toggle n-size" aria-labelledby="navbarDropdownMenuLink1">
+              <a class=" js-scroll-trigger" href="{% url 'about' %}">Hakkımızda</a>
+              <a class=" js-scroll-trigger" href="{% url 'faaliyet_raporlari' %}">Faaliyet Raporlarımız</a>
+              <a class=" js-scroll-trigger" href="{% url 'degerlerimiz' %}">Değerlerimiz</a>
+              <a class=" js-scroll-trigger" href="{% url 'stratejimiz' %}">Stratejimiz</a>
+              <a class=" js-scroll-trigger" href="{% url 'team' %}">KODA Ekibi</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown"
+              aria-expanded="true">
+              FAALİYETLERİMİZ
+            </a>
+            <div class="dropdown-menu dropdown-toggle" aria-labelledby="navbarDropdownMenuLink2">
+              <a class=" js-scroll-trigger" href="{% url 'koy_ogretmenleri' %}">Köy Öğretmenleri Projesi</a>
+              <a class=" js-scroll-trigger" href="#">BSMG Programı</a>
+              <a class=" js-scroll-trigger" href="{% url 'ruzgargulubultenleri' %}">Rüzgar Gülü Haber Bülteni</a>
+              <a class=" js-scroll-trigger" href="{% url 'gecmis_faaliyetler' %}">Geçmiş Faaliyetler</a>
+              <a class=" js-scroll-trigger" href="{% url 'koda_raporlari' %}">KODA Raporları</a>
+              <a class=" js-scroll-trigger" href="{% url 'neler_yapmiyoruz' %}">Neler Yapmıyoruz?</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="hover-link js-scroll-trigger" href="{% url 'yayinlarimiz' %}">YAYINLARIMIZ</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown"  aria-expanded="true">
-                      Neler Yapıyoruz?
-                  </a>
-                  <div class="dropdown-menu dropdown-toggle" aria-labelledby="navbarDropdownMenuLink2">
-                    <a class="navbar js-scroll-trigger"style="color:#034080 !important; font-weight: normal;font-size:14px;" href="{% url 'koy_ogretmenleri' %}">Köy Öğretmenleri Projesi</a>
-                    <a class="navbar js-scroll-trigger"style="color:#034080 !important; font-weight: normal;font-size:14px;" href="#">BSMG Programı</a>
-                    <a class="navbar js-scroll-trigger"style="color:#034080 !important; font-weight: normal;font-size:14px;" href="{% url 'ruzgargulubultenleri' %}">Rüzgar Gülü Haber Bülteni</a>
-                    <a class="navbar js-scroll-trigger"style="color:#034080 !important; font-weight: normal;font-size:14px;" href="{% url 'gecmis_faaliyetler' %}">Geçmiş Faaliyetler</a>
-                    <a class="navbar js-scroll-trigger"style="color:#034080 !important; font-weight: normal;font-size:14px;" href="{% url 'koda_raporlari' %}">KODA Raporları</a>
-                    <a class="navbar js-scroll-trigger"style="color:#034080 !important; font-weight: normal;font-size:14px;" href="{% url 'neler_yapmiyoruz' %}">Neler Yapmıyoruz?</a>
-                  </div>
-          </li>
-           <li class="nav-item dropdown">
-             <a class="navbar js-scroll-trigger" href="{% url 'yayinlarimiz' %}">Yayınlarımız</a>
-          </li>
-           <li class="nav-item dropdown">
-                          <a class="navbar js-scroll-trigger" href="{% url 'bagis' %}">Nasıl Destek Olabilirsiniz?</a>
+            <a class="hover-link js-scroll-trigger" href="{% url 'bagis' %}">NASIL DESTEK OLABİLİRSİNİZ?</a>
           </li>
 
           <li class="nav-item">
-            <a class="navbar js-scroll-trigger" href="{% url 'contact' %}">Bize Ulaşın</a>
+            <a class="hover-link js-scroll-trigger" href="{% url 'contact' %}">BİZE ULAŞIN</a>
           </li>
 
-            <li class="nav-item">
-                       <a href="https://acikacik.org/sivil-toplum-kurulusu/koy-okullari-degisim-agi-dernegi-"> <img src="{% static 'img/acikstk.png' %}" style="widht:50px; height:50px;" alt=""></a>
-            </li>
-
-          <li class="nav-item" >
-           <a href="{% url 'bagis' %}"> <button class="btn" style="background-color:transparent;border-color: #034080; color:#034080; margin-left:10%;"  href="{% url 'contact' %}">DESTEK OLUN</button></a>
+          <li class="nav-item nav-item-logo">
+            <a href="https://acikacik.org/sivil-toplum-kurulusu/koy-okullari-degisim-agi-dernegi-"> <img
+                src="{% static 'img/acikstk.png' %}" style="widht:50px; height:50px;" alt=""></a>
           </li>
 
         </ul>
-
       </div>
-    </div>
-  </nav>
+
+
+
+    </nav>
     <div class="container">
       <div class="intro-text">
-    </div>
+        <div id="go-up">
+          <div class="fss-dotted-scrollspy">
+            <div id="go-up-btn">
+              <a href="{% url 'bagis' %}" id="go-up-btn">
+                <img src="{% static 'img/DESTEKOL2.png' %}" alt="" width="100%" height="100%">
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
   </header>
 
-    {% block body %}
+  {% block body %}
 
-    {% endblock %}
+  {% endblock %}
 
 
-<!-- Footer -->
-<footer class="page-footer font-small" style="background-color:#cbcbcb;">
+  <!-- Footer -->
+  <footer class="page-footer font-small mt-5 pb-0">
+    <div class="container-fulid" style="background: rgb(241, 244, 246, .8) !important; border-top: 2px solid #e6e6e6; ">
+      <div class="container py-3">
 
-  <div>
-    <div class="container">
+        <!-- Grid row-->
+        <div class="social-links mb-2">
+          <a href="https://www.instagram.com/kodegisim/" class="instagram"> <i
+              class="fab fa-instagram fa-social-icon fa-2x">&#160;
+              &#160;</i></a>
+          <a href="https://www.facebook.com/kodegisim/?ref=br_rs" class="facebook"> <i
+              class="fab fa-facebook fa-social-icon  fa-2x"> &#160;
+            </i></a>
+          <a href="https://www.twitter.com/kodegisim/" class="twitter"> <i class="fab fa-twitter fa-2x fa-social-icon">
+              &#160;
+            </i></a>
+          <a href="https://www.youtube.com/channel/UCyiAbqsWLe4U261oMXGTm9A" class="instagram" style="color:#034080;">
+            <i class="fab fa-youtube fa-social-icon fa-2x"> &#160;
 
-      <!-- Grid row-->
-      <div class="row py-4 d-flex align-items-center">
+            </i></a>
+          <a href="https://www.linkedin.com/mwlite/company/kodegisim" class="linkedin"> <i
+              class="fab fa-linkedin fa-social-icon fa-2x"> &#160;
+            </i></a>
+          <a href="https://medium.com/kodegisim" class="instagram"> <i class="fab fa-medium fa-2x fa-social-icon">
+            </i></a>
 
-        <!-- Grid column -->
-        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-          <h6 class="mb-0 hinty bluer">Sosyal medyada bizi takip etmek ister misiniz?</h6> <br>
-                      <div class="social-links">
-          <a href="https://www.instagram.com/kodegisim/" class="instagram" style="color:#034080;">   <i class="fab fa-instagram fa-lg">&#160;
-&#160;</i></a>
-          <a href="https://www.facebook.com/kodegisim/?ref=br_rs class="facebook" style="color:#034080;">   <i class="fab fa-facebook fa-lg"> &#160;
-  </i></a>
-          <a href="https://www.twitter.com/kodegisim/" class="twitter" style="color:#034080;">   <i class="fab fa-twitter fa-lg"> &#160;
-  </i></a>
-          <a href="https://www.youtube.com/channel/UCyiAbqsWLe4U261oMXGTm9A" class="instagram" style="color:#034080;">   <i class="fab fa-youtube fa-lg">   &#160;
 
-</i></a>
-          <a href="https://www.linkedin.com/mwlite/company/kodegisim" class="linkedin" style="color:#034080;">   <i class="fab fa-linkedin fa-lg"> &#160;
-  </i></a>
-          <a href="https://medium.com/kodegisim" class="instagram" style="color:#034080;">   <i class="fab fa-medium fa-lg">   </i></a>
+
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+
+          <!-- Grid column -->
 
         </div>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-
+        <!-- Grid row-->
+        <small class="text-center" style="opacity: .7 !important;">&copy; 2020 Köy Okulları Değişim Ağı (KODA)</small>
       </div>
-      <!-- Grid row-->
-
     </div>
-  </div>
-
-  <!-- Footer Links -->
-  <div class="container text-center text-md-left mt-5">
-
-    <!-- Grid row -->
-    <div class="row mt-3 dark-grey-text">
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-4 col-xl-4 mb-4">
-
-        <!-- Content -->
-        <h6 class="text-uppercase font-weight-bold hinty bluer">HESAP BİLGİLERİMİZ</h6>
-        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto">
-        <a href="mailto:#"></a>
-        <br> <abbr title="Phone" class="monty">TL : TR720004600020888000430464</abbr>  <br><br>
-
-        <p class="monty">Önemli not: EFT yaparken alıcı kısmına "Köy Okulları Değişim Ağı Derneği" yazınız. KODA gibi kısaltmalar kullanmanız durumunda EFT talimatı banka tarafından geri çevrilmektedir.
-            <br><br> Detaylar için: https://www.kodegisim.org/bagis
-</p>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-4 col-xl-4 mb-4">
-      <!-- Grid column -->
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.053476284475!2d29.02984331564218!3d41.024085979299166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAxJzI2LjciTiAyOcKwMDEnNTUuMyJF!5e0!3m2!1str!2str!4v1578861495383!5m2!1str!2str"  width="360" height="280" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-      <!-- Grid column -->
-      </div>
-      <div class="col-md-4 col-lg-4 col-xl-4 mb-4" style="margin-left:5%;">
-
-        <!-- Links -->
-        <h6 class="text-uppercase font-weight-bold hinty bluer">İLETİŞİM</h6>
-        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p class="monty">
-          <i class="fas fa-home mr-3"></i>Fatura ve kargo gönderim adresimiz:<br>
-
-
-Murat Reis Mah. Gazi Cad. No:79 Bağlarbaşı/Üsküdar İSTANBUL</p>
-        <p class="monty">
-          <i class="fas fa-envelope mr-3"></i> bilgi@kodegisim.org</p>
-        <p class="monty">
-          <i class="fas fa-phone mr-3"></i> 0216 343 73 43</p>
-
-      </div>
-      <!-- Grid column -->
-
     </div>
-    <!-- Grid row -->
-
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
+  </footer>
+  <!-- Footer -->
 
   <!-- Portfolio Modals -->
 
@@ -248,7 +550,22 @@ Murat Reis Mah. Gazi Cad. No:79 Bağlarbaşı/Üsküdar İSTANBUL</p>
 
   <!-- Contact form JavaScript -->
   <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
-    <script src="{% static 'js/contact_me.js' %}"></script>
+  <script src="{% static 'js/contact_me.js' %}"></script>
+
+  <script>
+    $(window).on('scroll', function () {
+      if ($(window).scrollTop()) {
+        $('.navbar').addClass('black');
+      }
+      else {
+        $('.navbar').removeClass('black');
+      }
+    });
+
+
+
+  </script>
+
 
   <!-- Custom scripts for this template -->
   <script src="{% static 'js/agency.min.js' %}"></script>
