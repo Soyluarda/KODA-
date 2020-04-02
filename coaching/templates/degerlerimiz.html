@@ -1,34 +1,129 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
+
+<style>
+    .card-shadow-green {
+        border-radius: 5px;
+        background: rgb(242, 242, 242, .5);
+        -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+        box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+    }
+
+    .card-shadow-green:hover {
+        -webkit-box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(179, 179, 179, .2);
+        box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(28, 202, 167, .2);
+    }
+
+    .card-title-content {
+        padding: 1.2rem;
+    }
+
+    .card-title-content h6 {
+        font-size: 18px;
+    }
+
+    .card-title-content div {
+        font-size: 14px;
+    }
+
+    @media (min-width: 767.78px) and (max-width: 991.78px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 767.78px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+</style>
 {% endblock %}
 
 {% block body %}
 
-
-<section class="page-section">
-    <div class="container">
-         <div class="col-lg-12 text-center">
-            <h2 class="hinty bluer h-size">Değerlerimiz </h2><br>
-                <div class="row">
-                    <p class="monty bluer n-size">
-                        <strong>Bütünsellik:</strong> KODA, insanı doğanın bir parçası ve sosyal, duygusal, fiziksel, bilişsel ve ruhsal yönleriyle bir bütün olarak görür.
-                        <br> <br> <strong>Kapsayıcılık: </strong>KODA, çeşitliliği ve beraberinde gelen farklılıkları kabul eder. Faaliyetlerinin herkesin katılımına alan açması için emek verir.
-                        <br> <br> <strong>Adalet:</strong> KODA, tüm bireylerin içinde bulundukları koşullara uygun olarak, ihtiyaç duydukları kaynaklara erişimlerinde tarafsızlığı gözetir.
-                        <br> <br> <strong>Sürdürülebilirlik:</strong> KODA, değişimlere ve yeniliklere açık, esnek ve süreç odaklı olmaya özen gösterir. Bulunduğu alanın koşullarına uygun ve sürdürülebilir etkiyi hedefleyerek faalyetlerinin model niteliği taşımasını önceliklendirir.
-                        <br> <br><strong>Dayanışma:</strong> KODA için erişilebilir ve verimli bir dayanışma ağının gerekleri açık iletişim ve gönüllülüktür.
-                        <br> <br> <strong>Tarafsızlık:</strong> KODA, kimseden taraf değildir. KODA tarafsızlık ilkesini benimseyerek ortaklıklar kurmayı hedefler. Etrafında bir araya geldiği kişiler, kurumlar, dernekler vb. oluşumların kimliklerinde ve dernekteki faaliyetlerinde şeffaftır.
-
-
-
-
-
-
+<div class="container" style="margin-top: 80px;">
+    <div class="row intro-card-row">
+        <div class="col-md-4 mb-4">
+            <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #e45769; ">
+                <div class="card-title-content">
+                    <h6 class="mb-3">Bütünsellik</h6>
+                    <div>
+                        KODA, insanı doğanın bir parçası ve sosyal, duygusal, fiziksel, bilişsel ve ruhsal yönleriyle
+                        bir bütün olarak görür.
+                    </div>
+                </div>
+            </div>
 
         </div>
-         </div>
-    </div>
-</section>
+        <div class="col-md-4 mb-4">
+            <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #00926e;">
 
+                <div class="card-title-content">
+                    <h6 class="mb-3">Kapsayıcılık</h6>
+                    <div>
+                        KODA, çeşitliliği ve beraberinde gelen farklılıkları kabul eder. Faaliyetlerinin herkesin
+                        katılımına alan açması için emek verir.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #fab537;">
+
+                <div class="card-title-content">
+                    <h6 class="mb-3">Tarafsızlık</h6>
+                    <div>
+                        KODA, kimseden taraf değildir. KODA tarafsızlık ilkesini benimseyerek ortaklıklar kurmayı
+                        hedefler. Etrafında bir araya geldiği kişiler, kurumlar, dernekler vb. oluşumların kimliklerinde
+                        ve dernekteki faaliyetlerinde şeffaftır.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #00926e;">
+
+                <div class="card-title-content">
+                    <h6 class="mb-3">Adalet</h6>
+                    <div>
+                        KODA, tüm bireylerin içinde bulundukları koşullara uygun olarak, ihtiyaç duydukları kaynaklara
+                        erişimlerinde tarafsızlığı gözetir.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #fab537;">
+
+                <div class="card-title-content">
+                    <h6 class="mb-3">Sürdürülebilirlik</h6>
+                    <div>
+                        KODA, değişimlere ve yeniliklere açık, esnek ve süreç odaklı olmaya özen gösterir. Bulunduğu
+                        alanın koşullarına uygun ve sürdürülebilir etkiyi hedefleyerek faalyetlerinin model niteliği
+                        taşımasını önceliklendirir.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #e45769;">
+
+                <div class="card-title-content">
+                    <h6 class="mb-3">Dayanışma</h6>
+                    <div>
+                        KODA için erişilebilir ve verimli bir dayanışma ağının gerekleri açık iletişim ve gönüllülüktür.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
 
 {% endblock %}
