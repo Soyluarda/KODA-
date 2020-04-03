@@ -1,70 +1,171 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
+
+
+<style>
+  .contact-page-section {
+    position: relative;
+    padding-top: 80px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .contact-page-section .container {
+      max-width: 1100px;
+    }
+  }
+  @media (max-width: 992px) {
+    .inner-container .col-md-7, .inner-container .col-md-5 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .contact-page-section .inner-container {
+      box-shadow: 0 0 0 0 !important;
+    }
+    .inner-column.text-white{
+      color: #404040 !important;
+    }
+    .contact-page-section .inner-container {
+    background-color: #fff !important;
+  }
+  .contact-page-section {
+    padding-top: 30px;
+  }
+  }
+
+  .contact-page-section .inner-container {
+    position: relative;
+    z-index: 1;
+    background-color: #00926e;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, .1)
+  }
+
+  .contact-page-section .form-column {
+    position: relative;
+    padding: 0 0 0 15px
+  }
+
+  .contact-page-section .form-column .inner-column {
+    position: relative;
+    background-color: #fff;
+    height: 100%;
+  }
+
+  .contact-page-section .info-column {
+    position: relative
+  }
+
+  .contact-page-section .info-column .inner-column {
+    position: relative;
+  }
+
+  .contact-page-section .info-column h5 {
+    position: relative;
+    font-weight: 700;
+  }
+
+  .contact-page-section .info-column .list-info {
+    position: relative;
+    margin-bottom: 60px
+  }
+
+  .contact-page-section .info-column .list-info li {
+    position: relative;
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.8em;
+    padding-left: 45px
+  }
+
+  .contact-page-section .info-column .list-info li:last-child {
+    margin-bottom: 0
+  }
+
+  .contact-page-section .info-column .list-info li i {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #fff;
+    font-size: 30px
+  }
+
+  .contact-form {
+    position: relative
+  }
+
+  .contact-form .form-group {
+    position: relative;
+    margin-bottom: 20px
+  }
+</style>
 {% endblock %}
 
 {% block body %}
 
-<section class="page-section">
-    <div class="container">
 
-      <!-- Icon Divider -->
-      <div class="divider-custom">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-line"></div>
-      </div>
+<section class="contact-page-section pb-0">
+  <div class="container">
 
-      <!-- Contact Section Form -->
-      <div class="row">
+    <div class="inner-container">
+      <div class="row clearfix">
 
-   <div class="col-lg-6">
+        <!--Form Column-->
+        <div class="form-column col-md-7">
+          <div class="inner-column p-4 px-5">
+            <h3 class="mb-5 mt-3 text-center">Bize Ulaşın</h3>
+            <!--Contact Form-->
+            <div class="contact-form">
+              <form method="post" class="lang" key="form">
+                {% csrf_token %}
+                {{form.as_p}}
+                <div class="form-group text-right">
+                  <button type="submit" class="btn btn-secondary" id="sendMessageButton"
+                    key="sendbutton">Gönder</button>
+                </div>
+              </form>
 
-           <address>
-             <p class="monty n-size bluer"> <b>KÖY OKULLARI DEĞİŞİM AĞI DERNEĞİ</b>
-
-              <br>
-             Fatura ve Kargo Gönderim Adresimiz
-              <br> Murat Reis Mah. Gazi Cad. No:79
-             <br>Bağlarbaşı/Üsküdar İSTANBUL
-              <br> <abbr title="Phone">Sabit Hat:</abbr> 0216 343 73 43
-            </address>
-
-            <address>
-              <strong class="monty n-size bluer">E-posta:</strong><br>
-              <a href="mailto:#" class="monty n-size bluer">bilgi@kodegisim.org</a>
-            </address>
-   </p>
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.053476284475!2d29.02984331564218!3d41.024085979299166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAxJzI2LjciTiAyOcKwMDEnNTUuMyJF!5e0!3m2!1str!2str!4v1578861495383!5m2!1str!2str"  width="360" height="280" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-
-
-         </div>
-
-                <div class="col-lg-6 monty bluer n-size">
-      <h2 class="page-section-heading text-center hinty bluer h-size" >Bize Ulaşın</h2>
-
-          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-          <form method="post" class="lang" key="form">
-            {% csrf_token %}
-            {{form.as_p}}
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-xl lang" id="sendMessageButton" key="sendbutton" style="background-color: #034080;color:white;font-family:montserrat;">Gönder</button>
             </div>
-          </form>
+            <!--End Contact Form-->
+
+          </div>
         </div>
-          <div class="footer-copyright text-center py-3" style="margin-top:100px;!important;">
-     <h4 class="hinty bluer h-size">Hesap Bilgilerimiz</h4><br>
-              <p class="monty n-size bluer">
-    <b>TL: TR720004600020888000430464</b> <br>
-    Önemli not: EFT yaparken alıcı kısmına "Köy Okulları Değişim Ağı Derneği" yazınız. KODA gibi kısaltmalar kullanmanız durumunda EFT talimatı banka tarafından geri çevrilmektedir.  Detaylar için: https://www.kodegisim.org/bagis
 
-    </p>
-  </div>
-  <!-- Copyright -->
+        <!--Info Column-->
+        <div class="info-column col-md-5">
+          <div class="inner-column text-white p-4 py-5">
+            <h5 class="mb-4">KÖY OKULLARI DEĞİŞİM AĞI DERNEĞİ</h5>
+            <div class="font-weight-bold mb-2">Fatura ve Kargo Gönderim Adresimiz:</div>
+            <div>Murat Reis Mah. Gazi Cad. No:79</div>
+            <div>Bağlarbaşı/Üsküdar İSTANBUL</div>
+            <div>Sabit Hat: <span style="font-weight: 500;">0216 343 73 43</span> </div>
 
-</footer>
+            <div class="mt-3">
+              <strong><i class="far fa-envelope mr-2"></i>E-posta:</strong>
+              <a href="mailto:#" style="color: #fab537;">bilgi@kodegisim.org</a>
+            </div>
+            <div class="mt-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.053476284475!2d29.02984331564218!3d41.024085979299166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAxJzI2LjciTiAyOcKwMDEnNTUuMyJF!5e0!3m2!1str!2str!4v1578861495383!5m2!1str!2str"
+                width="100%" height="280" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+            </div>
+
+            <div class="mt-4">
+              <h5 class="mb-3">Hesap Bilgilerimiz</h5>
+
+              <div class="mb-2"><b>TL: TR720004600020888000430464</b></div>
+
+              Önemli not: EFT yaparken alıcı kısmına "Köy Okulları Değişim Ağı Derneği" yazınız. KODA gibi kısaltmalar
+              kullanmanız durumunda EFT talimatı banka tarafından geri çevrilmektedir. Detaylar için:
+              https://www.kodegisim.org/bagis
+
+            </div>
+          </div>
+        </div>
+
       </div>
-
-
-  </section>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
