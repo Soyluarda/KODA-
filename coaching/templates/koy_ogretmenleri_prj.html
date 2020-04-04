@@ -2,30 +2,90 @@
 {% load static %}
 {% block head %}
 
+<style>
+  .card-shadow-green {
+    border-radius: 5px;
+    background: rgb(242, 242, 242, .5);
+    -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+    box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+  }
 
+  .card-title-content {
+    padding: 1.2rem;
+  }
+
+  .card-title-content h6 {
+    font-size: 16px;
+  }
+
+  .card-title-content div {
+    font-size: 13px;
+  }
+
+  @media (min-width: 767.78px) and (max-width: 991.78px) {
+    .intro-card-row .col-md-4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (max-width: 767.78px) {
+    .intro-card-row .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+</style>
 
 {% endblock %}
 
 {% block body %}
 
 <section class="page-section">
-        <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-            <h2 class="hinty bluer h-size">Köy Öğretmenleri Projesi </h2><br>
-       <p class="monty bluer n-size">Köy Öğretmenleri Projesi kapsamda gerçekleştirdiğimiz üç ana faaliyetimiz bulunuyor.
-       “Köy Öğretmenleri Projesi”nin ana destekçisi Sabancı Vakfı’dır. Proje kapsamında yürütülen “Çocuk Atölyeleri”ni ise Dalyan Vakfı ve EMpower Vakfı da desteklemektedir.</p>
+  <div class="container">
+    <div class="text-center mb-5">
+      <h4 class="mb-3">Köy Öğretmenleri Projesi </h4>
+      <div>Köy Öğretmenleri Projesi kapsamda gerçekleştirdiğimiz üç ana faaliyetimiz bulunuyor.
+        “Köy Öğretmenleri Projesi”nin ana destekçisi Sabancı Vakfı’dır. Proje kapsamında yürütülen “Çocuk
+        Atölyeleri”ni ise Dalyan Vakfı ve EMpower Vakfı da desteklemektedir.
+      </div>
+    </div>
 
-  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success monty n-size" style="background-color:#034080 !important;"><span class="buttons">Öğretmen Toplulukları</span></a>
-  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success monty n-size" style="background-color:#034080 !important;"><span>Çocuk Atölyeleri</span></a>
-  <a href="{% url 'icerik_gelistirme' %}" class="btn btn-success monty n-size" style="background-color:#034080 !important;"><span>İçerik Geliştirme</span></a>
-
-
-
-<br>
-
-  </section>
-
-
+    <div class="row intro-card-row">
+      <div class="col-md-4 mb-4">
+        <div class="card-shadow-green text-center h-100" style="border-bottom:3px solid #e45769; ">
+          <div class="card-title-content">
+            <h6 class="mb-3">Öğretmen Toplulukları</h6>
+            <div>
+              <a href="{% url 'ogretmen_topluluklari' %}" class="font-weight-bold"
+                style="color:#034080 !important;">İncele<i class="fas fa-angle-double-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card-shadow-green text-center h-100" style="border-bottom:3px solid #00926e;">
+          <div class="card-title-content">
+            <h6 class="mb-3">Çocuk Atölyeleri</h6>
+            <div>
+              <a href="{% url 'cocuk_atolyeleri' %}" class="font-weight-bold" style="color:#034080 !important;">İncele<i
+                  class="fas fa-angle-double-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card-shadow-green text-center h-100" style="border-bottom:3px solid #fab537;">
+          <div class="card-title-content">
+            <h6 class="mb-3">İçerik Geliştirme</h6>
+            <div>
+              <a href="{% url 'icerik_gelistirme' %}" class="font-weight-bold"
+                style="color:#034080 !important;">İncele<i class="fas fa-angle-double-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
 
 {% endblock %}
