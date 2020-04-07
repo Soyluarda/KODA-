@@ -1,84 +1,122 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
+
+<style>
+  .card-shadow-green {
+    border-radius: 5px;
+    background: rgb(242, 242, 242, .5);
+    -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+    box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+  }
+
+  .card-shadow-green:hover {
+    -webkit-box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(179, 179, 179, .2);
+    box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(28, 202, 167, .2);
+  }
+
+  .card-title-content,
+  .card-body-content {
+    padding: 1.2rem;
+  }
+
+  .card-title-content h6 {
+    font-size: 18px;
+    color: white;
+  }
+
+  .card-body-content div {
+    font-size: 16px;
+  }
+
+  .card-body-content i {
+    color: #fab537;
+  }
+</style>
 {% endblock %}
 
 {% block body %}
 
 
 <section class="page-section">
-        <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h2 class="hinty bluer h-size">Geçmiş Faaliyetler<br></h2>
-
-           <h4 class="section-subheading hinty bluer h-size "><br><br> 2018- 2019 Eğitim-Öğretim Dönemi</h4>
-
-          <br> <label class="bluer hinty"><strong>Gönüllü Destek Ağı</strong></label><br>
-         <p class="monty bluer n-size">
-
-
-            Şanlıurfa- Harran’da görev yapan köy okulu öğretmenlerini desteklemek için 2018- 2019 Eğitim - Öğretim Dönemi'nde gönüllü ekiplerle birlikte yol aldık.
-
-
-
-Bu ağın içinde bulunan 6 adet gönüllü grubumuz,  Harran’daki köylerde görev yapan 3 öğretmenimizle etkileşime geçerek öğretmenlerin ihtiyaç duydukları konularda onlara destek olmayı ve çocukları çeşitli atölyelerle buluşturdular.
-
-
-          <br> * NOT EKLENECEKTİR
-           <br>
-                   </p>
-
-
-
-        <h4 class="section-subheading hinty bluer h-size"><br><br>2017- 2018 Eğitim-Öğretim Dönemi</h4>
-
-          <br> <label class="hinty bluer n-size"><strong>Şanlıurfa/Harran “Birleştirilmiş Sınıflar için Birleşmiş Öğretmenler Projesi"</strong></label>
-                    <p class="monty bluer n-size">
-
-          Birleştirilmiş Sınıflar için Birleşmiş Öğretmenler Projesi, 2017-2018 eğitim- öğretim döneminde, Şanlıurfa-Harran bölgesindeki köy okulu öğretmenlerini güçlendirmek için, Sabancı Vakfı Hibesiyle desteklenmiştir.
-
-    Proje süresi boyunca, katılımcı okullardan çıkan örnek uygulamalar, Türkiye’deki diğer köy okulu öğretmenlerini desteklemesi için KODA web sayfasında paylaşılmıştır. 2017- 2018 eğitim-öğretim döneminde projemize katılan öğretmenlerimizin paylaşımlarına ulaşmak için tıklayınız.
-           <br>
-
-           * NOT EKLENECEKTİR
-
-
-
-         </p>
-          <h4 class="section-subheading hinty bluer h-size"><br><br>2016- 2017 Eğitim-Öğretim Dönemi</p></h4>
-
-         <p class="monty bluer n-size">
-               Bayburt/ Merkez “Kırsalda Kaliteli Eğitim Projesi”
-
-           <br>  Sivas/ Gürün “Çocuk Atölyeleri ve Öğretmen Buluşmaları”
-
-           <br>  İstanbul/ Beykoz “Çocuk Atölyeleri”
-
-           <br>   Samsun/ Ayvacık "Çocuk Atölyeleri ve Öğretmen Buluşmaları”
-
-           <br>   Kastamonu/ Cide "Çocuk Atölyeleri ve Öğretmen Buluşmaları”
-
-           <br>  Muş/ Merkez "Çocuk Atölyeleri ve Öğretmen Buluşmaları”
-         </p>
-
-
-
-
-
-
-
-
-
-
-
-
-          <br><br><br>
+  <div class="container">
+    <h4 class="mb-5 text-center">Geçmiş Faaliyetler</h4>
+    <div class="row intro-card-row">
+      <div class="col-md-12 mb-4">
+        <div class="card-shadow-green h-100">
+          <div class="card-title-content" style="background-color:#e45769; ">
+            <h6 class="mb-0">2018- 2019 Eğitim-Öğretim Dönemi</h6>
+          </div>
+          <div class="card-body-content">
+            <div>
+              <b>Gönüllü Destek Ağı</b>
+              <div class="my-3">
+                Şanlıurfa- Harran’da görev yapan köy okulu öğretmenlerini desteklemek için 2018- 2019 Eğitim - Öğretim
+                Dönemi'nde gönüllü ekiplerle birlikte yol aldık.
+                Bu ağın içinde bulunan 6 adet gönüllü grubumuz, Harran’daki köylerde görev yapan 3 öğretmenimizle
+                etkileşime geçerek öğretmenlerin ihtiyaç duydukları konularda onlara destek olmayı ve çocukları çeşitli
+                atölyelerle buluşturdular.
+              </div>
+              <div>
+                * NOT EKLENECEKTİR
+              </div>
+            </div>
+          </div>
         </div>
-           </div>
-<br>
-
-  </section>
+      </div>
+      <div class="col-md-12 mb-4">
+        <div class="card-shadow-green h-100">
+          <div class="card-title-content" style="background-color:#00926e; ">
+            <h6 class="mb-0">2017- 2018 Eğitim-Öğretim Dönemi</h6>
+          </div>
+          <div class="card-body-content">
+            <div>
+              <b>Şanlıurfa/Harran “Birleştirilmiş Sınıflar için Birleşmiş Öğretmenler Projesi"</b>
+              <div class="my-3">
+                Birleştirilmiş Sınıflar için Birleşmiş Öğretmenler Projesi, 2017-2018 eğitim- öğretim döneminde,
+                Şanlıurfa-Harran bölgesindeki köy okulu öğretmenlerini güçlendirmek için, Sabancı Vakfı Hibesiyle
+                desteklenmiştir.
+                Proje süresi boyunca, katılımcı okullardan çıkan örnek uygulamalar, Türkiye’deki diğer köy okulu
+                öğretmenlerini desteklemesi için KODA web sayfasında paylaşılmıştır. 2017- 2018 eğitim-öğretim döneminde
+                projemize katılan öğretmenlerimizin paylaşımlarına ulaşmak için tıklayınız.
+              </div>
+              <div>
+                * NOT EKLENECEKTİR
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 mb-4">
+        <div class="card-shadow-green h-100">
+          <div class="card-title-content" style="background-color:#034080; ">
+            <h6 class="mb-0">2016- 2017 Eğitim-Öğretim Dönemi</h6>
+          </div>
+          <div class="card-body-content" style="line-height: 2;">
+            <div>
+              <i class="fas fa-angle-right mr-2"></i>Bayburt/ Merkez “Kırsalda Kaliteli Eğitim Projesi”
+            </div>
+            <div>
+              <i class="fas fa-angle-right mr-2"></i>Sivas/ Gürün “Çocuk Atölyeleri ve Öğretmen Buluşmaları”
+            </div>
+            <div>
+              <i class="fas fa-angle-right mr-2"></i>İstanbul/ Beykoz “Çocuk Atölyeleri”
+            </div>
+            <div>
+              <i class="fas fa-angle-right mr-2"></i>Samsun/ Ayvacık "Çocuk Atölyeleri ve Öğretmen Buluşmaları”
+            </div>
+            <div>
+              <i class="fas fa-angle-right mr-2"></i>Kastamonu/ Cide "Çocuk Atölyeleri ve Öğretmen Buluşmaları”
+            </div>
+            <div>
+              <i class="fas fa-angle-right mr-2"></i>Muş/ Merkez "Çocuk Atölyeleri ve Öğretmen Buluşmaları”
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
