@@ -85,6 +85,9 @@ def gonullu(request):
 def koy_ogretmenleri(request):
     return render(request,'koy_ogretmenleri_prj.html')
 
+def mentorluk_programi(request):
+    return render(request,'mentorluk_programi.html')
+
 def gecmis_faaliyetler(request):
     return render(request,'gecmis_faaliyetler.html')
 
