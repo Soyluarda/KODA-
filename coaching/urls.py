@@ -25,7 +25,7 @@ urlpatterns = [
     path('faaliyet-raporlari/', views.faaliyet_raporlari, name='faaliyet_raporlari'),
     path('ogretmen-topluluklari/', views.ogretmen_topluluklari, name='ogretmen_topluluklari'),
     path('bsmg-programi/', views.bsmg_programi, name='bsmg_programi'),
-
+    path('mentorluk-programi/', views.mentorluk_programi, name='mentorluk_programi'),
     path('cocuk-atolyeleri/', views.cocuk_atolyeleri, name='cocuk_atolyeleri'),
     path('gecmis-faaliyetler/', views.gecmis_faaliyetler, name='gecmis_faaliyetler'),
     path('degerlerimiz/', views.degerlerimiz, name='degerlerimiz'),
