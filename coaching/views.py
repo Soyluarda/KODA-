@@ -92,8 +92,8 @@ def ogretmen_topluluklari(request):
     return render(request,'ogretmen_topluluklari.html')
 
 
-def icerik_gelistirme(request):
-    return render(request,'icerik_gelistirme.html')
+def bsmg_programi(request):
+    return render(request,'bsmg_programi.html')
 
 
 def cocuk_atolyeleri(request):
