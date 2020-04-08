@@ -1,192 +1,191 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
+
+<style>
+  .card-shadow-green {
+      width: 300px;
+      border-radius: 5px;
+      background: rgb(242, 242, 242, .5);
+      -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+      box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+  }
+
+  .card-shadow-green:hover {
+      -webkit-box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(179, 179, 179, .2);
+      box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(28, 202, 167, .2);
+  }
+
+  .card-title-content {
+      padding: 1.2rem;
+  }
+
+  .card-title-content h6 {
+      font-size: 16px;
+      font-weight: 600;
+  }
+
+  .card-title-content div {
+      font-size: 12px;
+  }
+  a{
+    color:#595959;
+  }
+  a .card-title-content h6{
+    line-height: 1.4;
+  }
+  a:hover{
+    color:#404040;
+    text-decoration: none;
+
+  }
+
+  @media (min-width: 767.78px) and (max-width: 991.78px) {
+    .intro-card-row .col-md-4 {
+          flex: 0 0 33.333%;
+          max-width: 33.333%;
+      }
+      .intro-card-row .col-md-6 {
+          flex: 0 0 50%;
+          max-width: 50%;
+      }
+      .card-shadow-green {
+      width: 200px;
+      }
+      .card-title-content h6 {
+      font-size: 14px;
+  }
+  }
+
+  @media (min-width: 521px) and (max-width: 767.78px) {
+    .intro-card-row .col-md-4 {
+          flex: 0 0 33.333%;
+          max-width: 33.333%;
+      }
+      .intro-card-row .col-md-6 {
+          flex: 0 0 50%;
+          max-width: 50%;
+      }
+      .card-shadow-green {
+      width: 150px;
+      }
+      .card-title-content h6 {
+      font-size: 12px;
+  }
+  
+  }
+  @media (max-width: 520.78px)  {
+      .card-shadow-green {
+      margin: 0px auto;
+      max-width: 300px;
+      width: 100%;
+      }
+      .card-shadow-green.float-right, .card-shadow-green.float-left {
+     float: none !important;
+      }
+  }
+</style>
 {% endblock %}
 
 {% block body %}
 
 <section class="page-section">
-    <div class="container">
-         <div class="col-lg-12 text-center">
-            <h2 class="h-size hinty bluer">Bize Nasıl Destek Olabilirsiniz? </h2><br>
-      <div class="row">
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#bagisModal1">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-              </div>
+  <div class="container">
+    <h4 class="text-center mb-5">Bize Nasıl Destek Olabilirsiniz?</h4>
+    <div class="row intro-card-row">
+      <div class="col-md-4 mb-5 ">
+        <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #e45769; margin: 0px auto;">
+          <a href="{% url 'bagis_detay' %}" style="width: 300px;">
+
+            <div class="card-title-content">
+              <h6 class="my-4">KODA'ya Bağışta Bulunmak İstiyorum</h6>
+            </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #034080; margin: 0px auto;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScmjiVxvdWRjIHTdk1PIaGyTHlbYkc05tqDHJMhSfACFh75xA/viewform">
+            <div class="card-title-content">
+              <h6 class="my-4">Koda ile İşbirliği Yapmak İstiyorum</h6>
             </div>
           </a>
         </div>
       </div>
-            <div class="row text-left">
-                <a href="{% url 'bagis_detay' %}" style="color:white;" ><button class="btn btn-success n-size bluer monty"style="background-color:#034080;width:200px; height:125px;margin-left:27%;" >KODA'ya Bağışta <br> Bulunmak İstiyorum</a></button>
-                <br><br>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScmjiVxvdWRjIHTdk1PIaGyTHlbYkc05tqDHJMhSfACFh75xA/viewform" style="color:white;" ><button class="btn btn-success n-size bluer monty" style="background-color:#034080;width:200px; height:125px; margin-left:10%;" ><a href="{% url 'isbirligi' %}" style="color:white;">Koda ile İşbirliği <br> Yapmak İstiyorum</a></button>
+      <div class="col-md-4 mb-5">
+        <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #fab537; margin: 0px auto;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScmjiVxvdWRjIHTdk1PIaGyTHlbYkc05tqDHJMhSfACFh75xA/viewform">
+            <div class="card-title-content">
+              <h6 class="my-4">Öğretmenim, Bu Ağın Bir Parçası Olmak İstiyorum</h6>
             </div>
-             <br><br><br>
-             <a href="https://docs.google.com/forms/d/e/1FAIpQLScmjiVxvdWRjIHTdk1PIaGyTHlbYkc05tqDHJMhSfACFh75xA/viewform" style="color:white;" ><div class="row"> <br><br><button class="btn btn-success n-size bluer monty" style="background-color:#034080;width:200px; height:125px;margin-left:27%;" ><a href="https://docs.google.com/forms/d/e/1FAIpQLScmjiVxvdWRjIHTdk1PIaGyTHlbYkc05tqDHJMhSfACFh75xA/viewform"   style="color:white;" >Öğretmenim,<br> Bu Ağın  Bir <br>Parçası Olmak <br> İstiyorum</a></button>
-             <br><br>
-                 <a href="{% url 'bagis_detay' %}" style="color:white;" ><button class="btn btn-success n-size bluer monty" style="background-color:#034080;width:200px; height:125px;margin-left:10%;" > <a href="{% url 'sponsor' %}" style="color:white;">KODA'ya
-                 Sponsor Olmak <br> İstiyorum </button>
-                 </a>
-
-                 <br><br>
-                                 <a href="{% url 'koda_gonullusu' %}" style="color:white;" ><button class="btn btn-success n-size bluer monty"style="background-color:#034080;width:200px; height:125px;margin-left:40%; margin-top:5%;" >KODA Gönüllüsü Olmak İstiyorum</a></button>
-                <br><br>
-
-
-</div>
-             <br>
-
-
-                   <h2 class="h-size bluer hinty"></h2>
-      <br><br>
-
-
-
-               <p class="monty n-size bluer">
-      KODA'nın kurulduğu günden bu yana bizlerle birlikte olan, bize gerek saha, gerekse ofis faaliyetlerimizde çokça desteği ve katkısı dokunmuş o kadar çok isim var ki… Onların desteğini her zaman yanımızda hissediyoruz ve bu bize çok daha fazla cesaret ve güç veriyor.
-
-
-                 <br>2019-2020 yılı faaliyetlerimizde bize destek olmak üzere birlikte yol alacağımız gönüllülerimiz belli oldu. İlginize çok teşekkür ediyoruz.
-
-                 <br>Bir sonraki yılın gereksinimlerini, 2020 Temmuz ayında yeniden değerlendirerek, bu sayfadan ve sosyal medya kanallarımızdan duyuracağız.  O zamana kadar bilgilerinizin kayıt altında bulunmasını isterseniz  aşağıdaki formu doldurabilirsiniz.
-                 <br><br></p>
-                 <label style="font-size:20px; text-align:center !important;"><i> <a href="https://forms.gle/1umCWCBj39J7vMQV8" style="color:#034080; text-align:center !important;">https://forms.gle/1umCWCBj39J7vMQV8</a></i></label>
-
-
-
-             <br><br><br>
-              <div class="row">
-        <div class="col-lg-12">
-           <h2 class="h-size hinty bluer">Bize Katılmak İster Misiniz? </h2><br>
-​
-            <p style="text-align:left !important;"><a style="color:#034080; font-size:20px; text-align:left !important;" href="https://docs.google.com/forms/d/e/1FAIpQLSetzMePJwlEmW8vdHDeJpXlIEF3iDhNI0CsaG8941yTBhQj-g/viewform">Genel Başvuru</a></p>
-
-
-
-
-
-
-
-            <!--<img class="img-fluid" style="width:250px; height:250px;" src="{% static 'plane.png' %}" alt="">
           </a>
-          <div class="portfolio-caption">
-            <h4 style="font-family:Hind;color:#034080 !important;">Uçak biletleri</h4>
-            <p style="font-family:montserrat;color:#034080 !important;">Uçak...</p>
-          </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#bagisModal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-              </div>
+      </div>
+      <div class="col-md-6 mb-5">
+        <div class="card-shadow-green text-center h-100 float-right" style="border-bottom:5px solid #00926e;">
+          <a href="{% url 'bagis_detay' %}">
+            <div class="card-title-content">
+              <h6 class="my-4">KODA'ya
+                Sponsor Olmak İstiyorum
+              </h6>
             </div>
-            <img class="img-fluid" style="width:250px; height:250px;" src="{% static 'bus.png' %}" alt="">
           </a>
-          <div class="portfolio-caption">
-            <h4 style="font-family:Hind;color:#034080 !important;">Otobüs biletleri</h4>
-            <p style="font-family:montserrat;color:#034080 !important;">Otobüs yolculuğu</p>
-          </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#bagisModal3">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-              </div>
+      </div>
+      <div class="col-md-6 mb-5">
+        <div class="card-shadow-green text-center h-100 float-left" style="border-bottom:5px solid #e45769;">
+          <a href="{% url 'koda_gonullusu' %}">
+            <div class="card-title-content">
+              <h6 class="my-4">KODA Gönüllüsü Olmak İstiyorum</h6>
+
             </div>
-            <img class="img-fluid" style="width:250px; height:250px;" src="{% static 'hotel.png' %}" alt="">
           </a>
-          <div class="portfolio-caption">
-            <h4 style="font-family:Hind;color:#034080 !important;">Konaklama</h4>
-            <p style="font-family:montserrat;color:#034080 !important;">Otel giderleri...</p>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-<div class="portfolio-modal modal fade" id="bagisModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 mx-auto">
-              <div class="modal-body">
-                <p class="item-intro text-muted"></p>
-                <img class="img-fluid d-block mx-auto" style="width:250px;height:250px;"src="{% static 'portfolio1.webp' %}" alt="">
-                <p>Köy Öğretmenleri Projesi”nin ana destekçisi Sabancı Vakfı’dır.
-
-Proje kapsamında yürütülen “Çocuk Atölyeleri”ni ise Dalyan Vakfı desteklemektedir.</p>
-
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+
+
     </div>
-  </div>
 
-<div class="portfolio-modal modal fade" id="bagisModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 mx-auto">
-              <div class="modal-body">
-                <h2 class="text-uppercase">Otobüs biletleri</h2>
-                <p class="item-intro text-muted">Köy Öğretmenleri Projesi kapsamda gerçekleştirdiğimiz üç ana faaliyetimiz bulunuyor.</p>
-                <img class="img-fluid d-block mx-auto" src="{% static 'portfolio1.webp' %}" alt="">
-                <p>Köy Öğretmenleri Projesi”nin ana destekçisi Sabancı Vakfı’dır.
-
-Proje kapsamında yürütülen “Çocuk Atölyeleri”ni ise Dalyan Vakfı desteklemektedir.</p>--!>
-
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="mt-5 text-center">
+      <div class="mb-3">
+        KODA'nın kurulduğu günden bu yana bizlerle birlikte olan, bize gerek saha, gerekse ofis faaliyetlerimizde çokça
+        desteği ve katkısı dokunmuş o kadar çok isim var ki… Onların desteğini her zaman yanımızda hissediyoruz ve bu
+        bize çok daha fazla cesaret ve güç veriyor.
       </div>
-    </div>
-  </div>
-      <div class="portfolio-modal modal fade" id="bagisModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Konaklama</h2>
-                <p class="item-intro text-muted">Köy Öğretmenleri Projesi kapsamda gerçekleştirdiğimiz üç ana faaliyetimiz bulunuyor.</p>
-                <img class="img-fluid d-block mx-auto" src="{% static 'portfolio1.webp' %}" alt="">
-                <p>Köy Öğretmenleri Projesi”nin ana destekçisi Sabancı Vakfı’dır.
-
-Proje kapsamında yürütülen “Çocuk Atölyeleri”ni ise Dalyan Vakfı desteklemektedir.</p>
-
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="mb-3">
+        2019-2020 yılı faaliyetlerimizde bize destek olmak üzere birlikte yol alacağımız gönüllülerimiz belli oldu.
+        İlginize çok teşekkür ediyoruz.
       </div>
+      <div class="mb-3">
+        Bir sonraki yılın gereksinimlerini, 2020 Temmuz ayında yeniden değerlendirerek, bu sayfadan ve sosyal medya
+        kanallarımızdan duyuracağız. O zamana kadar bilgilerinizin kayıt altında bulunmasını isterseniz aşağıdaki formu
+        doldurabilirsiniz.
+      </div>
+      <div class="mb-3 text-center">
+        <a href="https://forms.gle/1umCWCBj39J7vMQV8" class="font-weight-bold"
+          style="color:#034080;">https://forms.gle/1umCWCBj39J7vMQV8</a>
+      </div>
+      <div class="mb-3 text-center">
+        <b style="font-size: 18px;">Bize Katılmak İster Misiniz?<i class="fas fa-hand-point-right ml-2"
+            style="color:#fab537;"></i></b>
+        <a style="color:#034080;" class="font-weight-bold ml-2"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSetzMePJwlEmW8vdHDeJpXlIEF3iDhNI0CsaG8941yTBhQj-g/viewform">Genel
+          Başvuru</a>
+      </div>
+
     </div>
-  </div>
+    <div class="mt-5 text-center">
+      <h4 class="text-center mb-3">Konaklama</h4>
+      <div class=" mb-2">
+        Köy Öğretmenleri Projesi kapsamda gerçekleştirdiğimiz üç ana faaliyetimiz bulunuyor.
+      </div>
+      <div class=" mb-3">
+        Köy Öğretmenleri Projesi”nin ana destekçisi Sabancı Vakfı’dır.
 
-  </section>
-
+        Proje kapsamında yürütülen “Çocuk Atölyeleri”ni ise Dalyan Vakfı desteklemektedir.
+      </div>
+      <img src="{% static 'portfolio1.webp' %}" alt="">
+    </div>
+</section>
 {% endblock %}
