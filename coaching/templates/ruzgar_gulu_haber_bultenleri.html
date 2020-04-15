@@ -1,64 +1,54 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
+<style>
+  .new-content{
+    border-radius: 4px;
+  }
+  .new-content a{
+    color: #fff;
+    font-weight:bold ;
+  }
+</style>
 {% endblock %}
+
 
 {% block body %}
 
 <section class="page-section">
-        <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-            <h2 class="section-heading hinty bluer h-size" style="text-align:center !important;">Rüzgar Gülü Haber Bültenleri </h2><br>
-           <!--     <form method="post" class="lang" key="form">
-                    {% csrf_token %}
-                    <div class="form-row">
-                  <div class="col-3"></div>
-                <div class="col-2">
-                    <input class="form-control monty n-size" type="text" id="name" name="name"  placeholder="Adı-Soyadı">
-                </div>
-                <div class="col-2">
-                    <input class="form-control monty n-size" type="text" id="email" name="email"  placeholder="E-mail">
-                </div>
-                      <button  type="submit" class="btn monty n-size" style="background-color:#00936F;color:white;">Abone ol!</button>
 
-              </div>
-            </form> -->
-            <h2 class="section-subheading "><br><br> <p style="color:#00936F;">2019</p>
-           <br></h2>
-
-  <a href="{% url 'bsmg_programi' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Temmuz</span></a>
-
-
-  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success monty n-size" style="background-color:#00936F;" ><span>Haziran</span></a>
-  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success" style="background-color:#00936F;" ><span>Mayıs</span></a>
-  <a href="{% url 'bsmg_programi' %}" class="btn btn-success" style="background-color:#00936F;"><span>Nisan</span></a>
-  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success" style="background-color:#00936F;"><span>Mart</span></a>
-  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success" style="background-color:#00936F;"><span>Şubat</span></a>
-  <a href="{% url 'bsmg_programi' %}" class="btn btn-success" style="background-color:#00936F;"><span>Ocak</span></a>
-
-            <h2 class="section-subheading "><br><br> <p style="color:#00936F;">2018</p>
-           <br></h2>
-
-  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Aralık</span></a>
-  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Kasım</span></a>
-  <a href="{% url 'bsmg_programi' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Ekim</span></a>
-  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success" style="background-color:#00936F;"><span>Eylül</span></a>
-  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Ağustos</span></a>
-  <a href="{% url 'bsmg_programi' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Temmuz</span></a>
-
-
-  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success" style="background-color:#00936F;"><span>Haziran</span></a>
-  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Mayıs</span></a>
-  <a href="{% url 'bsmg_programi' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Nisan</span></a>
-  <a href="{% url 'ogretmen_topluluklari' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Mart</span></a>
-  <a href="{% url 'cocuk_atolyeleri' %}" class="btn btn-success"style="background-color:#00936F;" ><span>Şubat</span></a>
-  <a href="{% url 'bsmg_programi' %}" class="btn btn-success" style="background-color:#00936F;"><span>Ocak</span></a>
-
-
-
-<br>
-
+  <div class="container">
+    <h4 class="text-center mb-4">Rüzgar Gülü Haber Bültenleri</h4>
+    <h3 class="text-center mb-4">2019</h3>
+    <div class="d-flex justify-content-center mb-4 flex-wrap">
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#00936F;"><a href="{% url 'bsmg_programi' %}" ><span>Temmuz</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#00936F;"><a href="{% url 'ogretmen_topluluklari' %}"  ><span>Haziran</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#fab537;"> <a href="{% url 'cocuk_atolyeleri' %}"><span>Mayıs</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#fab537;"><a href="{% url 'bsmg_programi' %}"><span>Nisan</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#fab537;"><a href="{% url 'ogretmen_topluluklari' %}"span>Mart</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#e45769;"> <a href="{% url 'cocuk_atolyeleri' %}" ><span>Şubat</span></a>
+      </div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#e45769;"><a href="{% url 'bsmg_programi' %}"><span>Ocak</span></a></div>
+    </div>
+    <h3 class="text-center mb-4">2018</h3>
+    <div class="d-flex justify-content-center mb-4 flex-wrap">
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#e45769;"><a href="{% url 'ogretmen_topluluklari' %}" ><span>Aralık</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#034080;"><a href="{% url 'cocuk_atolyeleri' %}"  ><span>Kasım</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#034080;"><a href="{% url 'bsmg_programi' %}"><span>Ekim</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#034080;"><a href="{% url 'ogretmen_topluluklari' %}" ><span>Eylül</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#00936F;"><a href="{% url 'cocuk_atolyeleri' %}" ><span>Ağustos</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#00936F;"><a href="{% url 'bsmg_programi' %}"><span>Temmuz</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#00936F;"><a href="{% url 'ogretmen_topluluklari' %}" ><span>Haziran</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#fab537;"><a href="{% url 'cocuk_atolyeleri' %}" ><span>Mayıs</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#fab537;"><a href="{% url 'bsmg_programi' %}"  ><span>Nisan</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#fab537;"><a href="{% url 'ogretmen_topluluklari' %}" ><span>Mart</span></a></div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#e45769;"> <a href="{% url 'cocuk_atolyeleri' %}" ><span>Şubat</span></a>
+      </div>
+      <div class="p-2 new-content mr-2 mb-3" style="background-color:#e45769;"><a href="{% url 'bsmg_programi' %}"><span>Ocak</span></a></div>
+    </div>
+  </div>
+</div>
+  
   </section>
 
 
