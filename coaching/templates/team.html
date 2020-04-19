@@ -2,470 +2,822 @@
 {% load static %}
 
 {% block head %}
+<style>
+  .circle-1 {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    margin: 0px auto;
+    padding-top: 20px;
+  }
+
+  .circle-2 {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    margin: 0px auto;
+    padding-top: 20px;
+  }
+
+  .circle-3 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0px auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .img-container {
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin: 0px auto;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #fff;
+  }
+
+  .img-container:hover .overlay {
+    opacity: .8;
+  }
+
+  .img-container .text {
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  h6 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .card-title-content {
+    padding: 1.2rem;
+  }
+
+  .card-title-content h6 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .card-title-content div {
+    font-size: 16px;
+  }
+  @media (min-width: 767.78px) and (max-width: 991.78px) {
+        .col-md-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 767.78px) {
+        .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+</style>
 {% endblock %}
 
 {% block body %}
 
+<section class="page-section">
+  <div class="container">
+    <h4 class="mb-5 text-center">KODA Ekibi</h4>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #00926e ;">
+          <div class="circle-2" style="background-color: #e45769 ;">
+            <div class="img-container" style="background-image: url('../static/img/team1.jpg');">
+              <div class="overlay">
+                <div class="text">Genel Koordinatör</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Mine Ekinci</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #fab537">
+          <div class="circle-2" style="background-color: #00926e ;">
+            <div class="img-container" style="background-image: url('../static/img/team2.jpg');">
+              <div class="overlay">
+                <div class="text">Öğretmen Toplulukları Programı Koordinatörü</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Esra Yıldırmış</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #e45769; ">
+          <div class="circle-2" style="background-color: #034080 ;">
+            <div class="img-container" style="background-image: url('../static/img/team3.jpg');">
+              <div class="overlay">
+                <div class="text">Çocuk Atölyeleri Programı Koordinatörü</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Gökçen Karaman</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #034080 ;">
+          <div class="circle-2" style="background-color: #fab537 ;">
+            <div class="img-container" style="background-image: url('../static/img/team4.jpg');">
+              <div class="overlay">
+                <div class="text">BSMG Programı Koordinatörü</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Duygu Aşık</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #00926e">
+          <div class="circle-2" style="background-color: #034080;">
+            <div class="img-container" style="background-image: url('../static/img/team5.JPG');">
+              <div class="overlay">
+                <div class="text">Eğitim Uzmanı</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Gülsüm Duman</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #fab537; ">
+          <div class="circle-2" style="background-color: #e45769 ;">
+            <div class="img-container" style="background-image: url('../static/img/team6.jpg');">
+              <div class="overlay">
+                <div class="text">İzleme ve Değerlendirme Uzmanı</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Arzu Şahin</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #fab537 ;">
+          <div class="circle-2" style="background-color: #00926e ;">
+            <div class="img-container" style="background-image: url('../static/img/team7.jpg');">
+              <div class="overlay">
+                <div class="text">Mali ve İdari İşler Koordinatörü</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Özlem Atalay Anıldı</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #00926e">
+          <div class="circle-2" style="background-color: #e45769;">
+            <div class="img-container"
+              style="background-image: url('../static/img/koda_logo.png'); background-color: #fff;">
+              <div class="overlay">
+                <div class="text">İletişim ve Kaynak Geliştirme Koordinatörü</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Menekşe Canatan</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #fab537; ">
+          <div class="circle-2" style="background-color: #034080 ;">
+            <div class="img-container" style="background-image: url('../static/img/team9.jpg');">
+              <div class="overlay">
+                <div class="text">İletişim Uzmanı</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Yunus Emre Demir</h6>
+      </div>
+    </div>
+    <h4 class="text-center mb-4 mt-4">Yönetim Kurulu Üyeleri</h4>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="text-center">
+          <div class="circle-3" style="background-image: url('../static/img/koda_logo.png');"></div>
+          <div class="card-title-content">
+            <h6 class="mb-2">Ali Sinan Kurmuş</h6>
+            <div>
+              Yönetim Kurulu Başkanı
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="text-center">
+          <div class="circle-3" style="background-image: url('../static/img/koda_logo.png');"></div>
+          <div class="card-title-content">
+            <h6 class="mb-2">Ömer Özkan</h6>
+            <div>
+              Yönetim Kurulu Başkan Yardımcısı
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="text-center">
+          <div class="circle-3" style="background-image: url('../static/img/koda_logo.png');"></div>
+          <div class="card-title-content">
+            <h6 class="mb-2">Gökçe Zeynep Kurmuş</h6>
+            <div>
+              Genel Sekreter
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="text-center">
+          <div class="circle-3" style="background-image: url('../static/img/koda_logo.png');"></div>
+          <div class="card-title-content">
+            <h6 class="mb-2">Selim Hasan</h6>
+            <div>
+              Sayman
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="text-center">
+          <div class="circle-3" style="background-image: url('../static/img/koda_logo.png');"></div>
+          <div class="card-title-content">
+            <h6 class="mb-2">M. Kayhan Karlı</h6>
+            <div>
+              Asil Üye
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="text-center">
+          <div class="circle-3" style="background-image: url('../static/img/koda_logo.png');"></div>
+          <div class="card-title-content">
+            <h6 class="mb-2">Derya Tombuloğlu</h6>
+            <div>
+              Asil Üye
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4 class="text-center mb-4 mt-4">Denetim Kurulu Üyeleri</h4>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="text-center">
+          <div class="circle-3" style="background-image: url('../static/img/koda_logo.png');"></div>
+          <div class="card-title-content">
+            <h6 class="mb-2">Ali Yalman</h6>
+            <div>
+              Denetim Kurulu Başkanı
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="text-center">
+          <div class="circle-3" style="background-image: url('../static/img/koda_logo.png');"></div>
+          <div class="card-title-content">
+            <h6 class="mb-2">İbrahim Betil</h6>
+            <div>
+              Asil Üye
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="text-center">
+          <div class="circle-3" style="background-image: url('../static/img/koda_logo.png');"></div>
+          <div class="card-title-content">
+            <h6 class="mb-2">M. Zekeriya Ürüm</h6>
+            <div>
+              Asil Üye
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 
 <section class="bg-light" id="team">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading hinty h-size" style="text-align:center !important;">KODA Ekibi</h2>
-        </div>
-      </div>
-      <center style="margin-top:50px;"><h3 class="section-subheading text-muted monty n-size" style="text-align:center !important;">Ekibimiz </h3></center>
- <div class="row">
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">Mine Ekinci</h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">Genel Koordinatör</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">Esra Yıldırmış </h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">Öğretmen Toplulukları Proje Koordinatörü</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">Menekşe Canatan</h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">İletişim Koordinatörü</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-       <div class="row">
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">Gökçen Karaman</h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">Çocuk Atölyeleri Proje Koordinatörü</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-          <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">Duygu Aşık</h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">BSMG* Proje Koordinatörü</p>
-              <p class="text-muted monty n-size" style="text-align:center !important;">*Birleştirilmiş Sınıflarda Görev Alan Köy Öğretmenlerinin Mesleki Gelişim Programı</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">Arzu Şahin</h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">İzleme ve Değerlendirme Uzmanı</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-            <center style="margin-top:50px;"><h3 class="section-subheading text-muted monty n-size" style="text-align:center !important;">Yönetim Kurulu Üyeleri </h3></center>
-
-      <div class="row">
-
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">Ali Sinan Kurmuş</h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">Yönetim Kurulu Başkanı</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">Ömer Özkan </h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">Yönetim Kurulu Başkan Yardımcısı</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">Gökçe Zeynep Kurmuş</h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">Genel Sekreter</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-          <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">Selim HASAN</h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">Sayman</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">M. Karhan Karlı</h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">Asil Üye</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">Derya Tombuloğlu</h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">Asil Üye</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <center style="margin-top:50px;"><h3 class="section-subheading text-muted" style="">Denetim Kurulu Üyeleri </h3></center>
-          <div class="row">
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">Ali Yalman</h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">Denetim Kurulu Başkanı</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">İbrahim Betil </h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">Asil Üye</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
-            <h4 class="minty h-size">M. Zekeriya Ürüm</h4>
-            <p class="text-muted monty n-size" style="text-align:center !important;">Asil Üye</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <div class="container">
+    <div class="row">
       <div class="col-lg-12 text-center">
-          <h2 class="section-heading hinty h-size">İş Birliklerimiz</h2>
+        <h2 class="section-heading hinty h-size" style="text-align:center !important;">KODA Ekibi</h2>
       </div>
-      <div class="row">
+    </div>
+    <center style="margin-top:50px;">
+      <h3 class="section-subheading text-muted monty n-size" style="text-align:center !important;">Ekibimiz </h3>
+    </center>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">Mine Ekinci</h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">Genel Koordinatör</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">Esra Yıldırmış </h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">Öğretmen Toplulukları Proje
+            Koordinatörü</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">Menekşe Canatan</h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">İletişim Koordinatörü</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">Gökçen Karaman</h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">Çocuk Atölyeleri Proje Koordinatörü
+          </p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">Duygu Aşık</h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">BSMG* Proje Koordinatörü</p>
+          <p class="text-muted monty n-size" style="text-align:center !important;">*Birleştirilmiş Sınıflarda Görev Alan
+            Köy Öğretmenlerinin Mesleki Gelişim Programı</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">Arzu Şahin</h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">İzleme ve Değerlendirme Uzmanı</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <center style="margin-top:50px;">
+      <h3 class="section-subheading text-muted monty n-size" style="text-align:center !important;">Yönetim Kurulu
+        Üyeleri </h3>
+    </center>
+
+    <div class="row">
+
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">Ali Sinan Kurmuş</h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">Yönetim Kurulu Başkanı</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">Ömer Özkan </h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">Yönetim Kurulu Başkan Yardımcısı</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">Gökçe Zeynep Kurmuş</h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">Genel Sekreter</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">Selim HASAN</h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">Sayman</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">M. Karhan Karlı</h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">Asil Üye</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">Derya Tombuloğlu</h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">Asil Üye</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <center style="margin-top:50px;">
+      <h3 class="section-subheading text-muted" style="">Denetim Kurulu Üyeleri </h3>
+    </center>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">Ali Yalman</h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">Denetim Kurulu Başkanı</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">İbrahim Betil </h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">Asil Üye</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'img/personal.png' %}" alt="">
+          <h4 class="minty h-size">M. Zekeriya Ürüm</h4>
+          <p class="text-muted monty n-size" style="text-align:center !important;">Asil Üye</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 text-center">
+      <h2 class="section-heading hinty h-size">İş Birliklerimiz</h2>
+    </div>
+    <div class="row">
       <div class="col-lg-4">
-      <div data-packed="true" style="width: 312px; pointer-events: none;" class="txtNew" id="comp-jeka3fna"><ul class="font_8" style="font-family:wfont_7314dd_b3cbf688a2a74bcb8e6eba2417aa7a45,wf_b3cbf688a2a74bcb8e6eba241,orig_hind_light; font-size:20px;">
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">AÇEV (Anne Çocuk Eğitim Vakfı) </p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Açık Açık Platformu</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Adana Final Okulları</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Alfa Tıbbi Cihazlar Pazarlama ve Ticaret Limited Şti.</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">And Gayrimenkul</p>
-	</li>
-	<li>
-      <p class="font_8 monty n-size" style="font-size:20px;">Ashoka</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Atölye Çocuk Evi</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Aydın Doğan Vakfı</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Aygenteks</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Başka Bir Okul Mümkün</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Bi’ Dünya Umut</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Bilgi Kozası Anaokulu</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Bilgi Üniversitesi Sosyal Kuluçka Merkezi</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Boyner</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Bursa İş Kadınları ve Yöneticileri Derneği</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Çatı Atölye</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">CEF Consultant Educatif Francophone</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Çocuklar İçin Felsefe</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Dalyan Vakfı</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Dalyan Vakfı</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Denge Kimya &amp; Tekstil</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Deniz-İş İlkokulu</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">DHL Worldwide Express Taşımacılık</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Eğitim Reformu Girişimi</p>
-	</li>
+        <div data-packed="true" style="width: 312px; pointer-events: none;" class="txtNew" id="comp-jeka3fna">
+          <ul class="font_8"
+            style="font-family:wfont_7314dd_b3cbf688a2a74bcb8e6eba2417aa7a45,wf_b3cbf688a2a74bcb8e6eba241,orig_hind_light; font-size:20px;">
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">AÇEV (Anne Çocuk Eğitim Vakfı) </p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Açık Açık Platformu</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Adana Final Okulları</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Alfa Tıbbi Cihazlar Pazarlama ve Ticaret Limited
+                Şti.</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">And Gayrimenkul</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Ashoka</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Atölye Çocuk Evi</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Aydın Doğan Vakfı</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Aygenteks</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Başka Bir Okul Mümkün</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Bi’ Dünya Umut</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Bilgi Kozası Anaokulu</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Bilgi Üniversitesi Sosyal Kuluçka Merkezi</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Boyner</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Bursa İş Kadınları ve Yöneticileri Derneği</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Çatı Atölye</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">CEF Consultant Educatif Francophone</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Çocuklar İçin Felsefe</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Dalyan Vakfı</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Dalyan Vakfı</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Denge Kimya &amp; Tekstil</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Deniz-İş İlkokulu</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">DHL Worldwide Express Taşımacılık</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Eğitim Reformu Girişimi</p>
+            </li>
 
 
-</ul></div>
+          </ul>
+        </div>
       </div>
       <div class="col-lg-4">
-      <div data-packed="true" style="width: 312px; pointer-events: none;" class="txtNew" id="comp-jeka3fna"><ul class="font_8" style="font-family:wfont_7314dd_b3cbf688a2a74bcb8e6eba2417aa7a45,wf_b3cbf688a2a74bcb8e6eba241,orig_hind_light; font-size:20px;">
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Fide Okulları</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Açık Açık Platformu&nbsp;</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Gençtur</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Habita</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Happy Moons-Watergarden</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">HIM-Herkes için Mimarlık</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">İlimkent Okulları</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Impact Hub</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">International Organization Development Association (IODA) Türkiye</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">İyi ki Üsküdar Var!</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">İzmir Ege Üniversitesi
+        <div data-packed="true" style="width: 312px; pointer-events: none;" class="txtNew" id="comp-jeka3fna">
+          <ul class="font_8"
+            style="font-family:wfont_7314dd_b3cbf688a2a74bcb8e6eba2417aa7a45,wf_b3cbf688a2a74bcb8e6eba241,orig_hind_light; font-size:20px;">
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Fide Okulları</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Açık Açık Platformu&nbsp;</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Gençtur</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Habita</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Happy Moons-Watergarden</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">HIM-Herkes için Mimarlık</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">İlimkent Okulları</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Impact Hub</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">International Organization Development Association
+                (IODA) Türkiye</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">İyi ki Üsküdar Var!</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">İzmir Ege Üniversitesi
 
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Dicle Üniversitesi</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Muş Alparslan Üniversitesi</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Ondokuz Mayıs Üniversitesi</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Kadıköy Impro</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Kale Grubu</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Kare Aydınlatma</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Kartal Belediyesi</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Kent ve Çocuk Atölyesi</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Muş Alparslan Üniversitesi (2018-2019)</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Narköy</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Öğretmen Ağı</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Özel ALEV Okulları</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Sabancı Vakfı​</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">YADA-Yaşama Dair Vakıf</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Samsun 19 Mayıs Üniversitesi (2018-2019)</p>
-	</li>
-</ul></div>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Dicle Üniversitesi</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Muş Alparslan Üniversitesi</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Ondokuz Mayıs Üniversitesi</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Kadıköy Impro</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Kale Grubu</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Kare Aydınlatma</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Kartal Belediyesi</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Kent ve Çocuk Atölyesi</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Muş Alparslan Üniversitesi (2018-2019)</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Narköy</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Öğretmen Ağı</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Özel ALEV Okulları</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Sabancı Vakfı​</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">YADA-Yaşama Dair Vakıf</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Samsun 19 Mayıs Üniversitesi (2018-2019)</p>
+            </li>
+          </ul>
+        </div>
       </div>
-       <div class="col-lg-4">
-      <div data-packed="true" style="width: 312px; pointer-events: none;" class="txtNew" id="comp-jeka3fna"><ul class="font_8" style="font-family:wfont_7314dd_b3cbf688a2a74bcb8e6eba2417aa7a45,wf_b3cbf688a2a74bcb8e6eba241,orig_hind_light; font-size:20px;">
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Şiddetsizlik Merkezi</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Sivil Düşün</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">T.C Çınar İlçe Milli Eğitim Müdürlüğü (2018-2019)</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">T.C Harran İlçe Milli Eğitim Müdürlüğü (2017-2018/2018-2019</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">T.C Harran Kaymakamlığı (2017-2018/2018-2019)</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">T.C. İstanbul Beykoz İlçe Milli Eğitim Müdürlüğü (2017-2018)</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">T.C. İzmir Menemen Milli Eğitim Müdürlüğü (2016-2017)</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">T.C. Kastamonu Cide İlçe Milli Eğitim Müdürlüğü (2016-2017)</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">T.C. Muş İl Milli Eğitim Müdürlüğü</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">T.C. Samsun Ayvacık İlçe Milli Eğitim Müdürlüğü (2016-2017)</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">T.C. Samsun Terme İlçe Milli Eğitim Müdürlüğü (2017-2018)</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">T.C. Sivas Gürün İlçe Milli Eğitim Müdürlüğü (2017-2018)</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Tarlamvar</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Türk Hava Yolları</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Vehbi Koç Vakfı</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Yalova Gökçe Tekstil</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">YEDA İnşaat</p>
-	</li>
-	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Yenilikçi Öğrenme Okulları (YÖM)</p>
-	</li>
-        	<li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Eğitmen Panda</p>
-	</li>
-                <li>
-	<p class="font_8 monty n-size" style="font-size:20px;">Enterkon Enternasyonel Organizasyon Müşavirlik</p>
-	</li>
-</ul></div>
-       </div>
+      <div class="col-lg-4">
+        <div data-packed="true" style="width: 312px; pointer-events: none;" class="txtNew" id="comp-jeka3fna">
+          <ul class="font_8"
+            style="font-family:wfont_7314dd_b3cbf688a2a74bcb8e6eba2417aa7a45,wf_b3cbf688a2a74bcb8e6eba241,orig_hind_light; font-size:20px;">
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Şiddetsizlik Merkezi</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Sivil Düşün</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">T.C Çınar İlçe Milli Eğitim Müdürlüğü (2018-2019)
+              </p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">T.C Harran İlçe Milli Eğitim Müdürlüğü
+                (2017-2018/2018-2019</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">T.C Harran Kaymakamlığı (2017-2018/2018-2019)</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">T.C. İstanbul Beykoz İlçe Milli Eğitim Müdürlüğü
+                (2017-2018)</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">T.C. İzmir Menemen Milli Eğitim Müdürlüğü
+                (2016-2017)</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">T.C. Kastamonu Cide İlçe Milli Eğitim Müdürlüğü
+                (2016-2017)</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">T.C. Muş İl Milli Eğitim Müdürlüğü</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">T.C. Samsun Ayvacık İlçe Milli Eğitim Müdürlüğü
+                (2016-2017)</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">T.C. Samsun Terme İlçe Milli Eğitim Müdürlüğü
+                (2017-2018)</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">T.C. Sivas Gürün İlçe Milli Eğitim Müdürlüğü
+                (2017-2018)</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Tarlamvar</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Türk Hava Yolları</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Vehbi Koç Vakfı</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Yalova Gökçe Tekstil</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">YEDA İnşaat</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Yenilikçi Öğrenme Okulları (YÖM)</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Eğitmen Panda</p>
+            </li>
+            <li>
+              <p class="font_8 monty n-size" style="font-size:20px;">Enterkon Enternasyonel Organizasyon Müşavirlik</p>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-  </section>
+</section> -->
 {% endblock %}
