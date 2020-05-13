@@ -33,5 +33,12 @@ urlpatterns = [
     path('koda-raporlari/', views.koda_raporlari, name='koda_raporlari'),
     path('kurumsal-destek/', views.kurumsal_destek, name='kurumsal_destek'),
     path('koda-haritasi/', views.koda_haritasi, name='koda_haritasi'),
+    path('cozum-masasi/', views.cozum_masasi, name='cozum_masasi'),
+    path('etkinlik-onerileri/', views.etkinlik_onerileri, name='etkinlik_onerileri'),
+    path('ogretmenlerden-gelen-etkinlikler/', views.ogretmenlerden_gelen_etkinlikler, name='ogretmenlerden_gelen_etkinlikler'),
+    path('onerilen-kaynaklar/', views.onerilen_kaynaklar, name='onerilen_kaynaklar'),
+    path('tipoti-galima-pako/', views.tipoti_galima_ve_pako, name='tipoti_galima_ve_pako'),
+    path('koylerde-uzaktan-egitim-ve-covid19/', views.koylerde_uzaktan_egitim_ve_covid19, name='koylerde_uzaktan_egitim_ve_covid19'),
+
 
 ]

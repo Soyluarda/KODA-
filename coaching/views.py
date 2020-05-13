@@ -183,5 +183,21 @@ def stratejimiz(request):
     return render(request,'stratejimiz.html')
 
 
+def cozum_masasi(request):
+    return render(request,'cozum_masasi.html')
 
+def etkinlik_onerileri(request):
+    return render(request,'etkinlik_onerileri.html')
+
+def ogretmenlerden_gelen_etkinlikler(request):
+    return render(request,'ogretmenlerden_gelen_etkinlikler.html')
+
+def onerilen_kaynaklar(request):
+    return render(request,'onerilen_kaynaklar.html')
+
+def tipoti_galima_ve_pako(request):
+    return render(request,'tipoti_galima_ve_pako.html')
+
+def koylerde_uzaktan_egitim_ve_covid19(request):
+    return render(request,'koylerde_uzaktan_egitim_ve_covid19.html')
 
