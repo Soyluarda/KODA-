@@ -5,9 +5,12 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.shortcuts import render,redirect
 from django.conf import settings
+from django.views.decorators.cache import cache_page
 
 from django.shortcuts import render
 
+
+@cache_page(600 * 600)
 def index(request):
     return render(request,'index.html')
 
