@@ -1,5 +1,5 @@
 """
-WSGI config for Abigail project.
+WSGI config for koda project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Abigail.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "koda.settings")
 
 application = get_wsgi_application()
