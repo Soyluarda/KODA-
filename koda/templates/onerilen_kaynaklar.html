@@ -2,9 +2,91 @@
 {% load static %}
 {% block head %}
 
+<style>
+    .card-shadow-green {
+        border-radius: 5px;
+        -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+        box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+    }
+
+    .card-title-content {
+        padding: 1.6rem 1.2rem;
+    }
+
+    .card-title-content h6 {
+        font-size: 19px;
+        color: #fff;
+    }
+
+    .card-title-content div {
+        font-size: 14px;
+    }
+
+    @media (min-width: 767.78px) and (max-width: 991.78px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 767.78px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+</style>
 
 {% endblock %}
 
 {% block body %}
+
+<section class="page-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h4 class="mb-3">Önerilen Kaynaklar</h4>
+        </div>
+
+        <div class="row intro-card-row">
+            <div class="col-md-4 mb-4">
+                <div class="card-shadow-green text-center h-100" style="background-color: #e45769; ">
+                    <div class="card-title-content">
+                        <h6 class="mb-3" style="min-height: 80px;display: flex;align-items: center;    justify-content: center;">İl Milli Eğitim Müdürlükleri Kaynakları</h6>
+                        <div>
+                            <a href="{% url 'ogretmen_topluluklari' %}" class="font-weight-bold"
+                                style="color:#fab638 !important;font-size: 16px;">İncele<i
+                                    class="fas fa-angle-double-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card-shadow-green text-center  h-100" style="background-color: #00926e;">
+                    <div class="card-title-content">
+                        <h6 class="mb-3" style="min-height: 80px;display: flex;align-items: center;    justify-content: center;">KODA
+                            Yayınları</h6>
+                        <div>
+                            <a href="{% url 'cocuk_atolyeleri' %}" class="font-weight-bold"
+                                style="color:#fab638 !important;font-size: 16px;">İncele<i
+                                    class="fas fa-angle-double-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card-shadow-green text-center h-100" style="background-color: #034080;">
+                    <div class="card-title-content">
+                        <h6 class="mb-3" style="min-height: 80px;display: flex;align-items: center;    justify-content: center;">Önerilen
+                            Siteler</h6>
+                        <div>
+                            <a href="{% url 'bsmg_programi' %}" class="font-weight-bold"
+                                style="color:#fab638 !important;font-size: 16px;">İncele<i
+                                    class="fas fa-angle-double-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
 
 {% endblock %}
