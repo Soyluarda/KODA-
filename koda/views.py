@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from django.shortcuts import render,redirect
 from django.conf import settings
 from django.views.decorators.cache import cache_page
-from .models import EventSuggestions, SuggestedSources, TgpAdvantures
+from .models import EventSuggestions, SuggestedSources, TgpAdvantures, RemoteLearning, TeachersDocuments
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 
