@@ -6,5 +6,11 @@
 {% endblock %}
 
 {% block body %}
+    {% for x in context %}
+        {{x.id}}
+        {{x.image}}
+        {{x.title}}
+        {{x.content}}
 
+    {% endfor %}
 {% endblock %}

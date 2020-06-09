@@ -6,8 +6,9 @@ from django.template.loader import render_to_string
 from django.shortcuts import render,redirect
 from django.conf import settings
 from django.views.decorators.cache import cache_page
-
+from .models import EventSuggestions, TeachersDocuments, SuggestedSources, TgpAdvantures, RemoteLearning
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 
 
 @cache_page(600 * 600)
@@ -187,17 +188,42 @@ def cozum_masasi(request):
     return render(request,'cozum_masasi.html')
 
 def etkinlik_onerileri(request):
-    return render(request,'etkinlik_onerileri.html')
+    context = EventSuggestions.objects.all()
+    return render(request,'etkinlik_onerileri.html', {'context': context})
+
+def etkinlik_onerileri_detay(request, id):
+    context = get_object_or_404(EventSuggestions, pk=id)
+    return render(request,'etkinlik_onerileri_detay.html', {'context': context})
 
 def ogretmenlerden_gelen_etkinlikler(request):
-    return render(request,'ogretmenlerden_gelen_etkinlikler.html')
+    context = TeachersDocuments.objects.all()
+    return render(request,'ogretmenlerden_gelen_etkinlikler.html', {'context': context})
+
+def ogretmenlerden_gelen_etkinlikler_detay(request, id):
+    context = get_object_or_404(TeachersDocuments, pk=id)
+    return render(request,'ogretmenlerden_gelen_etkinlikler_detay.html', {'context': context})
 
 def onerilen_kaynaklar(request):
-    return render(request,'onerilen_kaynaklar.html')
+    context = SuggestedSources.objects.all()
+    return render(request,'onerilen_kaynaklar.html', {'context': context})
+
+def onerilen_kaynaklar_detay(request, id):
+    context = get_object_or_404(SuggestedSources, pk=id)
+    return render(request,'onerilen_kaynaklar_detay.html', {'context': context})
 
 def tipoti_galima_ve_pako(request):
-    return render(request,'tipoti_galima_ve_pako.html')
+    context = TgpAdvantures.objects.all()
+    return render(request,'tipoti_galima_ve_pako.html', {'context': context})
+
+def tipoti_galima_ve_pako_detay(request, id):
+    context = get_object_or_404(TgpAdvantures, pk=id)
+    return render(request,'tipoti_galima_ve_pako_detay.html', {'context': context})
 
 def koylerde_uzaktan_egitim_ve_covid19(request):
-    return render(request,'koylerde_uzaktan_egitim_ve_covid19.html')
+    context = RemoteLearning.objects.all()
+    return render(request,'koylerde_uzaktan_egitim_ve_covid19.html', {'context': context})
+
+def koylerde_uzaktan_egitim_ve_covid19_detay(request):
+    context = get_object_or_404(RemoteLearning, pk=id)
+    return render(request,'koylerde_uzaktan_egitim_ve_covid19_detay.html', {'context': context})
 

@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from django.urls import path
+from django.urls import path, re_path
 from . import views
 
 urlpatterns = [
@@ -35,10 +35,19 @@ urlpatterns = [
     path('koda-haritasi/', views.koda_haritasi, name='koda_haritasi'),
     path('cozum-masasi/', views.cozum_masasi, name='cozum_masasi'),
     path('etkinlik-onerileri/', views.etkinlik_onerileri, name='etkinlik_onerileri'),
+    re_path(r'etkinlik-onerileri/(?P<id>[\w-]+)/$', views.etkinlik_onerileri_detay, name='etkinlik_onerileri_detay'),
     path('ogretmenlerden-gelen-etkinlikler/', views.ogretmenlerden_gelen_etkinlikler, name='ogretmenlerden_gelen_etkinlikler'),
+    re_path(r'ogretmenlerden-gelen-etkinlikler/(?P<id>[\w-]+)/$', views.ogretmenlerden_gelen_etkinlikler_detay, name='ogretmenlerden_gelen_etkinlikler_detay'),
     path('onerilen-kaynaklar/', views.onerilen_kaynaklar, name='onerilen_kaynaklar'),
+    re_path(r'onerilen-kaynaklar/(?P<id>[\w-]+)/$', views.onerilen_kaynaklar_detay,
+            name='onerilen_kaynaklar_detay'),
+
     path('tipoti-galima-pako/', views.tipoti_galima_ve_pako, name='tipoti_galima_ve_pako'),
+    re_path(r'tipoti-galima-pako/(?P<id>[\w-]+)/$', views.tipoti_galima_ve_pako_detay,
+            name='tipoti_galima_ve_pako_detay'),
     path('koylerde-uzaktan-egitim-ve-covid19/', views.koylerde_uzaktan_egitim_ve_covid19, name='koylerde_uzaktan_egitim_ve_covid19'),
+    re_path(r'koylerde-uzaktan-egitim-ve-covid19/(?P<id>[\w-]+)/$', views.koylerde_uzaktan_egitim_ve_covid19_detay,
+            name='koylerde_uzaktan_egitim_ve_covid19_detay'),
 
 
 ]
