@@ -23,7 +23,7 @@ class SuggestedSources(models.Model):
     def __str__(self):
         return self.title
 
-"""
+
 class TeachersDocuments(models.Model):
     title = models.CharField(max_length=250, null=True, blank=True)
     header_image = models.ImageField(null=True, blank=True)
@@ -47,7 +47,7 @@ class RemoteLearning(models.Model):
     def __str__(self):
         return self.title
 
-"""
+
 
 class EventSuggestions(models.Model):
     title = models.CharField(max_length=250, null=True, blank=True)
