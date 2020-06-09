@@ -2,9 +2,187 @@
 {% load static %}
 {% block head %}
 
+<style>
+    .card-img-content {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+        height: 300px;
+    }
 
+    .card-circle {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .card-shadow-green {
+        -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+        box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+
+    }
+
+    .card-shadow-green:hover {
+        -webkit-box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(179, 179, 179, .2);
+        box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(28, 202, 167, .2);
+    }
+
+    .card-title-content {
+        padding: 1.2rem;
+    }
+
+    .card-title-content div {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+    .social-icon-content {
+        width: 60px;
+        height: 60px;
+        border-radius: 4px;
+    }
+
+    @media (min-width: 991.78px) and (max-width: 1240px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 991.78px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+</style>
 {% endblock %}
 
 {% block body %}
+<section class="page-section">
+    <div class="container">
+        <div class="mb-5">
+            <h4 class="text-center mb-4">Tipoti, Galima ve Pako'nun Maceraları</h4>
+            <div>
+                Tipoti, Galima ve Pako'nun Maceraları başlıyooor! 🌈
+            </div>
+            <br>
+            <div>
+                Köy Okulları Değişim Ağı (KODA) olarak, uzaktan eğitim sürecinin köylerde yaşayan çocuklar için de en
+                verimli hale getirilmesine yönelik bir çok çalışma yürütüyoruz.
+            </div>
+            <br>
+            <div>
+                Nef Vakfı iş birliğinde, İnternet erişimi olmayan veya kısıtlı olan çocuklar için belli kazanımları
+                hedefleyen, yaklaşık 20 dakikalık ses kayıtlarından oluşan ve çocuklara uygun olarak hikayeleştirilmiş
+                bir içerik hazırladık: Tipoti, Galima ve Pako'nun Maceraları!
+            </div>
+            <br>
+            <div>
+                Çocukların evde etkinlik yapabilmeleri için dışarıdan malzeme temin etmeleri veya takas yapmaları salgın
+                boyunca riskli. Bu durumu göz önünde bulundurarak, evdeki materyaller ile çocukların kolayca
+                uygulayabileceği etkinlikler tasarladık. Üç kahraman etrafında kurguladığımız hikayenin içinde bu
+                etkinlikler yer alıyor.
+            </div>
+            <br>
+            <div>
+                Hikayeleştirilmiş içerikler çocukların; belli kazanımlara sahip olmalarını sağlıyor, tekerlemeler ile
+                dil gelişimlerine katkı sunuyor, hayal gücü ve yaratıcılıklarını besliyor ve hikayedeki kahramanların
+                sorunlarını çözerken problem çözme becerileri de gelişiyor.
+            </div>
+            <br>
+            <div>
+                Tipoti, Galima ve Pako'nun maceralarına Youtube ve Soundcloud hesaplarımızdan erişebilir veya aşağıdaki
+                linkler üzerinden ses veya PDF dosyalarını indirerek öğrencilerinizle paylaşabilirsiniz!
+            </div>
+            <br>
+            <div>
+                <b>Not:</b> Sevgili öğretmenler, bu hikayeleri doğrudan öğrencilerinize gönderirken internet sitemizde
+                bulunan MP3 formatındaki dosyaları kullanmanızı öneririz. Böylece öğrencilerinizin daha az internet
+                kullanımı ile hikayeleri dinlemelerini sağlayabilirsiniz.
+            </div>
+
+        </div>
+        <div class="row intro-card-row">
+            <div class="col-md-6 mb-5">
+                <div class="card-shadow-green text-center h-100">
+                    <div class="card-img-content text-center">
+                        <iframe class="Video19214044--playerContainer" data-player-name="YouTube" frameborder="0"
+                            allowfullscreen="1"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            title="YouTube video player" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/x7CtY7G5kwM?autoplay=0&amp;mute=0&amp;controls=1&amp;loop=0&amp;origin=https%3A%2F%2Fwww.kodegisim.org&amp;playsinline=1&amp;enablejsapi=1&amp;widgetid=5"></iframe>
+                    </div>
+
+                    <div class="card-title-content">
+                        <h6>Tipoti, Galima ve Pako'nun Maceraları - 22:
+                            Muğla Maceraları</h6>
+                        <div>
+                            <div class="text-center d-flex justify-content-center align-items-center"
+                                style="margin: 0px auto; ">
+                                <a style="background-color: #fab537;" class="social-icon-content mr-3"
+                                    href="{% static 'cocuk_atolyeleri_rehberi_2019.pdf' %}" target="_blank">
+                                    <img class="mt-1" data-type="image" itemprop="image"
+                                        src="{% static 'img/icons-pdf.png' %}" width="50px" height="50px">
+                                </a>
+                                <a style="background-color: #00926e;" class="social-icon-content"
+                                    href="{% static 'cocuk_atolyeleri_rehberi_2019.pdf' %}" target="_blank">
+                                    <div class="text-white">
+                                        <h6 class="mb-1">MP3</h6>
+                                    </div>
+                                    <i class="fas fa-download text-white" style="font-size: 18px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="card-shadow-green text-center h-100">
+                    <div class="card-img-content text-center">
+                        <iframe class="Video19214044--playerContainer" data-player-name="YouTube" frameborder="0"
+                            allowfullscreen="1"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            title="YouTube video player" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/x7CtY7G5kwM?autoplay=0&amp;mute=0&amp;controls=1&amp;loop=0&amp;origin=https%3A%2F%2Fwww.kodegisim.org&amp;playsinline=1&amp;enablejsapi=1&amp;widgetid=5"
+                            id="widget6"></iframe>
+                    </div>
+
+                    <div class="card-title-content">
+                        <h6>Tipoti, Galima ve Pako'nun Maceraları - 22:
+                            Muğla Maceraları</h6>
+                        <div>
+                            <div class="text-center d-flex justify-content-center align-items-center"
+                                style="margin: 0px auto; ">
+                                <a style="background-color: #fab537;" class="social-icon-content mr-3"
+                                    href="{% static 'cocuk_atolyeleri_rehberi_2019.pdf' %}" target="_blank">
+                                    <img class="mt-1" data-type="image" itemprop="image"
+                                        src="{% static 'img/icons-pdf.png' %}" width="50px" height="50px">
+                                </a>
+                                <a style="background-color: #00926e;" class="social-icon-content"
+                                    href="{% static 'cocuk_atolyeleri_rehberi_2019.pdf' %}" target="_blank">
+                                    <div class="text-white">
+                                        <h6 class="mb-1">MP3</h6>
+                                    </div>
+                                    <i class="fas fa-download text-white" style="font-size: 18px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
 
 {% endblock %}
