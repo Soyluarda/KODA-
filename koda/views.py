@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from django.shortcuts import render,redirect
 from django.conf import settings
 from django.views.decorators.cache import cache_page
-from .models import EventSuggestions, SuggestedSources, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries
+from .models import EventSuggestions, SuggestedSources, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 
@@ -237,11 +237,13 @@ def koda_gunceleri_detay(request, id):
     return render(request,'koda_gunceleri_detay.html', {'context': context})
 
 def il_milli_egitim(request):
-    return render(request,'il_milli_egitim.html' )
+    return render(request,'il_milli_egitim.html'
 
 
 def onerilen_siteler(request):
-    return render(request,'onerilen_siteler.html')
+    context = SuggestedSitesType.objects.all()
+    return render(request,'onerilen_siteler.html', {'context': context})
 
-def onerilen_siteler_detay(request):
-    return render(request,'onerilen_siteler_detay.html')
+def onerilen_siteler_detay(request, id):
+    context = get_object_or_404(SuggestedSites, pk=id)
+    return render(request,'onerilen_siteler_detay.html', {'context': context})

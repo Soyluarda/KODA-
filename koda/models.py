@@ -35,7 +35,6 @@ class TeachersDocuments(models.Model):
     def __str__(self):
         return self.title
         
-        
 
 class RemoteLearning(models.Model):
     title = models.CharField(max_length=250, null=True, blank=True)
@@ -47,7 +46,6 @@ class RemoteLearning(models.Model):
 
     def __str__(self):
         return self.title
-
 
 
 class EventSuggestions(models.Model):
@@ -65,6 +63,21 @@ class KodaDiaries(models.Model):
     header_image = models.ImageField(null=True, blank=True)
     content = RichTextField(null=True, blank=True)
     author = models.CharField(max_length=100, null=True, blank=True)
+
+    def __str__(self):
+        return self.title
+
+class SuggestedSitesType(models.Model):
+    site_name = models.CharField(max_length=250)
+
+    def __str__(self):
+        return self.site_name
+
+
+class SuggestedSites(models.Model):
+    title = models.CharField(max_length=250)
+    site_type = models.ForeignKey(SuggestedSitesType, on_delete=models.CASCADE)
+    url = models.URLField()
 
     def __str__(self):
         return self.title
