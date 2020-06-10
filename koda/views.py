@@ -237,7 +237,7 @@ def koda_gunceleri_detay(request, id):
     return render(request,'koda_gunceleri_detay.html', {'context': context})
 
 def il_milli_egitim(request):
-    return render(request,'il_milli_egitim.html'
+    return render(request,'il_milli_egitim.html')
 
 
 def onerilen_siteler(request):
