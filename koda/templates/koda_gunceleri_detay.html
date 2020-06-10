@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+
+{% endblock %}
+
+{% block body %}
+    {% for x in context %}
+        {{x.id}}
+        {{x.image}}
+        {{x.title|safe}}
+        {{x.content|safe}}
+
+    {% endfor %}
+{% endblock %}
