@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 
 urlpatterns = [
     url(r'^admin/',admin.site.urls),
-    path('', include('koda.urls'))
+    path('', include('koda.urls')),
+    re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
+
 ]

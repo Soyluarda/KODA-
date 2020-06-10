@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 from ckeditor.fields import RichTextField
 from django.db import models
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class TgpAdvantures(models.Model):
@@ -52,7 +53,7 @@ class RemoteLearning(models.Model):
 class EventSuggestions(models.Model):
     title = models.CharField(max_length=250, null=True, blank=True)
     header_image = models.ImageField(null=True, blank=True)
-    content = RichTextField(null=True, blank=True)
+    content = RichTextUploadingField(null=True, blank=True)
     pdf = models.URLField(max_length=250, null=True, blank=True)
 
     def __str__(self):

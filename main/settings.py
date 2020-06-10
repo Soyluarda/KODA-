@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -141,4 +142,7 @@ CKEDITOR_CONFIGS = {
         'width': 800,
     },
 }
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
 

@@ -49,5 +49,18 @@ urlpatterns = [
     re_path(r'koylerde-uzaktan-egitim-ve-covid19/(?P<id>[\w-]+)/$', views.koylerde_uzaktan_egitim_ve_covid19_detay,
             name='koylerde_uzaktan_egitim_ve_covid19_detay'),
 
+    path('koda-gunceleri/', views.koda_gunceleri,
+         name='koda_gunceleri'),
+    re_path(r'koda-gunceleri/(?P<id>[\w-]+)/$', views.koda_gunceleri_detay,
+            name='koda_gunceleri_detay'),
+
+    path('il-milli-egitim-mudurlukleri/', views.il_milli_egitim,
+             name='il_milli_egitim'),
+
+    re_path(r'onerilen-siteler/(?P<id>[\w-]+)/$', views.onerilen_siteler_detay,
+            name='onerilen_siteler_detay'),
+
+    path('onerilen-siteler/', views.onerilen_siteler,
+         name='onerilen_siteler'),
 
 ]
