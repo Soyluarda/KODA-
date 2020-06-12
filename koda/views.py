@@ -245,5 +245,7 @@ def onerilen_siteler(request):
     return render(request,'onerilen_siteler.html', {'context': context})
 
 def onerilen_siteler_detay(request, id):
-    context = get_object_or_404(SuggestedSites, site_type=id)
+    context = SuggestedSites.objects.all().filter(site_type=id)
+
+
     return render(request,'onerilen_siteler_detay.html', {'context': context})
