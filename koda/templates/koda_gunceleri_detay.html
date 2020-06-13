@@ -1,16 +1,25 @@
+
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
 
-
+<style>
+</style>
 {% endblock %}
 
 {% block body %}
-    {% for x in context %}
-        {{x.id}}
-        {{x.image}}
-        {{x.title|safe}}
-        {{x.content|safe}}
+<section class="page-section">
+    <div class="container">
+        {% for x in context %}
+        <div class="mb-5">
+            <h4 class="text-center">{{x.title}}</h4>
+        </div>
+        <div >
+                {{x.content|safe}}
+        </div>
+        {% endfor %}
+    </div>
+</section>
 
-    {% endfor %}
+
 {% endblock %}
