@@ -110,6 +110,7 @@
 
         </div>
         <div class="row intro-card-row">
+            {% for x in context %}
             <div class="col-md-6 mb-5">
                 <div class="card-shadow-green text-center h-100">
                     <div class="card-img-content text-center">
@@ -117,22 +118,21 @@
                             allowfullscreen="1"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             title="YouTube video player" width="100%" height="100%"
-                            src="https://www.youtube.com/embed/x7CtY7G5kwM?autoplay=0&amp;mute=0&amp;controls=1&amp;loop=0&amp;origin=https%3A%2F%2Fwww.kodegisim.org&amp;playsinline=1&amp;enablejsapi=1&amp;widgetid=5"></iframe>
+                            src="{{x.youtube_url}}"></iframe>
                     </div>
 
                     <div class="card-title-content">
-                        <h6>Tipoti, Galima ve Pako'nun Maceraları - 22:
-                            Muğla Maceraları</h6>
+                        <h6>{{x.title}}</h6>
                         <div>
                             <div class="text-center d-flex justify-content-center align-items-center"
                                 style="margin: 0px auto; ">
                                 <a style="background-color: #fab537;" class="social-icon-content mr-3"
-                                    href="{% static 'cocuk_atolyeleri_rehberi_2019.pdf' %}" target="_blank">
+                                    href="{{x.pdf }}" target="_blank">
                                     <img class="mt-1" data-type="image" itemprop="image"
                                         src="{% static 'img/icons-pdf.png' %}" width="50px" height="50px">
                                 </a>
                                 <a style="background-color: #00926e;" class="social-icon-content"
-                                    href="{% static 'cocuk_atolyeleri_rehberi_2019.pdf' %}" target="_blank">
+                                    href="{{ x.mp3}}" target="_blank">
                                     <div class="text-white">
                                         <h6 class="mb-1">MP3</h6>
                                     </div>
@@ -144,41 +144,7 @@
                 </div>
 
             </div>
-            <div class="col-md-6 mb-5">
-                <div class="card-shadow-green text-center h-100">
-                    <div class="card-img-content text-center">
-                        <iframe class="Video19214044--playerContainer" data-player-name="YouTube" frameborder="0"
-                            allowfullscreen="1"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            title="YouTube video player" width="100%" height="100%"
-                            src="https://www.youtube.com/embed/x7CtY7G5kwM?autoplay=0&amp;mute=0&amp;controls=1&amp;loop=0&amp;origin=https%3A%2F%2Fwww.kodegisim.org&amp;playsinline=1&amp;enablejsapi=1&amp;widgetid=5"
-                            id="widget6"></iframe>
-                    </div>
-
-                    <div class="card-title-content">
-                        <h6>Tipoti, Galima ve Pako'nun Maceraları - 22:
-                            Muğla Maceraları</h6>
-                        <div>
-                            <div class="text-center d-flex justify-content-center align-items-center"
-                                style="margin: 0px auto; ">
-                                <a style="background-color: #fab537;" class="social-icon-content mr-3"
-                                    href="{% static 'cocuk_atolyeleri_rehberi_2019.pdf' %}" target="_blank">
-                                    <img class="mt-1" data-type="image" itemprop="image"
-                                        src="{% static 'img/icons-pdf.png' %}" width="50px" height="50px">
-                                </a>
-                                <a style="background-color: #00926e;" class="social-icon-content"
-                                    href="{% static 'cocuk_atolyeleri_rehberi_2019.pdf' %}" target="_blank">
-                                    <div class="text-white">
-                                        <h6 class="mb-1">MP3</h6>
-                                    </div>
-                                    <i class="fas fa-download text-white" style="font-size: 18px;"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            {% endfor %}
         </div>
 
     </div>
