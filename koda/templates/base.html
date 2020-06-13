@@ -27,6 +27,16 @@
   <link href="{% static 'css/agency.min.css' %}" rel="stylesheet">
 
   <style>
+
+@font-face {
+      font-family: ProximaNovaSbold;
+      src: url("../static/Proxima-Nova-Sbold.otf");
+    }
+
+    .navbar, .collapse.navbar-collapse,.navbar-nav,  .nav-link {
+      font-family: ProximaNovaSbold !important;
+    }
+
     @media (min-width: 1200px) {
       .container {
         max-width: 1340px;
@@ -53,7 +63,7 @@
       }
 
       .navbar {
-        font-family: ProximaNovaSbold;
+        /* font-family: ProximaNovaSbold !important;  */
         background: rgb(255, 255, 255, .9);
       }
 
@@ -227,15 +237,6 @@
       color: #737373 !important;
     }
 
-    @font-face {
-      font-family: ProximaNovaSbold;
-      src: url("../static/Proxima-Nova-Sbold.otf");
-    }
-
-    .navbar {
-      font-family: ProximaNovaSbold;
-    }
-
     .nav-link {
       display: block;
       padding: .5rem 1rem;
@@ -337,20 +338,6 @@
     }
 
 
-    .hinty {
-      font-family: Hind !important;
-      text-align: left !important;
-    }
-
-    .monty {
-      font-family: montserrat !important;
-      text-align: left !important;
-    }
-
-    .n-size {
-      font-size: 16px !important;
-    }
-
     .h-size {
       font-size: 28px !important;
     }
@@ -433,11 +420,13 @@
               ÇÖZÜM MASASI
             </a>
             <div class="dropdown-menu dropdown-toggle" aria-labelledby="navbarDropdownMenuLink3">
-              <a class=" js-scroll-trigger" href="{% url 'etkinlik_onerileri' %}">Etkinlik Önerileri</a>
-              <a class=" js-scroll-trigger" href="{% url 'ogretmenlerden_gelen_etkinlikler' %}">Öğretmenlerden Gelen Etkinlikler</a>
-              <a class=" js-scroll-trigger" href="{% url 'onerilen_kaynaklar' %}">Önerilen Kaynaklar</a>
-              <a class=" js-scroll-trigger" href="{% url 'tipoti_galima_ve_pako' %}">Tipoti Galima ve Pako'nun Maceraları</a>
               <a class=" js-scroll-trigger" href="{% url 'koylerde_uzaktan_egitim_ve_covid19' %}">Köylerde Uzaktan Eğitim ve Covid-19</a>
+              <a class=" js-scroll-trigger" href="{% url 'etkinlik_onerileri' %}">Etkinlik Önerileri</a>
+              <a class=" js-scroll-trigger" href="{% url 'onerilen_kaynaklar' %}">Önerilen Kaynaklar</a>
+             
+              <a class=" js-scroll-trigger" href="{% url 'tipoti_galima_ve_pako' %}">Tipoti Galima ve Pako'nun Maceraları</a>
+              <a class=" js-scroll-trigger" href="{% url 'ogretmenlerden_gelen_etkinlikler' %}">Öğretmenlerden Gelen Etkinlikler</a>
+              
                <a class=" js-scroll-trigger" href="{% url 'koda_gunceleri' %}">KODA günceleri</a>
             </div>
           </li>
