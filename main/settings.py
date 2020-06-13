@@ -134,13 +134,28 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 
-
 CKEDITOR_CONFIGS = {
     'default': {
-       # 'toolbar': 'full',
+        'toolbar': 'Custom',
         'height': 300,
         'width': 800,
+        'toolbar_Custom':[
+            ['Styles','Format','Bold','Italic','Underline','Strike','SpellChecker','Undo','Redo'],
+            ['Link','Unlink','Anchor'],
+            ['Image','Flash','Table','HorizontalRule'],
+            ['TextColor','BgColor'],
+            ['Smiley','SpecialChar'],['Source','Youtube']
+        ],
+        'extraPlugins': 'youtube'
     },
+    'special': {
+        'toolbar': 'Special',
+        'toolbar_Special': [
+            ['Bold','CodeSnippet','Youtube'],
+        ],
+        'extraPlugins': ','.join(['codesnippet', 'youtube']),
+    }
+
 }
 
 CKEDITOR_UPLOAD_PATH = "uploads/"

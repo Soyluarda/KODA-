@@ -233,7 +233,7 @@ def koda_gunceleri(request):
     return render(request,'koda_gunceleri.html', {'context': context})
 
 def koda_gunceleri_detay(request, id):
-    context = get_object_or_404(KodaDiaries, pk=id)
+    context = KodaDiaries.objects.filter(id=id)
     return render(request,'koda_gunceleri_detay.html', {'context': context})
 
 def il_milli_egitim(request):
