@@ -36,82 +36,9 @@
 
 <section class="page-section">
     <div class="container">
-        <h4 class="mb-4 text-center">İl Milli Eğitim Müdürlükleri Kaynakları</h4>
-        <div class="mb-5">
-            <h6 class="mb-4">Bursa İl Milli Eğitim Müdürlüğü</h6>
-            <div class="d-flex flex-row flex-wrap mb-3">
-                <div class="pr-4" style="max-width: 280px;">
-                    <div class="card-shadow-green text-center d-flex justify-content-center align-items-center"
-                        style="background-color: #00926e;width: 80px;height: 80px;margin: 0px auto; ">
-                        <a href="{% static 'birlestirilmis_sınıflı_koy_okulları_etkinlik_kitabi _2019.pdf' %}"
-                            target="_blank">
-                            <img data-type="image" width="60px" height="60px" itemprop="image"
-                                src="{% static 'img/icons-pdf.png' %}">
-                        </a>
-                    </div>
-                    <div class="mt-3 text-center">
-                        <div> 1. Sınıf</div>
-                    </div>
-                </div>
-                <div class="pr-4" style="max-width: 280px;">
-                    <div class="card-shadow-green text-center d-flex justify-content-center align-items-center"
-                        style="background-color: #00926e;width: 80px;height: 80px;margin: 0px auto; ">
-                        <a href="{% static 'birlestirilmis_sınıflı_koy_okulları_etkinlik_kitabi _2019.pdf' %}"
-                            target="_blank">
-                            <img data-type="image" width="60px" height="60px" itemprop="image"
-                                src="{% static 'img/icons-pdf.png' %}">
-                        </a>
-                    </div>
-                    <div class="mt-3 text-center">
-                        <div> 2. Sınıf</div>
-                    </div>
-                </div>
-                <div class="pr-4" style="max-width: 280px;">
-                    <div class="card-shadow-green text-center d-flex justify-content-center align-items-center"
-                        style="background-color: #00926e;width: 80px;height: 80px;margin: 0px auto; ">
-                        <a href="{% static 'birlestirilmis_sınıflı_koy_okulları_etkinlik_kitabi _2019.pdf' %}"
-                            target="_blank">
-                            <img data-type="image" width="60px" height="60px" itemprop="image"
-                                src="{% static 'img/icons-pdf.png' %}">
-                        </a>
-                    </div>
-                    <div class="mt-3 text-center">
-                        <div> 3. Sınıf</div>
-                    </div>
-                </div>
-                <div class="pr-4" style="max-width: 280px;">
-                    <div class="card-shadow-green text-center d-flex justify-content-center align-items-center"
-                        style="background-color: #00926e;width: 80px;height: 80px;margin: 0px auto; ">
-                        <a href="{% static 'birlestirilmis_sınıflı_koy_okulları_etkinlik_kitabi _2019.pdf' %}"
-                            target="_blank">
-                            <img data-type="image" width="60px" height="60px" itemprop="image"
-                                src="{% static 'img/icons-pdf.png' %}">
-                        </a>
-                    </div>
-                    <div class="mt-3 text-center">
-                        <div> 4. Sınıf</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="mb-5">
-            <h6 class="mb-4">Diyarbakır İl Milli Eğitim Müdürlüğü</h6>
-            <div class="d-flex flex-row flex-wrap mb-3">
-                <div class="pr-4" style="max-width: 280px;">
-                    <div class="card-shadow-green text-center d-flex justify-content-center align-items-center"
-                        style="background-color: #00926e;width: 80px;height: 80px;margin: 0px auto; ">
-                        <a href="{% static 'birlestirilmis_sınıflı_koy_okulları_etkinlik_kitabi _2019.pdf' %}"
-                            target="_blank">
-                            <img data-type="image" width="60px" height="60px" itemprop="image"
-                                src="{% static 'img/icons-pdf.png' %}">
-                        </a>
-                    </div>
-                    <div class="mt-3 text-center">
-                        <div> Etkinlik Kitabı</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% for x in context %}
+            {{x.content|safe}}
+        {% endfor %}
     </div>
 </section>
 
