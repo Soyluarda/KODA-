@@ -2,9 +2,22 @@
 {% load static %}
 {% block head %}
 
-
+<style>
+</style>
 {% endblock %}
 
 {% block body %}
+<section class="page-section">
+    <div class="container">
+        <div class="mb-5">
+            <h4 class="text-center">{{context.header_content}}</h4>
+        </div>
+        <div >
+                {{context.content|safe}}
+        </div>
+
+    </div>
+</section>
+
 
 {% endblock %}
