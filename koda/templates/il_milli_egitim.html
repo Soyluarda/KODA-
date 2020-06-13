@@ -36,9 +36,19 @@
 
 <section class="page-section">
     <div class="container">
-        {% for x in context %}
-            {{x.content|safe}}
-        {% endfor %}
+        <div class="text-center mb-5">
+            <h4 class="mb-3">İl Milli Eğitim Müdürlükleri Kaynakları</h4>
+        </div>
+        <div class="row intro-card-row">
+            {% for x in context %}
+            <div class="col-md-4 mb-4">
+                {{x.content|safe}}
+            </div>
+
+            {% endfor %}
+
+        </div>
+
     </div>
 </section>
 
