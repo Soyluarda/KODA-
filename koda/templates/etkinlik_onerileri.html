@@ -86,12 +86,12 @@
             <div class="col-md-4 mb-4">
                 <div class="card-shadow-green text-center h-100">
                     <div class="card-img-content text-center py-4"
-                        style="background-image: url('../{{ x.header_image.url }}');">
+                        style="background-image: url('../{{ x.header_image }}');">
                     </div>
                     <div class="card-title-content">
                         <h6>{{x.title|safe}}</h6>
                         <div class="mb-3">
-                            {{x.content|safe}}
+                            {{x.header_content|safe}}
                         </div>
                         <a class="py-1 px-2 link" href="{% url 'etkinlik_onerileri_detay' x.id %}">
                             <span class="text-white">İncelemek için tıklayabilirsiniz!</span>
