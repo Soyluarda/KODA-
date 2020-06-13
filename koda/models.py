@@ -61,6 +61,7 @@ class RemoteLearning(models.Model):
 class EventSuggestions(models.Model):
     title = models.CharField(max_length=250, null=True, blank=True)
     header_image = models.ImageField(null=True, blank=True)
+    header_content = models.CharField(max_length=250, null=True, blank=True)
     content = RichTextUploadingField(null=True,
                                      blank=True,
                                      external_plugin_resources=[(
@@ -103,4 +104,16 @@ class SuggestedSites(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ilMilliEgitim(models.Model):
+    content = RichTextUploadingField(null=True,
+                                     blank=True,
+                                     external_plugin_resources=[(
+                                         'youtube',
+                                         '/static/vendor/ckeditor_plugins/youtube/youtube/',
+                                         'plugin.js',
+                                     )],
+                                     )
+
 
