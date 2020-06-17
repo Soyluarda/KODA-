@@ -76,7 +76,6 @@ class EventSuggestions(models.Model):
 
 class KodaDiaries(models.Model):
     title = models.CharField(max_length=250, null=True, blank=True)
-    header_image = models.ImageField(null=True, blank=True)
     content = RichTextUploadingField(null=True,
                                      blank=True,
                                      external_plugin_resources=[(

@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 from django.urls import path, re_path
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/',admin.site.urls),
     path('', include('koda.urls')),
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

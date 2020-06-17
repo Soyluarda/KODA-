@@ -2,9 +2,6 @@
 {% load static %}
 {% block head %}
 
-<style>
-   
-</style>
 {% endblock %}
 
 {% block body %}
@@ -13,10 +10,9 @@
         <div class="mb-5">
             <h4 class="text-center">{{context.title}}</h4>
         </div>
-        <div >
-                {{context.content|safe}}
+        <div>
+            {{context.content|safe}}
         </div>
-
     </div>
 </section>
 
