@@ -8,7 +8,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class TgpAdvantures(models.Model):
     title = models.CharField(max_length=250, null=True, blank=True)
     youtube_url = models.URLField(max_length=250, null=True, blank=True)
-    pdf = models.FileField(null=True, blank=True)
+    pdf = models.URLField(max_length=250, null=True, blank=True)
     mp3 = models.URLField(max_length=250, null=True, blank=True)
 
     def __str__(self):
