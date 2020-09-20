@@ -1,0 +1,302 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<style>
+  .circle-1 {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    margin: 0px auto;
+    padding-top: 20px;
+  }
+
+  .circle-2 {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    margin: 0px auto;
+    padding-top: 20px;
+  }
+
+  .circle-3 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0px auto;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .img-container {
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin: 0px auto;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #fff;
+  }
+
+  .img-container:hover .overlay {
+    opacity: .8;
+  }
+
+  .img-container .text {
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  h6 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .card-title-content {
+    padding: 1.2rem;
+  }
+
+  .card-title-content h6 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .card-title-content div {
+    font-size: 16px;
+  }
+  @media (min-width: 767.78px) and (max-width: 991.78px) {
+        .col-md-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 767.78px) {
+        .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+
+<section class="page-section">
+  <div class="container">
+    <h4 class="mb-5 text-center">Eğitmenlerimiz</h4>
+    <div class="row">
+
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #00926e ;">
+          <div class="circle-2" style="background-color: #e45769 ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Aysel Erkovan.jpg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Aysel Erkovan</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #fab537">
+          <div class="circle-2" style="background-color: #00926e ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Burçak Öner.jpg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Burçak Öner</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #e45769; ">
+          <div class="circle-2" style="background-color: #034080 ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Evin Doğan Kor.jpg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Evin Doğan Kor</h6>
+        <p class="text-center mt-3 text-muted">Covid-19 Bilgi İletişim Ağı Arama Ekibi Üyesi</p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #00926e ;">
+          <div class="circle-2" style="background-color: #e45769 ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/İlkay Nişancı.jpeg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">İlkay Nişancı</h6>
+        <p class="text-center mt-3 text-muted">Orff-Schulwerk Elementer <br> Müzik ve Hareket Eğitimcisi</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #fab537">
+          <div class="circle-2" style="background-color: #00926e ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Kemal Altunboğa.jpg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Kemal Altunboğa</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #e45769; ">
+          <div class="circle-2" style="background-color: #034080 ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Kenan Diribaş.jpeg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Kenan Diribaş</h6>
+        <p class="text-center mt-3 text-muted">Meslek Gelişim Uzmanı</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #00926e ;">
+          <div class="circle-2" style="background-color: #e45769 ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Mehmet Ateş.jpg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Mehmet Ateş</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #fab537">
+          <div class="circle-2" style="background-color: #00926e ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Mustafa Bektaş.jpg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Mustafa Bektaş</h6>
+        <p class="text-center mt-3 text-muted">Kırsal Kalkınma ve Doğa Gönüllüsü</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #e45769; ">
+          <div class="circle-2" style="background-color: #034080 ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Nihan Uçar.png');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Nihan Uçar</h6>
+      </div>
+
+
+
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #00926e ;">
+          <div class="circle-2" style="background-color: #e45769 ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Nurcan İnan.jpeg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Nurcan İnan</h6>
+        <p class="text-center mt-3 text-muted">Eğitim Programları Geliştirme Uzmanı</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #fab537">
+          <div class="circle-2" style="background-color: #00926e ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Nurçin Karabıyık.jpeg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Nurçin Karabıyık</h6>
+        <p class="text-center mt-3 text-muted">Yaratıcı Drama Lideri <br> Tiyatro-Mim Sanatçısı </p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #e45769; ">
+          <div class="circle-2" style="background-color: #034080 ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Orhan Cengiz.jpg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Orhan Cengiz</h6>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #00926e ;">
+          <div class="circle-2" style="background-color: #e45769 ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Ramazan Sağ.jpg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Ramazan Sağ</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #fab537">
+          <div class="circle-2" style="background-color: #00926e ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Selma Hekim.JPG');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Selma Hekim</h6>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #e45769; ">
+          <div class="circle-2" style="background-color: #034080 ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Tülin Özçağır.JPG');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Tülin Özçağır</h6>
+        <p class="text-center mt-3 text-muted">Hikaye Anlatıcısı<br> Öğretmen</p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #00926e ;">
+          <div class="circle-2" style="background-color: #e45769 ;">
+            <div class="img-container" style="background-image: url('../static/img/Eğitmenlerimiz/Zeynep Gülçin Altun.jpg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Zeynep Gülçin Altun</h6>
+      </div>
+
+
+
+    </div>
+    <h4 class="text-center mb-4 mt-4">Danışmanlarımız</h4>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #00926e ;">
+          <div class="circle-2" style="background-color: #e45769 ;">
+            <div class="img-container" style="background-image: url('../static/img/Danışmanlarımız/Haluk Aykul.jpg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Haluk Aykul</h6>
+        <p class="text-center mt-3 text-muted"> <b>Next Impact Danışmanlık </b><br>Strateji ve İş Birlikleri
+          <br>Danışmanı</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="circle-1" style="background-color: #fab537">
+          <div class="circle-2" style="background-color: #00926e ;">
+            <div class="img-container" style="background-image: url('../static/img/Danışmanlarımız/Tulya Bekişoğlu.jpg');">
+            </div>
+          </div>
+        </div>
+        <h6 class="text-center mt-3">Tulya Bekişoğlu</h6>
+        <p class="text-center mt-3 text-muted">İletişim Danışmanı</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -175,6 +175,8 @@ def koda_gonullusu(request):
 def team(request):
     return render(request,'team.html')
 
+def trainers(request):
+    return render(request,'trainers.html')
 
 def faaliyet_raporlari(request):
     return render(request,'faaliyet_raporlari.html')
