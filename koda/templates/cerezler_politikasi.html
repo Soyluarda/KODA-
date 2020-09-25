@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<style>
+    .btn-nav-link {
+        background-color: #fab537;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+        color: white !important;
+        font-weight: bold !important;
+        padding: 1.5rem 1rem;
+        max-width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-nav-link:hover {
+        font-weight: bolder !important;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<section class="page-section" id="about">
+    <div class="container">
+        <h4 class="text-center mb-3">KODA Çerez Politikası</h4>
+        <div class="mb-4">
+            <h6 class="mb-2">ÇEREZ (“COOKİE”) NEDİR?</h6>
+            <div class="mb-2">
+                Çerezler, ziyaret ettiğiniz internet siteleri tarafından tarayıcılar aracılığıyla bilgisayarınıza (ya da
+                akıllı telefon veya tablet gibi diğer cihazlarınıza) kaydedilen ve genelde harf ve rakamlardan oluşan
+                çok küçük metin dosyalarıdır. Çerezler, ziyaretçilere ilişkin isim, cinsiyet veya adres gibi kişisel
+                verileri içermezler.
+            </div>
+            <div>
+                Çerezler, ziyaret ettiğiniz web sitesini yöneten sunucular tarafından oluşturulurlar. Böylelikle
+                ziyaretçi aynı siteyi ziyaret ettiğinde sunucu bunu anlayabilir. Çerezler, web sitesi sahiplerine aynı
+                ziyaretçinin siteyi yeniden ziyaret ettiğini gösteren kimlik kartlarına benzetilebilir.
+            </div>
+        </div>
+        <div class="mb-4">
+            <h6 class="mb-2">KODA ÇEREZLERİ NASIL KULLANILMAKTADIR?</h6>
+            KODA çerezleri;
+            <ul class="mt-2">
+                <li>KODA tarafından işletilen elektronik ticaret platformlarına nereden ve hangi cihazlardan
+                    bağlandığınız, web sitesi/mobil uygulama/mobil sitesi üzerinde hangi içeriği görüntülediğiniz ve
+                    ziyaretinizin süresi gibi web sitesini/mobil uygulamayı/mobil sitesini nasıl kullandığınızın tespiti
+                    de dahil olmak üzere; web sitesini/mobil uygulamayı/mobil siteyi nasıl kullandığınızı belirlemek
+                    için kullanır.</li>
+                <li>Site’nin çalışması için gerekli temel fonksiyonları gerçekleştirmek. Örneğin, Site üyelerinin,
+                    üyelik bilgileriyle giriş yapabilmesi.</li>
+                <li>Site’yi analiz etmek ve Site’nin performansını arttırmak. Örneğin, Site’yi ziyaret edenlerin
+                    sayısının tespit edilmesi ve buna göre performans ayarlarının yapılması ya da ziyaretçilerin
+                    aradıklarını bulmalarının kolaylaştırılması.</li>
+                <li>Site’nin işlevselliğini arttırmak ve kullanım kolaylığı sağlamak. Örneğin, Site’yi ziyaret eden
+                    ziyaretçinin daha sonraki ziyaretinde kullanıcı adı bilgisinin ya da arama sorgularının hatırlanması
+                    veya Site üzerinden üçüncü taraf sosyal medya faaliyetlerine bağlantı sağlamak.</li>
+            </ul>
+        </div>
+        <div class="mb-4">
+            <h6 class="mb-2">KODA ÜÇÜNCÜ TARAF ÇEREZLERİNİ REKLAM VE YENİDEN HEDEFLEME İÇİN NASIL KULLANMAKTADIR?</h6>
+
+            <div class="mb-2">
+
+                KODA çerezleri ayrıca; arama motorlarını, KODA tarafından işletilen elektronik ticaret platformlarının
+                web sitesini, mobil uygulamasını veya mobil sitesi ve/veya KODA’nın reklam verdiği web sitelerini
+                ziyaret ettiğinizde ilginizi çekebileceğini düşündüğü reklamları size sunabilmek için “reklam
+                teknolojisini” devreye sokmak amacıyla kullanabilir. Reklam teknolojisi, size özel reklamlar sunabilmek
+                için web sitesine/mobil uygulamaya/mobil sitesine ve KODA’nın reklam verdiği web sitelerine/mobil/mobil
+                sitesi uygulamalarına yaptığınız önceki ziyaretlerle ilgili bilgileri kullanır. Bu reklamları sunarken,
+                KODA’nın sizi tanıyabilmesi amacıyla tarayıcınıza benzersiz bir üçüncü taraf çerezi yerleştirilebilir.
+            </div>
+            <div class="mb-2">
+
+                ​
+
+                Bunun yanı sıra ilginizi çekebilecek reklamları sosyal medya platformlarında da sunabilmek ve özel hedef
+                kitle oluşturmak amacıyla kişisel verilerinizden e-posta adresiniz bu platformlar ile paylaşılmaktadır.
+                E-posta adresiniz, bu platformların sunduğu güvenli kanallar ve ortamlar üzerinden aktarılmaktadır.
+                Sosyal medya platformları, e-posta adresinizi hashleyerek, yalnızca eşleştirme işlemi için
+                kullanmaktadır. E-Posta adresiniz üçüncü taraflarla veya diğer reklam verenlerle paylaşılmaz ve
+                eşleştirme işlemi tamamlandıktan sonra mümkün olan en kısa sürede sosyal medya platformlarının
+                sistemlerinden silinir.
+
+                ​</div>
+            <div class="mb-2">
+
+                Örneğin; Facebook, (a) kişisel veriniz Facebook sistemlerinde bulunduğu sürece verilerin güvenliğini ve
+                bütünlüğünü korumak ve (b) Facebook sistemlerinde bulunan kişisel verinize yanlışlıkla veya yetkisiz
+                olarak erişilmesine ve verinizin yanlışlıkla veya yetkisiz olarak kullanılmasına, değiştirilmesine veya
+                ifşa edilmesine karşı korumak için geliştirilen teknik ve fiziksel güvenlik önlemlerini de içerecek
+                şekilde, özel hedef kitlenizi (“özel hedef kitleniz”) oluşturan hash yöntemiyle şifrelenen e-posta
+                adresinizin ve Facebook Kullanıcı Kimliği koleksiyonunun gizliliğini ve güvenliğini sağlayacaktır.
+                Ayrıca, izniniz olmadan veya yasalar gerektirmediği sürece, Facebook üçüncü taraflara veya diğer reklam
+                verenlere özel hedef kitleniz için erişim veya bilgi vermez, özel hedef kitle bilgilerinizi
+                kullanıcılarımız hakkındaki bilgilere eklemez veya ilgi alanına dayalı profiller oluşturmaz ya da özel
+                hedef kitlenizi size hizmet sunmanın haricinde kullanmaz. Facebook özel hedef kitleler koşulları için
+                <strong><a target="_blank" class="text-dark"
+                        href="https://www.facebook.com/ads/manage/customaudiences/tos.php?_=_">
+                        https://www.facebook.com/ads/manage/customaudiences/tos.php?_=_</a> </strong>adresini, Facebook
+                Gizlilik İlkeleri için <strong><a target="_blank" href="https://www.facebook.com/privacy/explanation"
+                        class="text-dark"> https://www.facebook.com/privacy/explanation</a> </strong> adresini ziyaret
+                edebilirsiniz.
+            </div>
+        </div>
+        <div class="mb-4">
+            <h6 class="mb-2">KODA ÇEREZLERİ NASIL KULLANILMAKTADIR?</h6>
+            İnternet tarayıcınızın çeşidine göre aşağıdaki adımları izleyerek, çerezler hakkında bilgi edinip, izin
+            verme veya reddetme hakkınızı kullanabilirsiniz:
+            <ul class="mt-2 mb-2">
+                <li>Google Chrome: Browser’ınızın “adres bölümünde” yer alan, “kilit işareti” veya “i” harfini
+                    tıklayarak, “Cookie” sekmesinden çerezlere izin verebilir veya bloke edebilirsiniz.</li>
+                <li>İnternet Explorer: Browser’ınızın sağ üst köşesinde yer alan “Tool” veya “Araçlar” Bölümünden
+                    “Güvenlik” sekmesini tıklayın ve “izin ver” veya “izin verme” şeklinde çerez yönetimizi
+                    gerçekleştirin.</li>
+                <li>Mozilla Firefox: Browser’ınızın sağ üst köşesinde yer alan “menüyü aç” sekmesini tıklayınız.
+                    “Seçenekler” görselini tıklayarak “Gizlilik ve Güvenlik” butonunu kullanarak çerez yönetiminizi
+                    yapınız.</li>
+                <li>Diğer browserlar için de (opera, microsoft edge gibi), ilgili browser’ın yardım veya destek
+                    sayfalarını inceleyebilirsiniz.</li>
+                <li>Safari: Telefonunuzun “Ayarlar” bölümünden “safari” sekmesini seçip, “Gizlilik ve Güvenlik”
+                    Bölümünden tüm çerez yönetiminizi sağlayabilirsiniz.</li>
+                <li>Yukarıdaki seçeneklerin yanısıra; tüm çerezler hakkında bilgi sahibi olmak ve çerez yönetimi için:
+                    <strong><a target="_blank" class="text-dark" href="https://www.allaboutcookies.org">
+                            https://www.allaboutcookies.org</a> </strong> , <strong><a target="_blank" class="text-dark"
+                            href="https://www.youronlinechoices.eu/"> https://www.youronlinechoices.eu/</a> </strong>
+                    adresini ziyaret edebilirsiniz, veya "Privacy Badger" uygulamasını kullanabilirsiniz (<strong><a
+                            target="_blank" class="text-dark"
+                            href="https://www.eff.org/tr/privacybadger">https://www.eff.org/tr/privacybadger</a>
+                    </strong>)</li>
+                <li>Mobil uygulamalarda çerez veya SDK yönetimi için cihazınızın Gizlilik veya Ayarlar Bölümünde yer
+                    alan yönlendirmeleri takip edebilir veya Lumen Privacy Monitor’ü (<strong><a target="_blank"
+                            class="text-dark" href="https://haystack.mobi">https://haystack.mobi</a> </strong>)
+                    telefonunuza indirerek kullanabilirsiniz.</li>
+            </ul>
+
+            Kalıcı çerezleri veya oturum çerezlerini reddederseniz, web sitesini, mobil uygulamayı ve mobil sitesini
+            kullanmaya devam edebilirsiniz fakat web sitesinin, mobil uygulamanın ve mobil sitesinin tüm işlevlerine
+            erişemeyebilirsiniz veya erişiminiz sınırlı olabilir. Mobil uygulamada söz konusu durum değişkenlik
+            gösterebilmektedir.
+        </div>
+        <div class="mb-4">
+            <h6 class="mb-2">ÇEREZ ÇEŞİTLERİ</h6>
+            ​<div class="mb-2">
+                Kullanım süresine göre çerez çeşitleri: KODA tarafından işletilen elektronik ticaret platformlarının web
+                sitesinde, mobil uygulamasında ve mobil sitesinde kullanım sürelerine göre, oturum çerezleri ve kalıcı
+                çerezler kullanmaktadır. Oturum çerezi, tarayıcınızı kapattığınızda sona erer. Kalıcı çerez ise sabit
+                diskinizde uzun bir süre veya süresiz olarak kalır.
+            </div>
+            ​<div class="mb-2">
+                Çerezin sahibi veya çerezi yerleştiren tarafa göre çerez çeşitleri: KODA tarafından işletilen elektronik
+                ticaret platformlarının web sitesinde, mobil uygulamasında ve mobil sitesinde yerleştiren tarafa göre
+                “KODA çerezleri (first party cookie)” ve “üçüncü taraf (third party cookie) çerezler” kullanılmaktadır.
+                KODA çerezleri, KODA tarafından oluşturulurken, üçüncü taraf çerezleri ise işbirliği yaptığımız üçüncü
+                taraf firmalar tarafından yönetilmektedir.
+            </div>
+            ​<div class="mb-2">
+                Kullanım amaçlarına göre çerez çeşitleri: KODA tarafından işletilen elektronik ticaret platformlarının
+                web sitesinde, mobil uygulamasında ve mobil sitesinde kullanım amacına göre; teknik çerezler, doğrulama
+                çerezleri, hedefleme/reklam çerezleri, kişiselleştirme çerezleri ve analitik çerezler kullanılmaktadır.
+                KODA bu çerezleri kullanarak; Üyelerini birbirinden ayıran özellikleri belirleyerek, tercih ve
+                beğenilerine uygun kampanya ve reklam yapmak amacıyla Üyeleri büyük gruplara ayırarak, ortalama harcama
+                tutarı, yaş, cinsiyet, alışveriş yapılan kategoriler, mobil kullanım oranı gibi harcama alışkanlıklarını
+                tespit etmeye yönelik istatistiksel çalışmalar yapmaktadır.
+            </div>
+
+        </div>
+        <div class="mb-4 text-center d-flex" style="justify-content: center;">
+
+            <a class="btn-nav-link w-100"
+                href="https://bf1bc20e-7532-42dc-9f53-412a282c3145.filesusr.com/ugd/7314dd_53bdf84a618e45cc8bf5499f55cbcd87.pdf"
+                target="_blank">KODA Çerez Politikası
+            </a>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

@@ -27,14 +27,17 @@
   <link href="{% static 'css/agency.min.css' %}" rel="stylesheet">
 
   <style>
-
-@font-face {
+    @font-face {
       font-family: ProximaNovaSbold;
       src: url("../static/Proxima-Nova-Sbold.otf");
     }
 
-    .navbar, .collapse.navbar-collapse,.navbar-nav,  .nav-link {
-      font-family: ProximaNovaSbold !important;
+    .navbar,
+    .collapse.navbar-collapse,
+    .navbar-nav,
+    .nav-link {
+      font-family: 'Hind', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      font-weight: 600 !important;
     }
 
     @media (min-width: 1200px) {
@@ -44,9 +47,10 @@
     }
 
     @media (max-width: 992px) {
-      .page-section{
-        min-height:80vh ;
+      .page-section {
+        min-height: 80vh;
       }
+
       header.masthead {
         height: 400px !important;
       }
@@ -355,14 +359,30 @@
     .fa-social-icon:hover {
       color: rgb(233, 97, 111);
     }
-    .container{
-    color:  #404040;
-    font-family: montserrat !important;
 
-  }
-  .page-section{
-    padding: 80px 20px 0px 20px;
-  }
+    .container {
+      color: #404040;
+      font-family: montserrat !important;
+
+    }
+
+    .page-section {
+      padding: 80px 20px 0px 20px;
+    }
+
+    .btn-nav-link {
+      background-color: #fab537;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+      color: white !important;
+      height: 40px;
+      font-weight: bold !important;
+      padding: .5rem 1rem;
+    }
+    .fa-2x {
+    font-size: 1.5em !important;
+}
   </style>
   {% block head %}
   {% endblock %}
@@ -408,10 +428,13 @@
             </a>
             <div class="dropdown-menu dropdown-toggle" aria-labelledby="navbarDropdownMenuLink2">
               <a class=" js-scroll-trigger" href="{% url 'koy_ogretmenleri' %}">Köy Öğretmenleri Projesi</a>
-              <a class=" js-scroll-trigger" href="{% url 'mentorluk_programi' %}">Mentorluk Programi</a>
+              <a class=" js-scroll-trigger" href="{% url 'mentorluk_programi' %}">Mentorluk Programı</a>
               <a class=" js-scroll-trigger" href="{% url 'ruzgargulubultenleri' %}">Rüzgar Gülü Haber Bülteni</a>
               <a class=" js-scroll-trigger" href="{% url 'gecmis_faaliyetler' %}">Geçmiş Faaliyetler</a>
-              <a class=" js-scroll-trigger" href="{% url 'koda_raporlari' %}">KODA Raporları</a>
+              <a class=" js-scroll-trigger" href="{% url 'koda_raporlari' %}">Stratejik Plan ve Mali Belgeler</a>
+              <a class=" js-scroll-trigger" href="{% url 'bagis' %}">Nasıl Destek Olabilirsiniz?</a>
+              <a class=" js-scroll-trigger" href="{% url 'koda_gunceleri' %}">KODA Günceleri</a>
+
               <!-- <a class=" js-scroll-trigger" href="{% url 'neler_yapmiyoruz' %}">Neler Yapmıyoruz?</a> -->
             </div>
           </li>
@@ -421,27 +444,43 @@
               ÇÖZÜM MASASI
             </a>
             <div class="dropdown-menu dropdown-toggle" aria-labelledby="navbarDropdownMenuLink3">
-              <a class=" js-scroll-trigger" href="{% url 'koylerde_uzaktan_egitim_ve_covid19' %}">Köylerde Uzaktan Eğitim ve Covid-19</a>
+              <a class=" js-scroll-trigger" href="{% url 'koylerde_uzaktan_egitim_ve_covid19' %}">Köylerde Uzaktan
+                Eğitim ve Covid-19</a>
               <a class=" js-scroll-trigger" href="{% url 'etkinlik_onerileri' %}">Etkinlik Önerileri</a>
               <a class=" js-scroll-trigger" href="{% url 'onerilen_kaynaklar' %}">Önerilen Kaynaklar</a>
-             
-              <a class=" js-scroll-trigger" href="{% url 'tipoti_galima_ve_pako' %}">Tipoti Galima ve Pako'nun Maceraları</a>
-              <a class=" js-scroll-trigger" href="{% url 'ogretmenlerden_gelen_etkinlikler' %}">Öğretmenlerden Gelen Etkinlikler</a>
-              
-               <a class=" js-scroll-trigger" href="{% url 'koda_gunceleri' %}">KODA günceleri</a>
+
+              <a class=" js-scroll-trigger" href="{% url 'tipoti_galima_ve_pako' %}">Tipoti Galima ve Pako'nun
+                Maceraları</a>
+              <a class=" js-scroll-trigger" href="{% url 'ogretmenlerden_gelen_etkinlikler' %}">Öğretmenlerden Gelen
+                Etkinlikler</a>
+
             </div>
           </li>
           <li class="nav-item dropdown ">
             <a class="hover-link js-scroll-trigger" href="{% url 'yayinlarimiz' %}">YAYINLARIMIZ</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="hover-link js-scroll-trigger" href="{% url 'bagis' %}">NASIL DESTEK OLABİLİRSİNİZ?</a>
+          <li class="nav-item dropdown" style="display: flex;
+          align-items: center;">
+            <a class="js-scroll-trigger btn-nav-link" href="{% url 'bagis' %}">BAĞIŞ YAP</a>
           </li>
 
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown"
+              aria-expanded="true">
+              Gizlilik ve KVKK
+            </a>
+            <div class="dropdown-menu dropdown-toggle" aria-labelledby="navbarDropdownMenuLink3">
+              <a class=" js-scroll-trigger" href="{% url 'koylerde_uzaktan_egitim_ve_covid19' %}">KVKK Başvuru Formu</a>
+              <a class=" js-scroll-trigger" href="{% url 'etkinlik_onerileri' %}">KVKK Bilgilendirme Metni</a>
+              <a class=" js-scroll-trigger" href="{% url 'onerilen_kaynaklar' %}">Çerez Politikası</a>
+
+              <a class=" js-scroll-trigger" href="{% url 'tipoti_galima_ve_pako' %}">Kullanım Koşulları ve Gizlilik</a>
+
+            </div>
+          </li>
           <li class="nav-item">
             <a class="hover-link js-scroll-trigger" href="{% url 'contact' %}">BİZE ULAŞIN</a>
           </li>
-
           <li class="nav-item nav-item-logo">
             <a href="https://acikacik.org/sivil-toplum-kurulusu/koy-okullari-degisim-agi-dernegi-"> <img
                 src="{% static 'img/acikstk.png' %}" style="widht:50px; height:50px;" alt=""></a>
@@ -477,26 +516,57 @@
   <!-- Footer -->
   <footer class="page-footer font-small mt-5 pb-0">
     <div class="container-fulid" style="background: rgb(241, 244, 246, .5) !important; border-top: 1px solid #e6e6e6; ">
+      <div class="container py-3 d-flex flex-wrap">
+        <div class="flex-fill px-2">
+          <h6>İletişim</h6>
+          <div>
+            KÖY OKULLARI DEĞİŞİM AĞI DERNEĞİ
+          </div>
+          <div>
+            bilgi@kodegisim.org
+          </div>
+          <div>
+            0216 343 73 43
+          </div>
+        </div>
+        <div class="flex-fill px-2">
+          <div>
+            <a class="text-dark font-weight-bold" href="{% url 'koylerde_uzaktan_egitim_ve_covid19' %}">KVKK Başvuru Formu</a>
+          </div>
+          <div>
+            <a class="text-dark font-weight-bold" href="{% url 'koylerde_uzaktan_egitim_ve_covid19' %}">KVKK Bilgilendirme Metni</a>
+          </div>
+          <div>
+            <a class="text-dark font-weight-bold" href="{% url 'koylerde_uzaktan_egitim_ve_covid19' %}">Kullanım Koşulları ve Gizlilik Politikası</a>
+          </div>
+          <div>
+            <a class="text-dark font-weight-bold" href="{% url 'koylerde_uzaktan_egitim_ve_covid19' %}">Çerez Politikası</a>
+          </div>
+        </div>
+      </div>
       <div class="container py-3">
         <!-- Grid row-->
         <div class="social-links">
-          <a href="https://www.instagram.com/kodegisim/" class="instagram"> <i
+          <a href="https://www.instagram.com/kodegisim/" class="instagram" target="_blank"> <i
               class="fab fa-instagram fa-social-icon fa-2x">&#160;
               &#160;</i></a>
-          <a href="https://www.facebook.com/kodegisim/?ref=br_rs" class="facebook"> <i
+          <a href="https://www.facebook.com/kodegisim/?ref=br_rs" class="facebook" target="_blank"> <i
               class="fab fa-facebook fa-social-icon  fa-2x"> &#160;
             </i></a>
-          <a href="https://www.twitter.com/kodegisim/" class="twitter"> <i class="fab fa-twitter fa-2x fa-social-icon">
+          <a href="https://www.twitter.com/kodegisim/" class="twitter" target="_blank"> <i
+              class="fab fa-twitter fa-2x fa-social-icon">
               &#160;
             </i></a>
-          <a href="https://www.youtube.com/channel/UCyiAbqsWLe4U261oMXGTm9A" class="instagram" style="color:#034080;">
+          <a href="https://www.youtube.com/channel/UCyiAbqsWLe4U261oMXGTm9A" target="_blank" class="instagram"
+            style="color:#034080;">
             <i class="fab fa-youtube fa-social-icon fa-2x"> &#160;
 
             </i></a>
-          <a href="https://www.linkedin.com/mwlite/company/kodegisim" class="linkedin"> <i
+          <a href="https://www.linkedin.com/mwlite/company/kodegisim" target="_blank" class="linkedin"> <i
               class="fab fa-linkedin fa-social-icon fa-2x"> &#160;
             </i></a>
-          <a href="https://medium.com/kodegisim" class="instagram"> <i class="fab fa-medium fa-2x fa-social-icon">
+          <a href="https://medium.com/kodegisim" class="instagram" target="_blank"> <i
+              class="fab fa-medium fa-2x fa-social-icon">
             </i></a>
 
         </div>
@@ -504,8 +574,8 @@
       </div>
     </div>
     </div>
-    <div class="container-fulid" style="background: rgb(241, 244, 246, .8) !important; border-top: 1px solid #e6e6e6; ">
-        <small class="text-center" style="opacity: .7 !important;">&copy; 2020 Köy Okulları Değişim Ağı (KODA)</small>
+    <div class="container-fulid py-2" style="background: rgb(241, 244, 246, .8) !important; border-top: 1px solid #e6e6e6; ">
+      <small class="text-center" style="opacity: .7 !important;">&copy; 2020 Köy Okulları Değişim Ağı (KODA)</small>
     </div>
     </div>
   </footer>

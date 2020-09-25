@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<style>
+    .btn-nav-link {
+        background-color: #fab537;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+        color: white !important;
+        font-weight: bold !important;
+        padding: 1.5rem 1rem;
+        max-width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-nav-link:hover {
+        font-weight: bolder !important;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<section class="page-section" id="about">
+    <div class="container">
+        <h4 class="text-center mb-3">KVKK Başvuru Formu</h4>
+
+        <div class="mb-4">
+            6698 Sayılı Kişisel Verilerin Korunması Kanunu’nda (“KVK Kanunu”) ilgili kişi olarak tanımlanan kişisel veri
+            sahiplerine (“Bundan sonra “Başvuru Sahibi” olarak anılacaktır), KVK Kanunu’nun 11’inci maddesinde kişisel
+            verilerinin işlenmesine ilişkin birtakım taleplerde bulunma hakkı tanınmıştır. KVK Kanunu’nun 13’üncü
+            maddesinin
+            birinci fıkrası uyarınca; veri sorumlusu olan Derneğimize bu haklara ilişkin olarak yapılacak başvuruların
+            yazılı
+            olarak veya Kişisel Verilerin Korunması Kurulu (“Kurul”) tarafından belirlenen diğer yöntemlerle tarafımıza
+            iletilmesi gerekmektedir.
+        </div>
+        <div class="mb-4">
+
+            Bu çerçevede “yazılı” olarak Derneğimize yapılacak başvurular, işbu formun çıktısı alınarak;
+            <ul class="mb-2 mt-2">
+                <li>Başvuru Sahibinin şahsen başvurusu ile,</li>
+                <li>Noter vasıtasıyla,</li>
+                <li>Başvuru Sahibince 5070 Sayılı Elektronik İmza Kanunu’nda tanımlı olan “güvenli elektronik imza” ile
+                    imzalanarak Dernek kayıtlı elektronik posta adresine gönderilmek suretiyle,</li>
+            </ul>
+            tarafımıza iletilebilecektir.
+        </div>
+        <div class="mb-4">
+
+            Ekte yer alan formda, yazılı başvuruların ne şekilde tarafımıza ulaştırılacağına ilişkin yazılı başvuru
+            kanalları
+            özelinde bilgiler verilmektedir.
+        </div>
+        <div class="mb-4 text-center d-flex" style="justify-content: center;">
+
+            <a class="btn-nav-link w-100"
+                href="https://bf1bc20e-7532-42dc-9f53-412a282c3145.filesusr.com/ugd/7314dd_5fb91eb1438c4f9793f866e975a0a827.docx?dn=KODA_KVKK_Basvuru_Formu.docx"
+                target="_blank">KVKK Başvuru Formu</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
