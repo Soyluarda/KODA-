@@ -252,3 +252,16 @@ def onerilen_siteler_detay(request, id):
 
 
     return render(request,'onerilen_siteler_detay.html', {'context': context})
+
+
+def kvkk_basvuru(request):
+    return render(request,'kvkk_basvuru_formu.html')
+
+def kvkk_info(request):
+    return render(request,'kvkk_bilgilendirme_metni.html')
+
+def kvkk_politics(request):
+    return render(request,'kullanim_kosullari_gizlilik_politikasi.html')
+
+def cookies_policy(request):
+    return render(request,'cerezler_politikasi.html')

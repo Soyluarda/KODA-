@@ -64,4 +64,14 @@ urlpatterns = [
     path('onerilen-siteler/', views.onerilen_siteler,
          name='onerilen_siteler'),
 
+    path('kvkk-basvuru-formu/', views.kvkk_basvuru,
+         name='kvkk_basvuru_formu'),
+    path('kvkk-bilgilendirme-metni/', views.kvkk_info,
+         name='kvkk_bilgilendirme_metni'),
+    path('cerez-politikası/', views.cookies_policy,
+         name='cerez_politikasi'),
+    path('kullanım-kosullari-gizlilik/', views.kvkk_politics,
+         name='kullanim_kosullari_gizlilik'),
+
+
 ]
