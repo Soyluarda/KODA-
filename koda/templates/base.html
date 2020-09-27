@@ -383,6 +383,10 @@
     .fa-2x {
     font-size: 1.5em !important;
 }
+
+html {
+  scroll-behavior: smooth;
+}
   </style>
   {% block head %}
   {% endblock %}
@@ -395,7 +399,7 @@
 
 
       <a class="navbar-brand" href="{% url 'index' %}">
-        <img src="{% static 'img/koda_degisim.png' %}" style="widht:50px; height:50px;" alt="">
+        <img src="{% static 'img/koda_degisim.png' %}" style="height: 90px;" alt="">
       </a>
       <a href="https://acikacik.org/sivil-toplum-kurulusu/koy-okullari-degisim-agi-dernegi-" class="navbar-togle-logo"
         style="display: none;"> <img src="{% static 'img/acikstk.png' %}" style="widht:50px; height:50px;" alt=""></a>
@@ -409,9 +413,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link" href="#" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown"
               aria-expanded="true">
-              HAKKIMIZDA
+              Hakkımızda
             </a>
-            <div class="dropdown-menu dropdown-toggle n-size" aria-labelledby="navbarDropdownMenuLink1">
+            <div class="dropdown-menu dropdown-toggle n-size" aria-labelledby="navbarDropdownMenuLink1" >
               <a class=" js-scroll-trigger" href="{% url 'about' %}">Hakkımızda</a>
               <a class=" js-scroll-trigger" href="{% url 'faaliyet_raporlari' %}">Faaliyet Raporlarımız</a>
               <a class=" js-scroll-trigger" href="{% url 'degerlerimiz' %}">Değerlerimiz</a>
@@ -424,25 +428,26 @@
           <li class="nav-item dropdown">
             <a class="nav-link" href="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown"
               aria-expanded="true">
-              FAALİYETLERİMİZ
+              Neler Yapıyoruz?
             </a>
-            <div class="dropdown-menu dropdown-toggle" aria-labelledby="navbarDropdownMenuLink2">
-              <a class=" js-scroll-trigger" href="{% url 'koy_ogretmenleri' %}">Köy Öğretmenleri Projesi</a>
-              <a class=" js-scroll-trigger" href="{% url 'mentorluk_programi' %}">Mentorluk Programı</a>
+            <div class="dropdown-menu dropdown-toggle" aria-labelledby="navbarDropdownMenuLink2" style="left: -50px;">
+              <a class=" js-scroll-trigger" href="{% url 'koy_ogretmenleri' %}">Faaliyetlerimiz</a>
               <a class=" js-scroll-trigger" href="{% url 'ruzgargulubultenleri' %}">Rüzgar Gülü Haber Bülteni</a>
               <a class=" js-scroll-trigger" href="{% url 'gecmis_faaliyetler' %}">Geçmiş Faaliyetler</a>
               <a class=" js-scroll-trigger" href="{% url 'koda_raporlari' %}">Stratejik Plan ve Mali Belgeler</a>
               <a class=" js-scroll-trigger" href="{% url 'bagis' %}">Nasıl Destek Olabilirsiniz?</a>
               <a class=" js-scroll-trigger" href="{% url 'koda_gunceleri' %}">KODA Günceleri</a>
+              <a class=" js-scroll-trigger" href="{% url 'koda_gunceleri' %}">Destekçilerimiz</a>
               <!-- <a class=" js-scroll-trigger" href="{% url 'neler_yapmiyoruz' %}">Neler Yapmıyoruz?</a> -->
             </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link" href="#" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown"
               aria-expanded="true">
-              ÇÖZÜM MASASI
+              Çözüm Masası
             </a>
-            <div class="dropdown-menu dropdown-toggle" aria-labelledby="navbarDropdownMenuLink3">
+            <div class="dropdown-menu dropdown-toggle" aria-labelledby="navbarDropdownMenuLink3" style="
+            left: -70px;">
               <a class=" js-scroll-trigger" href="{% url 'koylerde_uzaktan_egitim_ve_covid19' %}">Köylerde Uzaktan
                 Eğitim ve Covid-19</a>
               <a class=" js-scroll-trigger" href="{% url 'etkinlik_onerileri' %}">Etkinlik Önerileri</a>
@@ -452,23 +457,23 @@
                 Maceraları</a>
               <a class=" js-scroll-trigger" href="{% url 'ogretmenlerden_gelen_etkinlikler' %}">Öğretmenlerden Gelen
                 Etkinlikler</a>
-
+                <a class=" js-scroll-trigger" href="{% url 'ogretmenlerden_gelen_etkinlikler' %}">Renkleri Dansı</a>
             </div>
           </li>
           <li class="nav-item dropdown ">
-            <a class="hover-link js-scroll-trigger" href="{% url 'yayinlarimiz' %}">YAYINLARIMIZ</a>
+            <a class="hover-link js-scroll-trigger" href="{% url 'yayinlarimiz' %}">Yayınlarımız</a>
           </li>
           <li class="nav-item dropdown" style="display: flex;
           align-items: center;">
-            <a class="js-scroll-trigger btn-nav-link" href="{% url 'bagis' %}">BAĞIŞ YAP</a>
+            <a class="js-scroll-trigger btn-nav-link" href="{% url 'bagis' %}">Bağış Yap</a>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown"
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink4" role="button" data-toggle="dropdown"
               aria-expanded="true">
               Gizlilik ve KVKK
             </a>
-            <div class="dropdown-menu dropdown-toggle" aria-labelledby="navbarDropdownMenuLink3">
+            <div class="dropdown-menu dropdown-toggle" aria-labelledby="navbarDropdownMenuLink4" style="left: -40px;">
               <a class=" js-scroll-trigger" href="{% url 'kvkk_basvuru_formu' %}">KVKK Başvuru Formu</a>
               <a class=" js-scroll-trigger" href="{% url 'kvkk_bilgilendirme_metni' %}">KVKK Bilgilendirme Metni</a>
               <a class=" js-scroll-trigger" href="{% url 'cerez_politikasi' %}">Çerez Politikası</a>
@@ -478,7 +483,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="hover-link js-scroll-trigger" href="{% url 'contact' %}">BİZE ULAŞIN</a>
+            <a class="hover-link js-scroll-trigger" href="{% url 'contact' %}">Bize Ulaşın</a>
           </li>
           <li class="nav-item nav-item-logo">
             <a href="https://acikacik.org/sivil-toplum-kurulusu/koy-okullari-degisim-agi-dernegi-"> <img
@@ -603,7 +608,10 @@
       }
     });
 
-
+    $('html,body').animate({
+      scrollTop: $(".page-section").offset().top-200
+    },
+    'slow');
 
   </script>
 

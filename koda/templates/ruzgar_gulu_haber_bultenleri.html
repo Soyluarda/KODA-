@@ -2,12 +2,24 @@
 {% load static %}
 {% block head %}
 <style>
-  .new-content{
+  .new-content {
     border-radius: 4px;
+    max-width: 120px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+    color: white !important;
+    background-color: #00936F;
   }
-  .new-content a{
+
+  .new-content a {
     color: #fff;
-    font-weight:bold ;
+    font-weight: bold;
   }
 </style>
 {% endblock %}
@@ -16,40 +28,80 @@
 {% block body %}
 
 <section class="page-section">
-
   <div class="container">
     <h4 class="text-center mb-4">Rüzgar Gülü Haber Bültenleri</h4>
-    <h3 class="text-center mb-4">2019</h3>
-    <div class="d-flex justify-content-center mb-4 flex-wrap">
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#00936F;"><a href="{% url 'bsmg_programi' %}" ><span>Temmuz</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#00936F;"><a href="{% url 'ogretmen_topluluklari' %}"  ><span>Haziran</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#fab537;"> <a href="{% url 'cocuk_atolyeleri' %}"><span>Mayıs</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#fab537;"><a href="{% url 'bsmg_programi' %}"><span>Nisan</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#fab537;"><a href="{% url 'ogretmen_topluluklari' %}"span>Mart</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#e45769;"> <a href="{% url 'cocuk_atolyeleri' %}" ><span>Şubat</span></a>
+    <div class=" mb-4">
+      <h3 class="text-center">2020</h3>
+      <div class="d-flex justify-content-center mb-4 flex-wrap">
+        <div class="p-2 new-content mr-2 mb-3"> <a target="_blank"
+            href="https://mailchi.mp/e36f798f8563/rzgar-gl-say-28-koda-bymeye-devam-ediyor"><span>Şubat</span></a>
+        </div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/134f7a2c2600/rzgar-gl-say-27-ocak20"><span>Ocak</span></a></div>
       </div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#e45769;"><a href="{% url 'bsmg_programi' %}"><span>Ocak</span></a></div>
     </div>
-    <h3 class="text-center mb-4">2018</h3>
-    <div class="d-flex justify-content-center mb-4 flex-wrap">
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#e45769;"><a href="{% url 'ogretmen_topluluklari' %}" ><span>Aralık</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#034080;"><a href="{% url 'cocuk_atolyeleri' %}"  ><span>Kasım</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#034080;"><a href="{% url 'bsmg_programi' %}"><span>Ekim</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#034080;"><a href="{% url 'ogretmen_topluluklari' %}" ><span>Eylül</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#00936F;"><a href="{% url 'cocuk_atolyeleri' %}" ><span>Ağustos</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#00936F;"><a href="{% url 'bsmg_programi' %}"><span>Temmuz</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#00936F;"><a href="{% url 'ogretmen_topluluklari' %}" ><span>Haziran</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#fab537;"><a href="{% url 'cocuk_atolyeleri' %}" ><span>Mayıs</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#fab537;"><a href="{% url 'bsmg_programi' %}"  ><span>Nisan</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#fab537;"><a href="{% url 'ogretmen_topluluklari' %}" ><span>Mart</span></a></div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#e45769;"> <a href="{% url 'cocuk_atolyeleri' %}" ><span>Şubat</span></a>
+    <div class="mb-4">
+      <h3 class="text-center">2019</h3>
+      <div class="d-flex justify-content-center mb-4 flex-wrap">
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/ec429c7cb9a1/ruzgar-gulu-26"><span>Aralık</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/7b0aaf453300/ruzgar-gulu-25"><span>Kasım</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/f790f5e15b82/ruzgargulu-24"><span>Ekim</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/f99073fb6311/koda-rzgar-gl-haber-blteni"><span>Eylül</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/605b9d058029/rzgar-gl-say-22-temmuz19"><span>Temmuz</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/b876d171588d/rzgar-gl-say-21-haziran19"><span>Haziran</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"> <a target="_blank"
+            href="https://mailchi.mp/3d8b9e92ae89/rzgar-gl-say-20-mays19"><span>Mayıs</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/03da10074a92/rzgar-gl-say-19-nisan19"><span>Nisan</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/079b23c716c0/rzgar-gl-say-18-mart19?fbclid=IwAR17W1VsIeeGrWBiQZrcsSwNxj4M5o9YPUGAp0N3nDxWdJewSFqYD_zLYEM"
+            span>Mart</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"> <a target="_blank"
+            href="https://mailchi.mp/8f83f447243a/rzgar-gl-say-17-ubat19"><span>Şubat</span></a>
+        </div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/c1e11424afb7/rzgar-gl-say-16-ocak19"><span>Ocak</span></a></div>
       </div>
-      <div class="p-2 new-content mr-2 mb-3" style="background-color:#e45769;"><a href="{% url 'bsmg_programi' %}"><span>Ocak</span></a></div>
+    </div>
+    <div class="mb-4">
+      <h3 class="text-center">2018</h3>
+      <div class="d-flex justify-content-center mb-4 flex-wrap">
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/321191faed95/rzgar-gl-say-15-aralk18"><span>Aralık</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/9b1f81275658/rzgar-gl-say-14-kasm18"><span>Kasım</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/bcbc7a52d787/rzgar-gl-say-13-ekim18"><span>Ekim</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/bcb56a2ba374/rzgar-gl-say-12-eyll18"><span>Eylül</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/686f2775cb29/rzgar-gl-say-11-austos-18"><span>Ağustos</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/0c0cceb387fa/rzgar-gl-say-10-temmuz18"><span>Temmuz</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/57092850cda4/rzgar-gl-say-9-haziran-18"><span>Haziran</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/7a510eabcf0e/rzgar-gl-say-8-mays-18"><span>Mayıs</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/41fb68b14ff2/rzgar-gl-say-7-nisan18"><span>Nisan</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/e2c7730a1bbb/rzgar-gl-say6-mart18"><span>Mart</span></a></div>
+        <div class="p-2 new-content mr-2 mb-3"> <a target="_blank"
+            href="https://mailchi.mp/f725692a26d3/rzgar-gl-say5-ubat18"><span>Şubat</span></a>
+        </div>
+        <div class="p-2 new-content mr-2 mb-3"><a target="_blank"
+            href="https://mailchi.mp/9d966fd79088/rzgar-gl-say4-ocak-18"><span>Ocak</span></a></div>
+      </div>
     </div>
   </div>
-</div>
-  
-  </section>
+  </div>
+</section>
 
 
 

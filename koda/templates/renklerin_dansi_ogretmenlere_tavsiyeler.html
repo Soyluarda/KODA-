@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+<style>
+    .card-img-content {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+        height: 300px;
+    }
+
+    .card-circle {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .card-shadow-green {
+        -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+        box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+
+    }
+
+    .card-shadow-green:hover {
+        -webkit-box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(179, 179, 179, .2);
+        box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(28, 202, 167, .2);
+    }
+
+    .card-title-content {
+        padding: 1.2rem;
+    }
+
+    .card-title-content div {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+    .social-icon-content {
+        width: 60px;
+        height: 60px;
+        border-radius: 4px;
+    }
+
+    @media (min-width: 991.78px) and (max-width: 1240px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 991.78px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    .text-yellow {
+        color: #fab638;
+    }
+
+    .text-dark-blue {
+        color: #034080;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<section class="page-section">
+    <div class="container">
+        <div class="mb-5">
+            <h4 class="text-center mb-4">Renklerin Dansı Öğretmenlere Tavsiyeler</h4>
+            <div>
+                Sevgili öğretmenlerimiz,
+            </div>
+            <br>
+            <div>
+                Sizler ve öğrencileriniz kademeli olarak başlayan yüz yüze eğitim döneminde okullara geri dönüyorsunuz.
+                Bu okula dönüş sürecinde sizleri ve öğrencilerinizi desteklemek adına sınıflarınıza kolaylıkla adapte
+                edip uygulayabileceğiniz yeni bir videolaştırılmış hikaye serisi hazırladık. Bu içerikler ile amacımız,
+                yaşanılan sürecin ardından hikaye, dans, müzik, hareket ve oyun ile çocukların iyi olma hallerine katkı
+                sunabilmek. “Renklerin Dansı” adıyla bir araya getirdiğimiz serimiz, köyde yaşayan ve renklere hayranlık
+                duyan Deniz adlı kahramanın köydeki yaşantısını ve uykusunda Renklerin Ülkesi’ne yaptığı ziyaretleri
+                konu alıyor.
+            </div>
+            <br>
+            <div>
+                Toplam 10 bölüm ile video içeriklerinden oluşan seride her bölüm ana renklere veya bu renklerin
+                karışımlarına odaklanıyor. Bu sırada çocukları fiziksel aktiviteye (ör. dans, resim, müzik, kil, oyun
+                vb.) teşvik ediyor; çocukların sosyal-duygusal, bilişsel ve fiziksel gelişimlerini destekliyor ve aynı
+                zamanda hayal gücü ve yaratıcılıklarını besliyor.
+            </div>
+            <br>
+            <div>
+                Bu serimizi, 27 Eylül tarihinden itibaren her Pazar günü paylaşacağız ve 10 haftanın sonunda toplam 10
+                video formatındaki içeriğimizi köylerde yaşayan çocuklara sizlerin de katkılarıyla ulaştırmayı
+                planlıyoruz.
+            </div>
+            <br>
+            <div>
+                Haftada bir olarak planlanan bölümler, kırsal bölgelerdeki öğrencilerin internete erişiminin kısıtlı
+                ve/ya bazı durumlarda hiç olmadığı göz önünde bulundurarak takvimlendirildi. Okulda yüz yüze eğitime
+                katılan okul öncesi ve ilkokul öğrencilerinin sizlerin aracılığı ile bu içeriklere ulaşabileceklerini
+                umut ediyoruz.
+            </div>
+            <br>
+            <div>
+                Videoları izledikten sonra hem siz öğretmenler her hikaye içerisindeki farklı unsurlara odaklanarak yeni
+                etkinlikler geliştirebileceksiniz hem de öğrencileriniz sizlerin gözetimi ve sosyal mesafe kurallarına
+                uymak şartıyla hikayenin kazanımlarını kendi diledikleri şekilde - sanat, oyun ve hareket - ifade
+                edebilecekler.
+            </div>
+            <br>
+            <div>
+                Böylece, öğrencilerinizin okula uyum ve gelişim süreçlerini izlenen video üzerinden hafta boyunca
+                desteklenmeye devam edebilirsiniz. Ayrıca, önümüzdeki dönemde yüz yüze eğitime yeniden ara verilir ve
+                uzaktan eğitime geri dönülürse içeriklerin haftada bir olarak paylaşılması, öğrencilerin asgari internet
+                kullanımıyla her hafta bir içeriğe ve bunu takiben geliştirilecek birçok etkinliğe ulaşmasını da
+                yardımcı olacaktır.
+            </div>
+            <br>
+            <div>
+                Biliyoruz ki her hikayede kahramanımız Deniz farklı maceralara atılıyor, bu da öğrencilerinizle birlikte
+                geliştirebileceğiniz bir sürü etkinlik anlamına geliyor. Haftanın ilk günü öğrencilerinizle video
+                izledikten sonra geri kalan günlerde sizlere öneri olması adına geliştirdiğimiz çerçeve etkinlik planına
+                aşağıdaki PDF bağlantısından ulaşabilirsiniz.
+            </div>
+            <br>
+            <div>
+                Dilerseniz bu çerçeve plan dahilinde geliştirdiğiniz veya sizlerin ve öğrencileriniz uyguladığı etkinlik
+                ve aktiviteleri bilgi@kodegisim.org adresine iletebilir veya sosyal medya hesaplarımızı etiketleyerek
+                paylaşabilirsiniz. Sizlerden gelen geri dönüşler için şimdiden sabırsızlanıyoruz!
+            </div>
+        </div>
+        <div class="mb-4">
+            <h6 class="mb-3">Renkleri Dansı</h6>
+            <a href="{% static 'cerceve_etkinlik_plani.pdf' %}"
+                style="color:#199b78 !important; font-weight: bold;text-decoration: none;" target="_blank">
+                <i class="fas fa-file-pdf fa-2x mr-2"></i>
+                <label style="cursor: pointer;">Çerçeve Etkinlik Planı</label></a>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

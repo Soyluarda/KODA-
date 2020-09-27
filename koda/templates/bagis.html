@@ -4,85 +4,97 @@
 
 <style>
   .card-shadow-green {
-      width: 300px;
-      border-radius: 5px;
-      background: rgb(242, 242, 242, .5);
-      -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
-      box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+    width: 300px;
+    border-radius: 5px;
+    background: rgb(242, 242, 242, .5);
+    -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+    box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
   }
 
   .card-shadow-green:hover {
-      -webkit-box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(179, 179, 179, .2);
-      box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(28, 202, 167, .2);
+    -webkit-box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(179, 179, 179, .2);
+    box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(28, 202, 167, .2);
   }
 
   .card-title-content {
-      padding: 1.2rem;
+    padding: 1.2rem;
   }
 
   .card-title-content h6 {
-      font-size: 16px;
-      font-weight: 600;
+    font-size: 16px;
+    font-weight: 600;
   }
 
   .card-title-content div {
-      font-size: 12px;
+    font-size: 12px;
   }
-  a{
-    color:#595959;
+
+  a {
+    color: #595959;
   }
-  a .card-title-content h6{
+
+  a .card-title-content h6 {
     line-height: 1.4;
   }
-  a:hover{
-    color:#404040;
+
+  a:hover {
+    color: #404040;
     text-decoration: none;
 
   }
 
   @media (min-width: 767.78px) and (max-width: 991.78px) {
     .intro-card-row .col-md-4 {
-          flex: 0 0 33.333%;
-          max-width: 33.333%;
-      }
-      .intro-card-row .col-md-6 {
-          flex: 0 0 50%;
-          max-width: 50%;
-      }
-      .card-shadow-green {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+
+    .intro-card-row .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .card-shadow-green {
       width: 200px;
-      }
-      .card-title-content h6 {
+    }
+
+    .card-title-content h6 {
       font-size: 14px;
-  }
+    }
   }
 
   @media (min-width: 521px) and (max-width: 767.78px) {
     .intro-card-row .col-md-4 {
-          flex: 0 0 33.333%;
-          max-width: 33.333%;
-      }
-      .intro-card-row .col-md-6 {
-          flex: 0 0 50%;
-          max-width: 50%;
-      }
-      .card-shadow-green {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+
+    .intro-card-row .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .card-shadow-green {
       width: 150px;
-      }
-      .card-title-content h6 {
+    }
+
+    .card-title-content h6 {
       font-size: 12px;
+    }
+
   }
-  
-  }
-  @media (max-width: 520.78px)  {
-      .card-shadow-green {
+
+  @media (max-width: 520.78px) {
+    .card-shadow-green {
       margin: 0px auto;
       max-width: 300px;
       width: 100%;
-      }
-      .card-shadow-green.float-right, .card-shadow-green.float-left {
-     float: none !important;
-      }
+    }
+
+    .card-shadow-green.float-right,
+    .card-shadow-green.float-left {
+      float: none !important;
+    }
   }
 </style>
 {% endblock %}
@@ -90,7 +102,19 @@
 {% block body %}
 <section class="page-section">
   <div class="container">
-    <h4 class="text-center mb-5">Bize Nasıl Destek Olabilirsiniz?</h4>
+    <h4 class="text-center mb-4">Bize Nasıl Destek Olabilirsiniz?</h4>
+    <div class="mb-4">
+      <div class="mb-2">
+        Kırsalda eği̇ti̇m gören bir çocuğun eği̇ti̇m yolculuğunu güçlendirmek, çocuğun içinde bulunduğu eği̇ti̇m
+        ekosisteminin tüm paydaşlarını güçlendirmekten geçiyor. Biz KODA olarak biliyoruz ki kırsalda eğitimin
+        niteliğinin artırılması kırın da kentin de sürdürülebilir bir biçimde kalkınabilmesi ve herkese insanca yaşam
+        olanaklarının sağlanabilmesi için çok önemli.
+      </div>
+      <div>
+        Bir dernek olarak tüm destekler ve bağışlar hedeflerimizi gerçekleştirmek ve etkimizi yaymak adına büyük önem
+        taşıyor. Haydi, sen de büyük bir değişim yaratacak bu girişimin bir parçası ol!
+      </div>
+    </div>
     <div class="row intro-card-row">
       <div class="col-md-4 mb-5 ">
         <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #e45769; margin: 0px auto;">
@@ -125,14 +149,15 @@
       </div>
       <div class="col-md-4 mb-5">
         <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #fab537 ; margin: 0px auto;">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScmjiVxvdWRjIHTdk1PIaGyTHlbYkc05tqDHJMhSfACFh75xA/viewform" target="_blank">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScmjiVxvdWRjIHTdk1PIaGyTHlbYkc05tqDHJMhSfACFh75xA/viewform"
+            target="_blank">
             <div class="card-title-content">
               <h6 class="my-4">Öğretmenim, Bu Ağın Bir Parçası Olmak İstiyorum</h6>
             </div>
           </a>
         </div>
       </div>
-      
+
       <div class="col-md-4 mb-5">
         <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #e45769;margin: 0px auto;">
           <a href="{% url 'koda_gonullusu' %}">
@@ -146,7 +171,8 @@
 
       <div class="col-md-4 mb-5">
         <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #034080;margin: 0px auto;">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_arW0BiTTRIleeOjs1ujZy9fbzxftQNMonUBCKMPuRyzg5Q/viewform" target="_blank">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_arW0BiTTRIleeOjs1ujZy9fbzxftQNMonUBCKMPuRyzg5Q/viewform"
+            target="_blank">
             <div class="card-title-content">
               <h6 class="my-4">Eğitmenim, Bu Ağın Bir Parçası Olmak İstiyorum</h6>
             </div>
@@ -155,26 +181,22 @@
       </div>
     </div>
 
-    <div class="mt-5 text-center">
+    <div class="mt-5">
       <div class="mb-3">
-        KODA'nın kurulduğu günden bu yana bizlerle birlikte olan, bize gerek saha, gerekse ofis faaliyetlerimizde çokça
-        desteği ve katkısı dokunmuş o kadar çok isim var ki… Onların desteğini her zaman yanımızda hissediyoruz ve bu
-        bize çok daha fazla cesaret ve güç veriyor.
+        KODA'nın kurulduğu günden bu yana bizlerle birlikte olan, bize gerek saha, gerekse ofis faaliyetlerimizde çokça desteği ve katkısı dokunmuş o kadar çok isim var ki… Onların desteğini her zaman yanımızda hissediyoruz ve bu bize çok daha fazla cesaret ve güç veriyor.
       </div>
       <div class="mb-3">
-        2019-2020 yılı faaliyetlerimizde bize destek olmak üzere birlikte yol alacağımız gönüllülerimiz belli oldu.
-        İlginize çok teşekkür ediyoruz.
+        2020-2021 yılı faaliyetlerimizde bize destek olmak üzere KODA Gönüllüsü olmak isterseniz aşağıdaki formu doldurabilirsiniz.
       </div>
+      
       <div class="mb-3">
-        Bir sonraki yılın gereksinimlerini, 2020 Temmuz ayında yeniden değerlendirerek, bu sayfadan ve sosyal medya
-        kanallarımızdan duyuracağız. O zamana kadar bilgilerinizin kayıt altında bulunmasını isterseniz aşağıdaki formu
-        doldurabilirsiniz.
-      </div>
-      <div class="mb-3 text-center">
         <a href="https://forms.gle/1umCWCBj39J7vMQV8" class="font-weight-bold"
           style="color:#034080;">https://forms.gle/1umCWCBj39J7vMQV8</a>
       </div>
-      <div class="mb-3 text-center">
+      <div class="mb-3">
+        Şu an KODA Ekibimiz için aktif bir arayışımız bulunmuyor. Önümüzdeki süreçlerde olası iş olanakları için dilerseniz aşağıdaki genel başvuruyu doldurabilirsiniz.
+      </div>
+      <div class="mb-3">
         <b style="font-size: 18px;">Bize Katılmak İster Misiniz?<i class="fas fa-hand-point-right ml-2"
             style="color:#fab537;"></i></b>
         <a style="color:#034080;" class="font-weight-bold ml-2"
@@ -182,18 +204,6 @@
           Başvuru</a>
       </div>
 
-    </div>
-    <div class="mt-5 text-center">
-      <h4 class="text-center mb-3">Konaklama</h4>
-      <div class=" mb-2">
-        Köy Öğretmenleri Projesi kapsamda gerçekleştirdiğimiz üç ana faaliyetimiz bulunuyor.
-      </div>
-      <div class=" mb-3">
-        Köy Öğretmenleri Projesi”nin ana destekçisi Sabancı Vakfı’dır.
-
-        Proje kapsamında yürütülen “Çocuk Atölyeleri”ni ise Dalyan Vakfı desteklemektedir.
-      </div>
-      <img src="{% static 'portfolio1.webp' %}" alt="">
     </div>
 </section>
 

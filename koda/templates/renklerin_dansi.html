@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+<style>
+    .card-img-content {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+        height: 300px;
+    }
+
+    .card-circle {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .card-shadow-green {
+        -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+        box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+
+    }
+
+    .card-shadow-green:hover {
+        -webkit-box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(179, 179, 179, .2);
+        box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(28, 202, 167, .2);
+    }
+
+    .card-title-content {
+        padding: 1.2rem;
+    }
+
+    .card-title-content div {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+    .social-icon-content {
+        width: 60px;
+        height: 60px;
+        border-radius: 4px;
+    }
+
+    @media (min-width: 991.78px) and (max-width: 1240px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 991.78px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    .text-yellow {
+        color: #fab638;
+    }
+
+    .text-dark-blue {
+        color: #034080;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<section class="page-section">
+    <div class="container">
+        <div class="mb-5">
+            <h4 class="text-center mb-4">Renklerin Dansı</h4>
+            <div>
+                Bizimle Renklerin Ülkesi’nde yolculuğa çıkmak ister misiniz?
+            </div>
+            <br>
+            <div>
+                Köyde yaşayan ve renklere hayranlık duyan kahramanımız Deniz, geceleri Renkler Ülkesi’ne yolculuğa
+                çıkıyor. Biz de Renklerin Dansı serimizde Deniz’e eşlik ediyoruz. Hadi, siz de bize katılın!
+            </div>
+            <br>
+            <div>
+                Toplam 10 video içerikten oluşan Renklerin Dansı serimizde her bölüm ana renklere veya bu renklerin
+                karışımlarına odaklanıyor. Bu sırada çocukları fiziksel aktiviteye (ör. dans, resim, müzik, kil, oyun
+                vb.) teşvik ediyor; çocukların sosyal-duygusal, bilişsel ve fiziksel gelişimlerini destekliyor ve aynı
+                zamanda hayal gücü ve yaratıcılıklarını besliyor.
+            </div>
+            <br>
+            <div>
+                KODA Eğitim Uzmanı Gülsüm Duman’ın yazdığı, her bölümüne başka bir sanatçının renk kattığı serimizi her
+                hafta Pazar günleri sizlerle paylaşacağız.
+            </div>
+            <br>
+            <div>
+                Haftada bir olarak planlanan bölümler, kırsal bölgelerdeki öğrencilerin internete erişiminin kısıtlı
+                ve/ya bazı durumlarda hiç olmadığı göz önünde bulundurarak takvimlendirildi. Okulda yüz yüze eğitime
+                katılan okul öncesi ve ilkokul öğrencilerinin öğretmenleri aracılığı ile bu içeriklere
+                ulaşabileceklerini umut ediyoruz.
+            </div>
+
+        </div>
+        <div class="mb-4">
+            <i class="fas fa-angle-right mr-2 text-yellow"></i><a href="{% url 'tipoti_galima_ve_pako'  %}"
+                class="text-dark font-weight-bold">
+                Öğretmenlere Tavsiyeler ve Çerçeve Etkinlik Planı <i
+                    class="fas fa-external-link-alt ml-2 text-dark-blue"></i></a>
+        </div>
+        <div class="mb-4">
+            <h6 class="mb-2">Bölüm-1: Sarılar Şehri</h6>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card-img-content text-center">
+
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NfHSjo-0d4I"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-8 d-flex align-self-center">
+                    <div class="mb-3">
+                        Renklerin Dansı’nın ilk bölümünde, Deniz ile birlikte Sarılar Şehri’ne gidiyoruz!
+
+                        Performans ve kareografisini bağımsız dansçı ve oyuncu Sevi Algan’ın hazırladığı bölümümüzü
+                        Instagram ve YouTube hesaplarımız üzerinden izleyebilir, aynı zamanda internetin kısıtlı olduğu
+                        durumlar için bölümün küçük boyutlu ses dosyasını internet sitemizden indirebilirsiniz.
+                        <div>
+                            <a style="color: #00926e;" class="font-weight-bold"
+                                href="https://static.wixstatic.com/mp3/7314dd_6cfdd31781fa4ca3b7f6ef0da110af37.mp3"
+                                target="_blank">
+                                Ses dosyasını buradan indirebilirsiniz.
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
