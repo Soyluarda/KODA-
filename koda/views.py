@@ -263,5 +263,14 @@ def kvkk_info(request):
 def kvkk_politics(request):
     return render(request,'kullanim_kosullari_gizlilik_politikasi.html')
 
+def covid_bilgi_iletisim(request):
+    return render(request,'covid19_bilgi_ve_iletisim_agi.html')
+
+def renklerin_dansi(request):
+    return render(request,'renklerin_dansi.html')
+
+def ogretmenlere_tavsiyeler_ve_cevre_etkinlik(request):
+    return render(request,'renklerin_dansi_ogretmenlere_tavsiyeler.html')
+
 def cookies_policy(request):
     return render(request,'cerezler_politikasi.html')

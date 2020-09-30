@@ -63,6 +63,13 @@ urlpatterns = [
 
     path('onerilen-siteler/', views.onerilen_siteler,
          name='onerilen_siteler'),
+    path('covid-19-bilgi-iletisim-agi/', views.covid_bilgi_iletisim,
+         name='covid_bilgi_iletisim'),
+    path('renklerin-dansi/', views.renklerin_dansi,
+         name='renklerin_dansi'),
+
+    path('ogretmenlere-tavsiyeler-ve-cevre-etkinlik-plani/', views.ogretmenlere_tavsiyeler_ve_cevre_etkinlik,
+         name='ogretmenlere_tavsiyeler_ve_cevre_etkinlik'),
 
     path('kvkk-basvuru-formu/', views.kvkk_basvuru,
          name='kvkk_basvuru_formu'),
