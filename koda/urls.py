@@ -12,7 +12,7 @@ urlpatterns = [
     path('products/',views.products,name='products'),
     path('index2/',views.index2,name='index2'),
     path('basvuru/', views.basvuru, name='basvuru'),
-    path('bagis/', views.bagis, name='bagis'),
+    path('nasil-destek-olabilirsiniz/', views.nasil_destek_olabilirsiniz, name='nasil_destek_olabilirsiniz'),
     path('gonullu/', views.gonullu, name='gonullu'),
     path('bize-katilin/', views.bize_katilin, name='bize_katilin'),
     path('koda-gonullusu/', views.koda_gonullusu, name='koda_gonullusu'),
@@ -20,6 +20,7 @@ urlpatterns = [
     path('koda-ile-isbirligi/', views.isbirligi, name='isbirligi'),
     path('sponsor-olmak/', views.sponsor, name='sponsor'),
     path('bagis-detay/', views.bagis_detay, name='bagis_detay'),
+    path('bagis-yap/', views.bagis_yap, name='bagis_yap'),
     path('neler-yapmiyoruz/', views.neler_yapmiyoruz, name='neler_yapmiyoruz'),
     path('koy-ogretmenleri-projesi/', views.koy_ogretmenleri, name='koy_ogretmenleri'),
     path('stratejimiz/', views.stratejimiz, name='stratejimiz'),
@@ -67,7 +68,8 @@ urlpatterns = [
          name='covid_bilgi_iletisim'),
     path('renklerin-dansi/', views.renklerin_dansi,
          name='renklerin_dansi'),
-
+    path('destekcilerimiz/', views.destekcilerimiz,
+         name='destekcilerimiz'),
     path('ogretmenlere-tavsiyeler-ve-cevre-etkinlik-plani/', views.ogretmenlere_tavsiyeler_ve_cevre_etkinlik,
          name='ogretmenlere_tavsiyeler_ve_cevre_etkinlik'),
 

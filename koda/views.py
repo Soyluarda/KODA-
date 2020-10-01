@@ -52,8 +52,8 @@ def index2(request):
 def basvuru(request):
     return render(request,'basvuru.html')
 
-def bagis(request):
-    return render(request,'bagis.html')
+def nasil_destek_olabilirsiniz(request):
+    return render(request,'nasil_destek_olabilirsiniz.html')
 
 
 def gonullu(request):
@@ -147,6 +147,9 @@ def isbirligi(request):
 
 def bagis_detay(request):
     return render(request,'bagis_detay.html')
+
+def bagis_yap(request):
+    return render(request,'bagis_yap.html')
 
 def neler_yapmiyoruz(request):
     return render(request,'neler_yapmiyoruz.html')
@@ -249,8 +252,6 @@ def onerilen_siteler(request):
 
 def onerilen_siteler_detay(request, id):
     context = SuggestedSites.objects.all().filter(site_type=id)
-
-
     return render(request,'onerilen_siteler_detay.html', {'context': context})
 
 
@@ -274,3 +275,6 @@ def ogretmenlere_tavsiyeler_ve_cevre_etkinlik(request):
 
 def cookies_policy(request):
     return render(request,'cerezler_politikasi.html')
+
+def destekcilerimiz(request):
+    return render(request,'destekcilerimiz.html')
