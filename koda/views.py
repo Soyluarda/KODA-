@@ -15,6 +15,7 @@ from django.shortcuts import get_object_or_404
 def index(request):
     return render(request,'index.html')
 
+
 def contact(request):
     my_form = ContactForm()
     context = {
@@ -43,14 +44,14 @@ def contact(request):
 def about(request):
     return render(request,'about.html')
 
+
 def galeri(request):
     return render(request,'galeri.html')
 
-def index2(request):
-    return render(request,'index2.html')
 
 def basvuru(request):
     return render(request,'basvuru.html')
+
 
 def nasil_destek_olabilirsiniz(request):
     return render(request,'nasil_destek_olabilirsiniz.html')
@@ -86,14 +87,18 @@ def gonullu(request):
                   )
     return render(request,'gonullu.html',context)
 
+
 def koy_ogretmenleri(request):
     return render(request,'koy_ogretmenleri_prj.html')
+
 
 def mentorluk_programi(request):
     return render(request,'mentorluk_programi.html')
 
+
 def gecmis_faaliyetler(request):
     return render(request,'gecmis_faaliyetler.html')
+
 
 def ogretmen_topluluklari(request):
     return render(request,'ogretmen_topluluklari.html')
@@ -106,8 +111,10 @@ def bsmg_programi(request):
 def cocuk_atolyeleri(request):
     return render(request,'cocuk_atolyeleri.html')
 
+
 def degerlerimiz(request):
     return render(request,'degerlerimiz.html')
+
 
 def ruzgargulubultenleri(request):
     my_form = RuzgarGuluForm()
@@ -139,33 +146,42 @@ def ruzgargulubultenleri(request):
 def products(request):
     return render(request,'products.html')
 
+
 def sponsor(request):
     return render(request,'sponsor_olmak_istiyorum.html')
+
 
 def isbirligi(request):
     return render(request,'koda_ile_isbirligi.html')
 
+
 def bagis_detay(request):
     return render(request,'bagis_detay.html')
+
 
 def bagis_yap(request):
     return render(request,'bagis_yap.html')
 
+
 def neler_yapmiyoruz(request):
     return render(request,'neler_yapmiyoruz.html')
+
 
 def yayinlarimiz(request):
     return render(request,'yayinlarimiz.html')
 
+
 def bize_katilin(request):
     return render(request,'bize_katilin.html')
+
 
 def koda_raporlari(request):
     return render(request,'koda_raporlari.html')
 
-def koda_haritasi(request):
 
+def koda_haritasi(request):
     return render(request,'koda_haritasi.html')
+
 
 def kurumsal_destek(request):
     return render(request,'kurumsal_destek_ve_isbirligi.html')
@@ -178,8 +194,10 @@ def koda_gonullusu(request):
 def team(request):
     return render(request,'team.html')
 
+
 def trainers(request):
     return render(request,'trainers.html')
+
 
 def faaliyet_raporlari(request):
     return render(request,'faaliyet_raporlari.html')
@@ -192,41 +210,51 @@ def stratejimiz(request):
 def cozum_masasi(request):
     return render(request,'cozum_masasi.html')
 
+
 def etkinlik_onerileri(request):
     context = EventSuggestions.objects.all()
     return render(request,'etkinlik_onerileri.html', {'context': context})
+
 
 def etkinlik_onerileri_detay(request, id):
     context = get_object_or_404(EventSuggestions, pk=id)
     return render(request,'etkinlik_onerileri_detay.html', {'context': context})
 
+
 def ogretmenlerden_gelen_etkinlikler(request):
     context = TeachersDocuments.objects.all()
     return render(request,'ogretmenlerden_gelen_etkinlikler.html', {'context': context})
+
 
 def ogretmenlerden_gelen_etkinlikler_detay(request, id):
     context = get_object_or_404(TeachersDocuments, pk=id)
     return render(request,'ogretmenlerden_gelen_etkinlikler_detay.html', {'context': context})
 
+
 def onerilen_kaynaklar(request):
     context = SuggestedSources.objects.all()
     return render(request,'onerilen_kaynaklar.html', {'context': context})
+
 
 def onerilen_kaynaklar_detay(request, id):
     context = get_object_or_404(SuggestedSources, pk=id)
     return render(request,'onerilen_kaynaklar_detay.html', {'context': context})
 
+
 def tipoti_galima_ve_pako(request):
     context = TgpAdvantures.objects.all()
     return render(request,'tipoti_galima_ve_pako.html', {'context': context})
+
 
 def tipoti_galima_ve_pako_detay(request, id):
     context = get_object_or_404(TgpAdvantures, pk=id)
     return render(request,'tipoti_galima_ve_pako_detay.html', {'context': context})
 
+
 def koylerde_uzaktan_egitim_ve_covid19(request):
     context = RemoteLearning.objects.all()
     return render(request,'koylerde_uzaktan_egitim_ve_covid19.html', {'context': context})
+
 
 def koylerde_uzaktan_egitim_ve_covid19_detay(request, id):
     context = get_object_or_404(RemoteLearning, pk=id)
@@ -237,9 +265,11 @@ def koda_gunceleri(request):
     context = KodaDiaries.objects.all()
     return render(request,'koda_gunceleri.html', {'context': context})
 
+
 def koda_gunceleri_detay(request, id):
     context = KodaDiaries.objects.filter(id=id)
     return render(request,'koda_gunceleri_detay.html', {'context': context})
+
 
 def il_milli_egitim(request):
     context = ilMilliEgitim.objects.all()
@@ -250,6 +280,7 @@ def onerilen_siteler(request):
     context = SuggestedSitesType.objects.all()
     return render(request,'onerilen_siteler.html', {'context': context})
 
+
 def onerilen_siteler_detay(request, id):
     context = SuggestedSites.objects.all().filter(site_type=id)
     return render(request,'onerilen_siteler_detay.html', {'context': context})
@@ -258,23 +289,30 @@ def onerilen_siteler_detay(request, id):
 def kvkk_basvuru(request):
     return render(request,'kvkk_basvuru_formu.html')
 
+
 def kvkk_info(request):
     return render(request,'kvkk_bilgilendirme_metni.html')
+
 
 def kvkk_politics(request):
     return render(request,'kullanim_kosullari_gizlilik_politikasi.html')
 
+
 def covid_bilgi_iletisim(request):
     return render(request,'covid19_bilgi_ve_iletisim_agi.html')
+
 
 def renklerin_dansi(request):
     return render(request,'renklerin_dansi.html')
 
+
 def ogretmenlere_tavsiyeler_ve_cevre_etkinlik(request):
     return render(request,'renklerin_dansi_ogretmenlere_tavsiyeler.html')
 
+
 def cookies_policy(request):
     return render(request,'cerezler_politikasi.html')
+
 
 def destekcilerimiz(request):
     return render(request,'destekcilerimiz.html')

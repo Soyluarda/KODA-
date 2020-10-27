@@ -82,5 +82,4 @@ urlpatterns = [
     path('kullanım-kosullari-gizlilik/', views.kvkk_politics,
          name='kullanim_kosullari_gizlilik'),
 
-
 ]

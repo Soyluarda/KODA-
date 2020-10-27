@@ -28,8 +28,6 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
-
 INSTALLED_APPS = [
     'main',
     'koda',
@@ -159,5 +157,3 @@ CKEDITOR_CONFIGS = {
 }
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
-
-

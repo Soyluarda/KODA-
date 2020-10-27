@@ -74,6 +74,7 @@ class EventSuggestions(models.Model):
     def __str__(self):
         return self.title
 
+
 class KodaDiaries(models.Model):
     title = models.CharField(max_length=250, null=True, blank=True)
     content = RichTextUploadingField(null=True,
@@ -88,6 +89,7 @@ class KodaDiaries(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class SuggestedSitesType(models.Model):
     site_name = models.CharField(max_length=250)
@@ -114,5 +116,3 @@ class ilMilliEgitim(models.Model):
                                          'plugin.js',
                                      )],
                                      )
-
-
