@@ -4,7 +4,6 @@ from ckeditor.fields import RichTextField
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 
-
 class TgpAdvantures(models.Model):
     title = models.CharField(max_length=250, null=True, blank=True)
     youtube_url = models.URLField(max_length=250, null=True, blank=True)
@@ -108,6 +107,19 @@ class SuggestedSites(models.Model):
 
 
 class ilMilliEgitim(models.Model):
+    content = RichTextUploadingField(null=True,
+                                     blank=True,
+                                     external_plugin_resources=[(
+                                         'youtube',
+                                         '/static/vendor/ckeditor_plugins/youtube/youtube/',
+                                         'plugin.js',
+                                     )],
+                                     )
+
+
+
+class KVKKForm(models.Model):
+    title = models.SlugField(max_length=250)
     content = RichTextUploadingField(null=True,
                                      blank=True,
                                      external_plugin_resources=[(

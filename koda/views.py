@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from django.shortcuts import render,redirect
 from django.conf import settings
 from django.views.decorators.cache import cache_page
-from .models import EventSuggestions, SuggestedSources, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
+from .models import EventSuggestions, SuggestedSources, KVKKForm, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 
@@ -215,6 +215,10 @@ def etkinlik_onerileri(request):
     context = EventSuggestions.objects.all()
     return render(request,'etkinlik_onerileri.html', {'context': context})
 
+
+def kvkk_detail(request, title):
+    context = get_object_or_404(KVKKForm, title=title)
+    return render(request,'kvkk_detail.html', {'context': context})
 
 def etkinlik_onerileri_detay(request, id):
     context = get_object_or_404(EventSuggestions, pk=id)
