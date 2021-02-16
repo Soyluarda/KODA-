@@ -4,12 +4,12 @@ from . import views
 
 urlpatterns = [
     path('', views.index,name='index'),
-    path('contact/',views.contact,name='contact'),
+    path('iletisim/',views.contact,name='contact'),
     path('galeri/', views.galeri, name='galeri'),
-    path('about/', views.about, name='about'),
-    path('team/', views.team, name='team'),
-    path('trainers/', views.trainers, name='trainers'),
-    path('products/',views.products,name='products'),
+    path('hakkimizda/', views.about, name='about'),
+    path('ekip/', views.team, name='team'),
+    path('egitmenlerimiz/', views.trainers, name='trainers'),
+    path('neler-yapiyoruz/',views.products,name='products'),
     path('basvuru/', views.basvuru, name='basvuru'),
     re_path(r'kvkk-forms/(?P<title>[\w-]+)/$', views.kvkk_detail, name='kvkk_detail'),
     path('nasil-destek-olabilirsiniz/', views.nasil_destek_olabilirsiniz, name='nasil_destek_olabilirsiniz'),

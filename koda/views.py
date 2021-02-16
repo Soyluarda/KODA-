@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from django.shortcuts import render,redirect
 from django.conf import settings
 from django.views.decorators.cache import cache_page
-from .models import EventSuggestions, SuggestedSources, KVKKForm, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
+from .models import EventSuggestions, SuggestedSources, Pages, Covid19Information, KodaKVKKForms, KodaTeam, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 
@@ -42,7 +42,11 @@ def contact(request):
 
 
 def about(request):
-    return render(request,'about.html')
+    content = Pages.objects.get(slug='hakkimizda')
+    ctx = {
+        'data': content
+    }
+    return render(request,'about.html', ctx)
 
 
 def galeri(request):
@@ -192,7 +196,8 @@ def koda_gonullusu(request):
 
 
 def team(request):
-    return render(request,'team.html')
+    ctx = {'team': KodaTeam.objects.all()}
+    return render(request,'team.html', ctx)
 
 
 def trainers(request):
@@ -217,8 +222,8 @@ def etkinlik_onerileri(request):
 
 
 def kvkk_detail(request, title):
-    context = get_object_or_404(KVKKForm, title=title)
-    return render(request,'kvkk_detail.html', {'context': context})
+    context = get_object_or_404(KodaKVKKForms, title=title)
+    return render(request,'kvkk_details.html', {'context': context})
 
 def etkinlik_onerileri_detay(request, id):
     context = get_object_or_404(EventSuggestions, pk=id)
@@ -303,11 +308,21 @@ def kvkk_politics(request):
 
 
 def covid_bilgi_iletisim(request):
-    return render(request,'covid19_bilgi_ve_iletisim_agi.html')
+    content = Covid19Information.objects.all()
+    page_data = Pages.objects.get(slug='covid19_information')
+    ctx = {
+        'data': content,
+        'page_data': page_data,
+    }
+    return render(request,'covid19_bilgi_ve_iletisim_agi.html', ctx)
 
 
 def renklerin_dansi(request):
-    return render(request,'renklerin_dansi.html')
+    content = Pages.objects.get(slug='renklerin_dansi')
+    ctx = {
+        'data': content
+    }
+    return render(request,'renklerin_dansi.html', ctx)
 
 
 def ogretmenlere_tavsiyeler_ve_cevre_etkinlik(request):

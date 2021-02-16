@@ -117,8 +117,18 @@ class ilMilliEgitim(models.Model):
                                      )
 
 
+class KodaTeam(models.Model):
+    name = models.CharField(max_length=250)
+    title = models.CharField(max_length=250)
+    email = models.CharField(max_length=250)
+    image = models.ImageField(upload_to="Ekibimiz", null=True, blank=True)
 
-class KVKKForm(models.Model):
+
+    def __str__(self):
+        return self.name
+
+
+class KodaKVKKForms(models.Model):
     title = models.SlugField(max_length=250)
     content = RichTextUploadingField(null=True,
                                      blank=True,
@@ -128,3 +138,32 @@ class KVKKForm(models.Model):
                                          'plugin.js',
                                      )],
                                      )
+
+    def __str__(self):
+        return self.title
+
+
+
+class Pages(models.Model):
+    title = models.CharField(max_length=250)
+    slug = models.SlugField(max_length=250)
+    content = RichTextUploadingField(null=True,
+                                     blank=True,
+                                     external_plugin_resources=[(
+                                         'youtube',
+                                         '/static/vendor/ckeditor_plugins/youtube/youtube/',
+                                         'plugin.js',
+                                     )],
+                                     )
+
+    def __str__(self):
+        return self.title
+
+
+class Covid19Information(models.Model):
+    title = models.CharField(max_length=250)
+    content = models.CharField(max_length=500)
+    pdf = models.FileField()
+
+    def __str__(self):
+        return self.title
