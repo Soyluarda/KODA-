@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from django.shortcuts import render,redirect
 from django.conf import settings
 from django.views.decorators.cache import cache_page
-from .models import EventSuggestions, SuggestedSources, Pages, Covid19Information, KodaKVKKForms, KodaTeam, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
+from .models import EventSuggestions, SuggestedSources, Pages, KodaTrainers, KodaConsultants, Covid19Information, KodaKVKKForms, KodaTeam, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 
@@ -93,11 +93,16 @@ def gonullu(request):
 
 
 def koy_ogretmenleri(request):
+
     return render(request,'koy_ogretmenleri_prj.html')
 
 
 def mentorluk_programi(request):
-    return render(request,'mentorluk_programi.html')
+    content = Pages.objects.get(slug='mentorluk')
+    ctx = {
+        'data': content
+    }
+    return render(request,'mentorluk_programi.html', ctx)
 
 
 def gecmis_faaliyetler(request):
@@ -105,15 +110,27 @@ def gecmis_faaliyetler(request):
 
 
 def ogretmen_topluluklari(request):
-    return render(request,'ogretmen_topluluklari.html')
+    content = Pages.objects.get(slug='ogretmen-topluluklari')
+    ctx = {
+        'data': content
+    }
+    return render(request,'ogretmen_topluluklari.html', ctx)
 
 
 def bsmg_programi(request):
-    return render(request,'bsmg_programi.html')
+    content = Pages.objects.get(slug='bsmg-programi')
+    ctx = {
+        'data': content
+    }
+    return render(request,'bsmg_programi.html', ctx)
 
 
 def cocuk_atolyeleri(request):
-    return render(request,'cocuk_atolyeleri.html')
+    content = Pages.objects.get(slug='koye-ilk-adim')
+    ctx = {
+        'data': content
+    }
+    return render(request,'cocuk_atolyeleri.html', ctx)
 
 
 def degerlerimiz(request):
@@ -201,7 +218,10 @@ def team(request):
 
 
 def trainers(request):
-    return render(request,'trainers.html')
+    ctx = {'trainers': KodaTrainers.objects.all(),
+           'consultants': KodaConsultants.objects.all()
+           }
+    return render(request,'trainers.html', ctx)
 
 
 def faaliyet_raporlari(request):
@@ -334,4 +354,8 @@ def cookies_policy(request):
 
 
 def destekcilerimiz(request):
-    return render(request,'destekcilerimiz.html')
+    content = Pages.objects.get(slug='destekcilerimiz')
+    ctx = {
+        'data': content
+    }
+    return render(request,'destekcilerimiz.html', ctx)

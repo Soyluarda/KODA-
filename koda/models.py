@@ -128,6 +128,27 @@ class KodaTeam(models.Model):
         return self.name
 
 
+
+class KodaTrainers(models.Model):
+    name = models.CharField(max_length=250)
+    title = models.CharField(max_length=250)
+    image = models.ImageField(upload_to="Eğitmenlerimiz", null=True, blank=True)
+
+
+    def __str__(self):
+        return self.name
+
+
+class KodaConsultants(models.Model):
+    name = models.CharField(max_length=250)
+    title = models.CharField(max_length=250)
+    image = models.ImageField(upload_to="Danışmanlarımız", null=True, blank=True)
+
+
+    def __str__(self):
+        return self.name
+
+
 class KodaKVKKForms(models.Model):
     title = models.SlugField(max_length=250)
     content = RichTextUploadingField(null=True,
