@@ -40,6 +40,27 @@
 
 <section class="page-section">
   <div class="container">
+     <h4 class="mb-5 text-center">Geçmiş Faaliyetler</h4>
+
+    {% for faaliyet in faaliyetler %}
+    <div class="row intro-card-row">
+      <div class="col-md-12 mb-4">
+        <div class="card-shadow-green h-100">
+          <div class="card-title-content" style="background-color:#034080; ">
+            <h6 class="mb-0">{{faaliyet.title}}</h6>
+          </div>
+          <div class="card-body-content">
+            <div>
+
+             {{faaliyet.content|safe}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    <!--
     <h4 class="mb-5 text-center">Geçmiş Faaliyetler</h4>
     <div class="row intro-card-row">
       <div class="col-md-12 mb-4">
@@ -115,7 +136,9 @@
         </div>
       </div>
     </div>
+    -->
   </div>
+
 </section>
 
 

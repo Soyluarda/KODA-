@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from django.shortcuts import render,redirect
 from django.conf import settings
 from django.views.decorators.cache import cache_page
-from .models import EventSuggestions, SuggestedSources, KoyeİlkAdimVideolar, OgretmenTopluluklariYorumlari, KoyeİlkAdimYorumlari, Pages, KodaTrainers, KodaConsultants, BiaIcerikler, KodaKVKKForms, KodaTeam, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
+from .models import EventSuggestions, SuggestedSources, KoyeİlkAdimVideolar, GecmisFaaliyetler, OgretmenTopluluklariYorumlari, KoyeİlkAdimYorumlari, Pages, KodaTrainers, KodaConsultants, BiaIcerikler, KodaKVKKForms, KodaTeam, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 
@@ -106,7 +106,11 @@ def mentorluk_programi(request):
 
 
 def gecmis_faaliyetler(request):
-    return render(request,'gecmis_faaliyetler.html')
+    faaliyetler = GecmisFaaliyetler.objects.all().order_by('-id')
+    ctx = {
+        'faaliyetler': faaliyetler,
+    }
+    return render(request,'gecmis_faaliyetler.html', ctx)
 
 
 def ogretmen_topluluklari(request):

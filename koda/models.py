@@ -214,3 +214,15 @@ class KoyeİlkAdimVideolar(models.Model):
     title = models.CharField(max_length=500)
     youtube_url = models.CharField(max_length=1000)
     type = models.IntegerField(choices=TYPE_CHOICES)
+
+
+class GecmisFaaliyetler(models.Model):
+    title = models.CharField(max_length=500)
+    content = RichTextUploadingField(null=True,
+                                     blank=True,
+                                     external_plugin_resources=[(
+                                         'youtube',
+                                         '/static/vendor/ckeditor_plugins/youtube/youtube/',
+                                         'plugin.js',
+                                     )],
+                                     )
