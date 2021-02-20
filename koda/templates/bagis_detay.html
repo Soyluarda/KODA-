@@ -1,6 +1,79 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
+<style>
+    .card-img-content {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+        height: 230px;
+    }
+
+    .card-circle {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .card-shadow-green {
+        background: rgb(242, 242, 242, .5);
+        -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+        box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+    }
+
+    .card-shadow-green:hover {
+        -webkit-box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(179, 179, 179, .2);
+        box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(28, 202, 167, .2);
+    }
+
+    .card-title-content {
+        padding: 1.2rem;
+    }
+
+    .card-title-content div {
+        font-size: 14px;
+        padding-top: 10px;
+        min-height: 140px;
+    }
+
+
+
+    @media (min-width: 991.78px) and (max-width: 1240px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 991.78px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .card-title-content div {
+            min-height: 100%;
+    }
+    }
+
+    .link {
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) !important;
+        background-color: #034080;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .link:hover{
+        background-color: #00926e;
+        text-decoration: none;
+        box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19) !important;
+    }
+</style>
 {% endblock %}
 
 {% block body %}
@@ -8,41 +81,62 @@
 <section class="page-section">
    <div class="container">
       <h4 class="text-center mb-5">Nasıl Destek Olabilirsiniz?</h4>
-      <div class="mt-5">
-         <div class="mb-3">
-            <h5>Bağış</h5>
-            Akbank Hesap Numaraları ile Bağış Yapmak için: <br>
-            TL: TR720004600020888000430464 <br>
-            Euro: TR500004600020036000435966 <br>
-            Dolar: TR030004600020001000435965 <br>
-            Önemli not: EFT yaparken alıcı kısmına "Köy Okulları Değişim Ağı Derneği" yazınız. <br>
-            KODA gibi kısaltmalar kullanmanız durumunda EFT talimatı banka tarafından geri çevrilmektedir.
-         </div>
-         <div class="mb-3">
+      <div class="row intro-card-row">
 
-            <h6>Kredi Kartı ile Bağış Yapmak İçin:</h6>
-            <div class="mb-2">
-               Banka kartınızla tek seferlik veya düzenli bağış yapmak isterseniz, ödemelerinizi
-               Fonzip'in güvenli ödeme platformunda yer alan KODA sayfasından yapabilirsiniz:
+             <div class="col-md-4 mb-4">
+                <div class="card-shadow-green text-center h-100">
+                    <div class="card-img-content text-center py-4"
+                        style="background-image: url('/static/img/fonzip.png');">
+                    </div>
+                    <div class="card-title-content">
+                        <h6>Kredi kartınızla Fonzip üzerinden</h6>
+                        <div class="mb-3  h-100">
+                            Kredi veya banka kartınızla tek seferlik veya düzenli bağış yapmak isterseniz, ödemelerinizi
+                            Fonzip'in güvenli ödeme platformunda yer alan KODA sayfasından yapabilirsiniz.
+                        </div>
+                        <a class="py-1 px-2 link" target="_blank" href="https://fonzip.com/kodegisim/bagis">
+                            <span class="text-white">Bağış yapmak için tıklayın!</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a href="https://fonzip.com/kodegisim/bagis#/" class="font-weight-bold"
-               style="color:#034080;">https://fonzip.com/kodegisim/bagis#/</a>
-         </div>
-         <div class="mb-3">
-            <span>
-               <h6 class="mb-2">Bkm Express ile Bağış Yapmak İçin: <a href="https://bkmexpress.com.tr/bagis/"
-                     class="font-weight-bold ml-2" style="color:#034080;">https://bkmexpress.com.tr/bagis/</a></h6>
-            </span>
-         </div>
-         <div class="mb-3">
-            <span>
-               <h6 class="mb-2">Bağışçı Hakları Beyannamesi’ni görüntülemek için <a
-                     href="https://bf1bc20e-7532-42dc-9f53-412a282c3145.filesusr.com/ugd/7314dd_8210f1f21b954bab89da6bec0cd940f3.pdf"
-                     style="color:#034080;"><u> tıklayınız.</u></a></h6>
-            </span>
-         </div>
+           <div class="col-md-4 mb-4">
+                <div class="card-shadow-green text-center h-100">
+                    <div class="card-img-content text-center py-4"
+                        style="background-image: url('/static/img/koda_bagis.png');">
+                    </div>
+                    <div class="card-title-content">
+                        <h6>Akbank hesap numaralarımıza <br> havale veya EFT ile</h6>
+                        <div class="mb-3  h-100">
+                            TL: TR720004600020888000430464 <br>
+                            Euro: TR500004600020036000435966 <br>
+                            Dolar: TR030004600020001000435965
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+
+           <div class="col-md-4 mb-4">
+                <div class="card-shadow-green text-center h-100">
+                    <div class="card-img-content text-center py-4"
+                        style="background-image: url('/static/img/bkm_express.png');">
+                    </div>
+                    <div class="card-title-content">
+                        <h6>BKM Express ile</h6>
+                        <div class="mb-3  h-100">
+                            BKM Express üzerinden KODA'ya bağış yapabilirsiniz.
+                        </div>
+                        <a class="py-1 px-2 link" target="_blank" href="https://bkmexpress.com.tr/bagis/">
+                            <span class="text-white">Bağış yapmak için tıklayın!</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
       </div>
+
+       {{data.content|safe}}
 
 </section>
 

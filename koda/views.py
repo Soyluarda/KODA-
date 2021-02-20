@@ -187,7 +187,11 @@ def isbirligi(request):
 
 
 def bagis_detay(request):
-    return render(request,'bagis_detay.html')
+    content = Pages.objects.get(slug='bagis-detay')
+    ctx = {
+        'data': content
+    }
+    return render(request,'bagis_detay.html', ctx)
 
 
 def bagis_yap(request):
