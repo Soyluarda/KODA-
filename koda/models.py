@@ -181,10 +181,36 @@ class Pages(models.Model):
         return self.title
 
 
-class Covid19Information(models.Model):
+class BiaIcerikler(models.Model):
     title = models.CharField(max_length=250)
     content = models.CharField(max_length=500)
     pdf = models.FileField()
 
     def __str__(self):
         return self.title
+
+
+class OgretmenTopluluklariYorumlari(models.Model):
+    content = models.CharField(max_length=1000)
+    image = models.ImageField(upload_to="ogretmen-topluluklari-yorumlari", null=True, blank=True)
+
+
+class KoyeİlkAdimYorumlari(models.Model):
+    content = models.CharField(max_length=1000)
+    image = models.ImageField(upload_to="koye-ilk-adim-yorumlari", null=True, blank=True)
+
+
+class KoyeİlkAdimVideolar(models.Model):
+    DENEYIM = 1
+    EGITIM = 2
+    ATOLYE = 3
+
+    TYPE_CHOICES = (
+        (DENEYIM, 'Deneyim'),
+        (EGITIM, 'Eğitim'),
+        (ATOLYE, 'Atölye')
+    )
+
+    title = models.CharField(max_length=500)
+    youtube_url = models.CharField(max_length=1000)
+    type = models.IntegerField(choices=TYPE_CHOICES)

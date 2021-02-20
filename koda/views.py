@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from django.shortcuts import render,redirect
 from django.conf import settings
 from django.views.decorators.cache import cache_page
-from .models import EventSuggestions, SuggestedSources, Pages, KodaTrainers, KodaConsultants, Covid19Information, KodaKVKKForms, KodaTeam, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
+from .models import EventSuggestions, SuggestedSources, KoyeİlkAdimVideolar, OgretmenTopluluklariYorumlari, KoyeİlkAdimYorumlari, Pages, KodaTrainers, KodaConsultants, BiaIcerikler, KodaKVKKForms, KodaTeam, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 
@@ -111,8 +111,12 @@ def gecmis_faaliyetler(request):
 
 def ogretmen_topluluklari(request):
     content = Pages.objects.get(slug='ogretmen-topluluklari')
+    yorumlar = OgretmenTopluluklariYorumlari.objects.all()
+    content_2 = Pages.objects.get(slug='cumbur-cemaat-koy-senligi')
     ctx = {
-        'data': content
+        'data': content,
+        'yorumlar': yorumlar,
+        'data_2': content_2
     }
     return render(request,'ogretmen_topluluklari.html', ctx)
 
@@ -125,12 +129,14 @@ def bsmg_programi(request):
     return render(request,'bsmg_programi.html', ctx)
 
 
-def cocuk_atolyeleri(request):
+def koye_ilk_adim(request):
     content = Pages.objects.get(slug='koye-ilk-adim')
+    datas = KoyeİlkAdimYorumlari.objects.all()
     ctx = {
-        'data': content
+        'data': content,
+        'yorumlar': datas
     }
-    return render(request,'cocuk_atolyeleri.html', ctx)
+    return render(request,'koye_ilk_adim.html', ctx)
 
 
 def degerlerimiz(request):
@@ -328,13 +334,21 @@ def kvkk_politics(request):
 
 
 def covid_bilgi_iletisim(request):
-    content = Covid19Information.objects.all()
     page_data = Pages.objects.get(slug='covid19_information')
+    ctx = {
+        'page_data': page_data,
+    }
+    return render(request,'covid19_bilgi_ve_iletisim_agi.html', ctx)
+
+
+def bia_icerikler(request):
+    content = BiaIcerikler.objects.all()
+    page_data = Pages.objects.get(slug='bia_icerikler')
     ctx = {
         'data': content,
         'page_data': page_data,
     }
-    return render(request,'covid19_bilgi_ve_iletisim_agi.html', ctx)
+    return render(request,'bia_icerikler.html', ctx)
 
 
 def renklerin_dansi(request):
@@ -359,3 +373,17 @@ def destekcilerimiz(request):
         'data': content
     }
     return render(request,'destekcilerimiz.html', ctx)
+
+
+def koye_ilk_adim_videolar(request):
+    deneyimler = KoyeİlkAdimVideolar.objects.filter(type=1)
+    egitimler = KoyeİlkAdimVideolar.objects.filter(type=2)
+    atolyeler = KoyeİlkAdimVideolar.objects.filter(type=3)
+    ctx = {
+        'deneyimler': deneyimler,
+        'egitimler': egitimler,
+        'atolyeler': atolyeler
+
+    }
+    return render(request,'koye_ilk_adim_videolar.html', ctx)
+

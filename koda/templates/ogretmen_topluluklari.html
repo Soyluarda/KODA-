@@ -92,7 +92,28 @@
     {{data.content|safe}}
 
     </div>
-    <div class="row intro-card-row">
+        <div class="row intro-card-row">
+
+          {% for yorum in yorumlar %}
+          <div class="col-md-4 mb-4">
+              <div class="card-shadow-green text-center h-100" style="border-bottom:3px solid #e45769;">
+              <div class="card-img-content text-center py-4" style="background-image: url('../media/{{yorum.image}}');">
+              </div>
+              <div class="card-title-content">
+                <div>
+                  {{yorum.image}}
+                  {{yorum.content}}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+
+
+
+        </div>
+    <!--
       <div class="col-md-4 mb-4">
         <div class="card-shadow-green text-center h-100" style="border-bottom:3px solid #e45769;">
           <div class="card-img-content text-center py-4" style="background-image: url('../static/img/afacan_6.JPG');">
@@ -181,36 +202,10 @@
         </div>
       </div>
     </div>
+    -->
 
     <div class="mt-5 text-center">
-      <h4 class="mb-3">Cümbür Cemaat Köy Şenliği</h4>
-      <div>
-        Her yıl; köy halkı, çocuklar, KODA öğretmenleri ve gönüllüler ile birlikte bir köy şenliği düzenliyoruz.
-        Geçtiğimiz yıl şenliklerimizi hem Diyarbakır-Çınar’da hem de Şanlıurfa- Harran’da büyük bir heyecanla ve tam bir
-        imece usulüyle şenliklerimizi gerçekleştirdik. Bu şenliklerde neler yok ki… Çocukların öğretmenleri ile birlikte
-        hazırladıkları gösterileri, erbane ritim atölyesi, makrome, resim atölyesi, açık hava oyunları ve tabii ki
-        birlikteliğimizin verdiği coşkuyla yapılan hazırlık heyecanları, halaylarımız ve mutluluktan hiç yorgunluk
-        hissetmediğimiz toparlanmalarımızla kalbimiz kıpır kıpır bir sonraki buluşmaya kadarki vedalarımız.
-        <div class="row intro-card-row mt-5">
-          <div class="col-md-4 mb-4">
-            <div class="card-img-content" style="border-bottom:3px solid #e45769;">
-              <div class="card-img-1 card-circle "></div>
-            </div>
-
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card-img-content" style="border-bottom:3px solid #00926e;">
-
-              <div class="card-img-2 card-circle "></div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card-img-content" style="border-bottom:3px solid #fab537;">
-              <div class="card-img-3 card-circle "></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {{data_2.content|safe}}
     </div>
   </div>
 </section>

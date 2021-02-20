@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+<style>
+  .card-shadow-green {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+    box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+  }
+
+  .card-title-content {
+    padding: 1.6rem 1.2rem;
+  }
+
+  .card-title-content h6 {
+    font-size: 19px;
+    color: #fff;
+  }
+
+  .card-title-content div {
+    font-size: 14px;
+  }
+
+  @media (min-width: 767.78px) and (max-width: 991.78px) {
+    .intro-card-row .col-md-4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (max-width: 767.78px) {
+    .intro-card-row .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+</style>
+
+{% endblock %}
+
+{% block body %}
+
+<section class="page-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h4 class="mb-3">Deneyim Videoları</h4>
+      <div class="row">
+      {% for deneyim in deneyimler %}
+       <div class="card-shadow-green text-center h-100 col-4">
+            <div class="card-img-content text-center">
+                <iframe width="100%" height="100%" src="{{deneyim.youtube_url}}"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+            </div>
+
+            <div class="card-title-content">
+                <h6>{{x.title}}</h6>
+                <div></div>
+            </div>
+        </div>
+
+
+
+      {% endfor %}
+      </div>
+    </div>
+      <div class="container">
+    <div class="text-center mb-5">
+      <h4 class="mb-3">Eğitim Videoları</h4>
+      <div class="row">
+            {% for egitim in egitimler %}
+             <div class="card-shadow-green text-center h-100 col-4">
+                  <div class="card-img-content text-center">
+                      <iframe width="100%" height="100%" src="{{egitim.youtube_url}}"
+                                  frameborder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowfullscreen></iframe>
+                  </div>
+
+                  <div class="card-title-content">
+                      <h6>{{x.title}}</h6>
+                      <div></div>
+                  </div>
+              </div>
+
+
+
+      {% endfor %}
+      </div>
+    </div>
+          <div class="container">
+    <div class="text-center mb-5">
+      <h4 class="mb-3">Atölye Videoları</h4>
+      <div class="row">
+            {% for atolye in atolyeler %}
+       <div class="card-shadow-green text-center h-100 col-4">
+            <div class="card-img-content text-center">
+                <iframe width="100%" height="100%" src="{{atolye.youtube_url}}"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+            </div>
+
+            <div class="card-title-content">
+                <h6>{{x.title}}</h6>
+                <div></div>
+            </div>
+        </div>
+
+
+
+      {% endfor %}
+      </div>
+    </div>
+
+</section>
+
+{% endblock %}

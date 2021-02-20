@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from .models import SuggestedSources, Pages, KodaConsultants, KodaTrainers, Covid19Information, KodaKVKKForms, KodaTeam, TgpAdvantures, EventSuggestions, KodaDiaries, SuggestedSitesType, SuggestedSites, TeachersDocuments, RemoteLearning, ilMilliEgitim
+from .models import SuggestedSources, OgretmenTopluluklariYorumlari, KoyeİlkAdimVideolar, KoyeİlkAdimYorumlari, Pages, KodaConsultants, KodaTrainers, BiaIcerikler, KodaKVKKForms, KodaTeam, TgpAdvantures, EventSuggestions, KodaDiaries, SuggestedSitesType, SuggestedSites, TeachersDocuments, RemoteLearning, ilMilliEgitim
 
 
 from django.contrib import admin
@@ -17,6 +17,9 @@ admin.site.register(ilMilliEgitim)
 admin.site.register(KodaTeam)
 admin.site.register(KodaKVKKForms)
 admin.site.register(Pages)
-admin.site.register(Covid19Information)
+admin.site.register(BiaIcerikler)
 admin.site.register(KodaConsultants)
 admin.site.register(KodaTrainers)
+admin.site.register(OgretmenTopluluklariYorumlari)
+admin.site.register(KoyeİlkAdimYorumlari)
+admin.site.register(KoyeİlkAdimVideolar)

@@ -56,6 +56,25 @@
     <div class="mb-5">
      {{data.content|safe}}
     </div>
+      <div class="row intro-card-row">
+          {% for yorum in yorumlar %}
+          <div class="col-md-4 mb-4">
+        <div class="card-shadow-green text-center h-100" style="border-bottom:3px solid #e45769;">
+          <div class="card-img-content text-center py-4" style="background-image: url('../media/{{yorum.image}}');">
+          </div>
+          <div class="card-title-content">
+            <div>
+              {{yorum.content}}
+            </div>
+          </div>
+        </div>
+      </div>
+          {% endfor %}
+
+
+      </div>
+
+    <!--
     <div class="row intro-card-row">
       <div class="col-md-4 mb-4">
         <div class="card-shadow-green text-center h-100" style="border-bottom:3px solid #e45769;">
@@ -138,6 +157,7 @@
       </div>
     </div>
   </div>
+  -->
 </section>
 
 
