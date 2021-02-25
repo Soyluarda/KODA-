@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from django.shortcuts import render,redirect
 from django.conf import settings
 from django.views.decorators.cache import cache_page
-from .models import EventSuggestions, SuggestedSources, KoyeİlkAdimVideolar, GecmisFaaliyetler, OgretmenTopluluklariYorumlari, KoyeİlkAdimYorumlari, Pages, KodaTrainers, KodaConsultants, BiaIcerikler, KodaKVKKForms, KodaTeam, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
+from .models import EventSuggestions, SuggestedSources, Yayinlarimiz, StratejikPlanVeMaliBelgeler, KoyeİlkAdimVideolar, GecmisFaaliyetler, OgretmenTopluluklariYorumlari, KoyeİlkAdimYorumlari, Pages, KodaTrainers, KodaConsultants, BiaIcerikler, KodaKVKKForms, KodaTeam, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 
@@ -203,7 +203,13 @@ def neler_yapmiyoruz(request):
 
 
 def yayinlarimiz(request):
-    return render(request,'yayinlarimiz.html')
+    yayinlarimiz = Yayinlarimiz.objects.all()
+
+    ctx = {
+        'yayinlarimiz': yayinlarimiz,
+
+    }
+    return render(request,'yayinlarimiz.html', ctx)
 
 
 def bize_katilin(request):
@@ -211,7 +217,19 @@ def bize_katilin(request):
 
 
 def koda_raporlari(request):
-    return render(request,'koda_raporlari.html')
+    stratejik = StratejikPlanVeMaliBelgeler.objects.filter(type=1)
+    bagimsiz_denetim = StratejikPlanVeMaliBelgeler.objects.filter(type=2)
+    ic_denetim = StratejikPlanVeMaliBelgeler.objects.filter(type=3)
+    gelir_gider = StratejikPlanVeMaliBelgeler.objects.filter(type=4)
+    beyannameler = StratejikPlanVeMaliBelgeler.objects.filter(type=5)
+    ctx = {
+        'stratejik': stratejik,
+        'bagimsiz_denetim': bagimsiz_denetim,
+        'ic_denetim': ic_denetim,
+        'gelir_gider': gelir_gider,
+        'beyannameler': beyannameler
+    }
+    return render(request,'koda_raporlari.html', ctx)
 
 
 def koda_haritasi(request):

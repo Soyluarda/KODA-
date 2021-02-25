@@ -226,3 +226,29 @@ class GecmisFaaliyetler(models.Model):
                                          'plugin.js',
                                      )],
                                      )
+
+
+class StratejikPlanVeMaliBelgeler(models.Model):
+    STRATEJIK = 1
+    BAGIMSIZ_DENETIM = 2
+    IC_DENETIM = 3
+    GELIR_GIDER = 4
+    BEYANNAMELER = 5
+
+    TYPE_CHOICES = (
+        (STRATEJIK, 'Stratejik Plan'),
+        (BAGIMSIZ_DENETIM, 'Bağımsız Denetim Raporları'),
+        (IC_DENETIM, 'İç Denetim Raporları'),
+        (GELIR_GIDER, 'Gelir- Gider Tabloları'),
+        (BEYANNAMELER, 'Beyannameler')
+    )
+
+    title = models.CharField(max_length=200)
+    pdf = models.FileField()
+    type = models.IntegerField(choices=TYPE_CHOICES)
+
+
+class Yayinlarimiz(models.Model):
+    title = models.CharField(max_length=200)
+    pdf = models.FileField()
+    image = models.ImageField(upload_to='yayinlarimiz/')

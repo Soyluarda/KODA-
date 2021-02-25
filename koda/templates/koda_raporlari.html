@@ -51,8 +51,10 @@
           </div>
           <div class="card-body-content" style="line-height: 2;">
             <div>
-              <i class="fas fa-angle-right mr-2"></i><a href="{% static '2018_2023_stratejik_plan.pdf' %}"
-                target="_blank"> 2018-2023 </a>
+              {% for x in stratejik %}
+                <i class="fas fa-angle-right mr-2"></i><a href="/media/{{x.pdf}}"
+                  target="_blank"> {{x.title}} </a>
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -64,8 +66,10 @@
           </div>
           <div class="card-body-content" style="line-height: 2;">
             <div>
-              <i class="fas fa-angle-right mr-2"></i><a href="{% static 'bagimsiz_ic_denetim.pdf' %}" target="_blank">
-                2018- 2019 bağımsız denetim raporu </a>
+              {% for x in bagimsiz_denetim %}
+                <i class="fas fa-angle-right mr-2"></i><a href="/media/{{x.pdf}}"
+                  target="_blank"> {{x.title}} </a>
+              {% endfor %}
             </div>
             <!-- <div>
               <i class="fas fa-angle-right mr-2"></i><a href="{% static 'koda_gelir_gider_2017.pdf' %}" target="_blank">
@@ -81,12 +85,10 @@
           </div>
           <div class="card-body-content" style="line-height: 2;">
             <div>
-              <i class="fas fa-angle-right mr-2"></i><a href="{% static 'koda_ic_denetim_2019.pdf' %}" target="_blank">
-                2019 yılı iç denetim raporu </a>
-            </div>
-            <div>
-              <i class="fas fa-angle-right mr-2"></i><a href="{% static 'koda_ic_denetim_2018.pdf' %}" target="_blank">
-                2018 yılı iç denetim raporu </a>
+              {% for x in ic_denetim %}
+                <i class="fas fa-angle-right mr-2"></i><a href="/media/{{x.pdf}}"
+                  target="_blank"> {{x.title}} </a>
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -98,16 +100,10 @@
           </div>
           <div class="card-body-content" style="line-height: 2;">
             <div>
-              <i class="fas fa-angle-right mr-2"></i><a href="{% static 'koda_gelir_gider_2019.pdf' %}" target="_blank">
-                2019 yılı gelir- gider raporu </a>
-            </div>
-            <div>
-              <i class="fas fa-angle-right mr-2"></i><a href="{% static 'koda_gelir_gider_2018.pdf' %}" target="_blank">
-                2018 yılı gelir- gider raporu </a>
-            </div>
-            <div>
-              <i class="fas fa-angle-right mr-2"></i><a href="{% static 'koda_gelir_gider_2017.pdf' %}" target="_blank">
-                2017 yılı gelir- gider raporu </a>
+              {% for x in gelir_gidere %}
+                <i class="fas fa-angle-right mr-2"></i><a href="/media/{{x.pdf}}"
+                  target="_blank"> {{x.title}} </a>
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -136,20 +132,10 @@
                 target="_blank"> 2018- 2023 Stratejik Plan </a>
             </div> -->
             <div>
-              <i class="fas fa-angle-right mr-2"></i><a href="{% static 'beyannameler_2019.pdf' %}" target="_blank">
-                2019 yılı beyannameler raporu </a>
-            </div>
-            <div>
-              <i class="fas fa-angle-right mr-2"></i><a href="{% static 'beyannameler_2018.pdf' %}" target="_blank">
-                2018 yılı beyannameler raporu </a>
-            </div>
-            <div>
-              <i class="fas fa-angle-right mr-2"></i><a href="{% static 'beyannameler_2017.pdf' %}" target="_blank">
-                2017 yılı beyannameler raporu </a>
-            </div>
-            <div>
-              <i class="fas fa-angle-right mr-2"></i><a href="{% static 'beyannameler_2016.pdf' %}" target="_blank">
-                2016 yılı beyannameler raporu </a>
+              {% for x in beyannameler %}
+                <i class="fas fa-angle-right mr-2"></i><a href="/media/{{x.pdf}}"
+                  target="_blank"> {{x.title}} </a>
+              {% endfor %}
             </div>
           </div>
         </div>
