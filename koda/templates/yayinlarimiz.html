@@ -61,6 +61,7 @@
     color: #404040;
   }
 
+
 </style>
 
 {% endblock %}
@@ -73,13 +74,13 @@
         <div class="row intro-card-row mt-5">
             {% for x in  yayinlarimiz %}
                  <div class="col-md-4 mb-4">
-                    <div class="card-shadow-green text-center h-100">
+                    <div class="card-shadow-green text-center">
+                        <h6 style="text-align:center">{{x.title}}</h6>
                         <a href="/media/{{x.pdf}}">
                             <div class="card-img-content text-center py-4"
-                            style="background-image: url('/media/{{ x.image }}');">
+                            style="background-image: url('/media/{{ x.image }}'); background-size: 100% 100%;;">
 
                         <div class="card-title-content">
-                            <h6>{{x.title}}</h6>
                             <div class="mb-3  h-100">
 
                             </div>
