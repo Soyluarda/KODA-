@@ -103,18 +103,6 @@
 <section class="page-section">
   <div class="container">
     <h4 class="text-center mb-4">Bize Nasıl Destek Olabilirsiniz?</h4>
-    <div class="mb-4">
-      <div class="mb-2">
-        Kırsalda eği̇ti̇m gören bir çocuğun eği̇ti̇m yolculuğunu güçlendirmek, çocuğun içinde bulunduğu eği̇ti̇m
-        ekosisteminin tüm paydaşlarını güçlendirmekten geçiyor. Biz KODA olarak biliyoruz ki kırsalda eğitimin
-        niteliğinin artırılması kırın da kentin de sürdürülebilir bir biçimde kalkınabilmesi ve herkese insanca yaşam
-        olanaklarının sağlanabilmesi için çok önemli.
-      </div>
-      <div>
-        Bir dernek olarak tüm destekler ve bağışlar hedeflerimizi gerçekleştirmek ve etkimizi yaymak adına büyük önem
-        taşıyor. Haydi, sen de büyük bir değişim yaratacak bu girişimin bir parçası ol!
-      </div>
-    </div>
     <div class="row intro-card-row">
       <div class="col-md-4 mb-5 ">
         <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #e45769; margin: 0px auto;">
@@ -149,7 +137,7 @@
       </div>
       <div class="col-md-4 mb-5">
         <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #fab537 ; margin: 0px auto;">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScmjiVxvdWRjIHTdk1PIaGyTHlbYkc05tqDHJMhSfACFh75xA/viewform"
+          <a href="{% url 'ogretmen_agin_parcasi' %}"
             target="_blank">
             <div class="card-title-content">
               <h6 class="my-4">Öğretmenim, Bu Ağın Bir Parçası Olmak İstiyorum</h6>
@@ -171,7 +159,7 @@
 
       <div class="col-md-4 mb-5">
         <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #034080;margin: 0px auto;">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_arW0BiTTRIleeOjs1ujZy9fbzxftQNMonUBCKMPuRyzg5Q/viewform"
+          <a href="egitmen_agin_parcasi"
             target="_blank">
             <div class="card-title-content">
               <h6 class="my-4">Eğitmenim, Bu Ağın Bir Parçası Olmak İstiyorum</h6>
@@ -182,27 +170,7 @@
     </div>
 
     <div class="mt-5">
-      <div class="mb-3">
-        KODA'nın kurulduğu günden bu yana bizlerle birlikte olan, bize gerek saha, gerekse ofis faaliyetlerimizde çokça desteği ve katkısı dokunmuş o kadar çok isim var ki… Onların desteğini her zaman yanımızda hissediyoruz ve bu bize çok daha fazla cesaret ve güç veriyor.
-      </div>
-      <div class="mb-3">
-        2020-2021 yılı faaliyetlerimizde bize destek olmak üzere KODA Gönüllüsü olmak isterseniz aşağıdaki formu doldurabilirsiniz.
-      </div>
-      
-      <div class="mb-3">
-        <a href="https://forms.gle/1umCWCBj39J7vMQV8" class="font-weight-bold"
-          style="color:#034080;">https://forms.gle/1umCWCBj39J7vMQV8</a>
-      </div>
-      <div class="mb-3">
-        Şu an KODA Ekibimiz için aktif bir arayışımız bulunmuyor. Önümüzdeki süreçlerde olası iş olanakları için dilerseniz aşağıdaki genel başvuruyu doldurabilirsiniz.
-      </div>
-      <div class="mb-3">
-        <b style="font-size: 18px;">Bize Katılmak İster Misiniz?<i class="fas fa-hand-point-right ml-2"
-            style="color:#fab537;"></i></b>
-        <a style="color:#034080;" class="font-weight-bold ml-2"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSetzMePJwlEmW8vdHDeJpXlIEF3iDhNI0CsaG8941yTBhQj-g/viewform">Genel
-          Başvuru</a>
-      </div>
+    {{data|safe}}
 
     </div>
 </section>

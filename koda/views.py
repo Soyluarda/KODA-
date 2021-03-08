@@ -58,7 +58,11 @@ def basvuru(request):
 
 
 def nasil_destek_olabilirsiniz(request):
-    return render(request,'nasil_destek_olabilirsiniz.html')
+    content = Pages.objects.get(slug='nasil-destek-olabilirsiniz')
+    ctx = {
+        'data': content
+    }
+    return render(request,'nasil_destek_olabilirsiniz.html', ctx)
 
 
 def gonullu(request):
@@ -179,11 +183,19 @@ def products(request):
 
 
 def sponsor(request):
-    return render(request,'sponsor_olmak_istiyorum.html')
+    content = Pages.objects.get(slug='sponsor-olmak-istiyorum')
+    ctx = {
+        'data': content
+    }
+    return render(request,'sponsor_olmak_istiyorum.html', ctx)
 
 
 def isbirligi(request):
-    return render(request,'koda_ile_isbirligi.html')
+    content = Pages.objects.get(slug='koda-ile-isbirligi')
+    ctx = {
+        'data': content
+    }
+    return render(request,'koda_ile_isbirligi.html', ctx)
 
 
 def bagis_detay(request):
@@ -241,7 +253,27 @@ def kurumsal_destek(request):
 
 
 def koda_gonullusu(request):
-    return render(request,'koda_gonullusu.html')
+    content = Pages.objects.get(slug='koda-gonullusu-olmak')
+    ctx = {
+        'data': content
+    }
+    return render(request,'koda_gonullusu.html', ctx)
+
+
+def ogretmen_agin_parcasi(request):
+    content = Pages.objects.get(slug='ogretmenim-bu-agin-parcasi')
+    ctx = {
+        'data': content
+    }
+    return render(request,'ogretmenim-bu-agin-parcasi-olmak-istiyorum.html', ctx)
+
+
+def egitmen_agin_parcasi(request):
+    content = Pages.objects.get(slug='egitmenim-bu-agin-parcasi')
+    ctx = {
+        'data': content
+    }
+    return render(request,'egitmenim_bu_agin_parcasi_olmak_istiyorum.html', ctx)
 
 
 def team(request):
