@@ -1,4 +1,3 @@
-
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
@@ -25,6 +24,7 @@
 
     .card-shadow-green {
         background: rgb(242, 242, 242, .5);
+        border: 1px solid rgb(242, 242, 242, 2);
         -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
         box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
     }
@@ -35,13 +35,14 @@
     }
 
     .card-title-content {
-        padding: 1.2rem;
+        padding: 1.2rem ;
     }
 
     .card-title-content div {
-        font-size: 14px;
+        font-size: 16px;
         padding-top: 10px;
     }
+
 
 
     @media (min-width: 991.78px) and (max-width: 1240px) {
@@ -56,6 +57,7 @@
             flex: 0 0 100%;
             max-width: 100%;
         }
+
     }
 
     .link {
@@ -74,34 +76,11 @@
 {% endblock %}
 
 {% block body %}
-<section class="page-section">
+<section class="page-section" id="about">
     <div class="container">
-        <div class="mb-5">
-            <h4 class="text-center">Öğretmenlerden Gelenler</h4>
-        </div>
-        <div class="row intro-card-row">
-            {% for x in context %}
-            <div class="col-md-4 mb-4">
-                <div class="card-shadow-green text-center h-100">
-                    <div class="card-img-content text-center py-4"
-                        style="background-image: url('/media/{{ x.header_image }}');">
-                    </div>
-                    <div class="card-title-content h-100">
-                        <h6 class="mb-4">{{x.title|safe}}</h6>
-                        <!-- <div class="mb-3 h-100">
-                            {{x.header_content}}
-                        </div> -->
-                        <a class="py-1 px-2 link" href="{% url 'ogretmenlerden_gelen_etkinlikler_detay' x.id %}">
-                            <span class="text-white">İncelemek için tıklayabilirsiniz!</span>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-            {% endfor %}
-
-        </div>
+            {{page_data.content|safe}}
 
     </div>
 </section>
+
 {% endblock %}

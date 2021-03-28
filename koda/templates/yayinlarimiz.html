@@ -27,12 +27,15 @@
             flex: 0 0 100%;
             max-width: 100%;
         }
-    }  .card-shadow-green {
-    border-radius: 5px;
-    background: rgb(242, 242, 242, .5);
-    -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
-    box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
-  }
+    }
+
+    .card-shadow-green {
+        border-radius: 5px;
+        background: rgb(242, 242, 242, .5);
+        -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+        box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+
+    }
 
   .card-shadow-green:hover {
     -webkit-box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(179, 179, 179, .2);
@@ -62,6 +65,21 @@
   }
 
 
+
+
+figure {
+  display:flex;
+}
+
+.card-shadow-green img {
+  width: 320px;
+  height: 250px;
+  border: 1px solid #999;
+  object-fit: cover;
+  object-position: 50% 15%;
+}
+
+
 </style>
 
 {% endblock %}
@@ -77,14 +95,10 @@
                     <div class="card-shadow-green text-center">
                         <h6 style="text-align:center">{{x.title}}</h6>
                         <a href="/media/{{x.pdf}}">
-                            <div class="card-img-content text-center py-4"
-                            style="background-image: url('/media/{{ x.image }}'); background-size: 100% 100%;;">
+                                <figure>
+                                  <img src="/media/{{ x.image }}" alt="">
+                                </figure>
 
-                        <div class="card-title-content">
-                            <div class="mb-3  h-100">
-
-                            </div>
-                        </div>
                         </div>
                         </a>
                     </div>

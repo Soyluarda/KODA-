@@ -399,6 +399,29 @@ def covid_bilgi_iletisim(request):
     return render(request,'covid19_bilgi_ve_iletisim_agi.html', ctx)
 
 
+def aile_calismalari(request):
+    page_data = Pages.objects.get(slug='aile-calismalari')
+    ctx = {
+        'page_data': page_data,
+    }
+    return render(request,'aile_calismalari.html', ctx)
+
+
+def okul_sonrasi_calismalari(request):
+    page_data = Pages.objects.get(slug='okul-sonrasi-calismalari')
+    ctx = {
+        'page_data': page_data,
+    }
+    return render(request,'okul_sonrasi_calismalari.html', ctx)
+
+
+def yolculuk_var(request):
+    page_data = Pages.objects.get(slug='yolculuk-var')
+    ctx = {
+        'page_data': page_data,
+    }
+    return render(request,'yolculuk_var.html', ctx)
+
 def bia_icerikler(request):
     content = BiaIcerikler.objects.all()
     page_data = Pages.objects.get(slug='bia_icerikler')
