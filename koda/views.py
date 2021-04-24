@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from django.shortcuts import render,redirect
 from django.conf import settings
 from django.views.decorators.cache import cache_page
-from .models import EventSuggestions, SuggestedSources, Yayinlarimiz, StratejikPlanVeMaliBelgeler, KoyeİlkAdimVideolar, GecmisFaaliyetler, OgretmenTopluluklariYorumlari, KoyeİlkAdimYorumlari, Pages, KodaTrainers, KodaConsultants, BiaIcerikler, KodaKVKKForms, KodaTeam, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
+from .models import EventSuggestions, SuggestedSources, BagisKartlari, Yayinlarimiz, StratejikPlanVeMaliBelgeler, KoyeİlkAdimVideolar, GecmisFaaliyetler, OgretmenTopluluklariYorumlari, KoyeİlkAdimYorumlari, Pages, KodaTrainers, KodaConsultants, BiaIcerikler, KodaKVKKForms, KodaTeam, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 
@@ -200,8 +200,10 @@ def isbirligi(request):
 
 def bagis_detay(request):
     content = Pages.objects.get(slug='bagis-detay')
+    cards = BagisKartlari.objects.all()
     ctx = {
-        'data': content
+        'data': content,
+        'cards': cards
     }
     return render(request,'bagis_detay.html', ctx)
 

@@ -253,3 +253,10 @@ class Yayinlarimiz(models.Model):
     title = models.CharField(max_length=200)
     pdf = models.FileField()
     image = models.ImageField(upload_to='yayinlarimiz/')
+
+
+class BagisKartlari(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='bagis')
+    url = models.CharField(max_length=200, null=True, blank=True)
