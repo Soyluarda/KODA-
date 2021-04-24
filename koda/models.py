@@ -4,6 +4,7 @@ from ckeditor.fields import RichTextField
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 
+
 class TgpAdvantures(models.Model):
     title = models.CharField(max_length=250, null=True, blank=True)
     youtube_url = models.URLField(max_length=250, null=True, blank=True)
@@ -39,7 +40,7 @@ class TeachersDocuments(models.Model):
 
     def __str__(self):
         return self.title
-        
+
 
 class RemoteLearning(models.Model):
     title = models.CharField(max_length=250, null=True, blank=True)
