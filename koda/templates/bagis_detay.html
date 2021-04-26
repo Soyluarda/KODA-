@@ -84,10 +84,8 @@
 <section class="page-section">
    <div class="container">
       <h4 class="text-center mb-5">Nasıl Destek Olabilirsiniz?</h4>
-
-       {% for card in cards %}
             <div class="row intro-card-row">
-
+                {% for card in cards %}
                  <div class="col-md-4 mb-4">
                     <div class="card-shadow-green text-center h-100">
                         <div class="card-img-content text-center py-4"
@@ -106,9 +104,8 @@
                         </div>
                     </div>
                 </div>
-          </div>
-
-       {% endfor %}
+                 {% endfor %}
+            </div>
 
        {{data.content|safe}}
 
