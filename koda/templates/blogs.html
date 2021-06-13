@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} KODA Blog {% endblock %}
+
+{% block head %}
+
+<style>
+    .card-shadow-green {
+        border-radius: 5px;
+        background: rgb(242, 242, 242, .5);
+        -webkit-box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+        box-shadow: 0 0.46875rem 2.1875rem rgba(28, 202, 167, .03), 0 0.9375rem 1.40625rem rgba(28, 202, 167, .03), 0 0.25rem 0.53125rem rgba(28, 202, 167, .05), 0 0.125rem 0.1875rem rgba(28, 202, 167, .03);
+    }
+
+    .card-shadow-green:hover {
+        -webkit-box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(179, 179, 179, .2);
+        box-shadow: 0 0.8rem 4rem rgba(179, 179, 179, .2), 0 1.8rem 2.8rem rgba(179, 179, 179, .2), 0 0.5rem 1rem rgba(179, 179, 179, .2), 0 0.25rem 0.3rem rgba(28, 202, 167, .2);
+    }
+
+    .card-title-content {
+        padding: 1.2rem;
+    }
+
+    .card-title-content h6 {
+        font-size: 18px;
+    }
+
+    .card-title-content div {
+        font-size: 14px;
+    }
+
+    @media (min-width: 767.78px) and (max-width: 991.78px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 767.78px) {
+        .intro-card-row .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<section class="page-section">
+    <div class="container">
+      <h4 class="mb-5 text-center">KODA Blog</h4>
+
+      {% for blog in blogs %}
+        <div class="row intro-card-row">
+            <div class="col-md-4 mb-4">
+                <div class="card-shadow-green text-center h-100" style="border-bottom:5px solid #e45769; ">
+                    <div class="card-title-content">
+                        <h6 class="mb-3">{{blog.title}}</h6>
+                        <div>
+                          <a href="{% url 'blog_detail' blog.pk %}">Blog yazısını okumak için tıklayın</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+      {% endfor %}
+
+    </div>
+</section>
+{% endblock %}
