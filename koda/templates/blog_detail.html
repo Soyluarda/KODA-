@@ -80,28 +80,10 @@
 
 {% block body %}
 <section class="page-section">
-    <div class="container">
-        <div class="mb-5">
-            <h4 class="text-center">{{context.title}}</h4>
-        </div>
-        <div class="row intro-card-row">
-            <div class="col-md-4 mb-4">
-                <div class="card-shadow-green text-center h-100 py-2">
-                    <!-- <div class="card-img-content text-center py-4"
-                        style="background-image: url('../{{ x.header_image }}');">
-                    </div> -->
-                    <div class="card-title-content">
-                        <div class="mb-4 font-weight-bold" >
-                            {{context.content}}
-                        </div>
-                    </div>
-                </div>
+  <div class="container">
+    <h4 class="text-center mb-5">{{context.title}}</h4>
+    {{context.content|safe}}
 
-            </div>
-
-        </div>
-
-    </div>
 </section>
 
 
