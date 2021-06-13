@@ -260,3 +260,16 @@ class BagisKartlari(models.Model):
     content = models.CharField(max_length=200)
     image = models.ImageField(upload_to='bagis')
     url = models.CharField(max_length=200, null=True, blank=True)
+
+
+class Blog(models.Model):
+    title = models.CharField(max_length=500)
+    header_image = models.ImageField(upload_to='blog')
+    content = RichTextUploadingField(null=True,
+                                     blank=True,
+                                     external_plugin_resources=[(
+                                         'youtube',
+                                         '/static/vendor/ckeditor_plugins/youtube/youtube/',
+                                         'plugin.js',
+                                     )],
+                                     )

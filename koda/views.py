@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from django.shortcuts import render,redirect
 from django.conf import settings
 from django.views.decorators.cache import cache_page
-from .models import EventSuggestions, SuggestedSources, BagisKartlari, Yayinlarimiz, StratejikPlanVeMaliBelgeler, KoyeİlkAdimVideolar, GecmisFaaliyetler, OgretmenTopluluklariYorumlari, KoyeİlkAdimYorumlari, Pages, KodaTrainers, KodaConsultants, BiaIcerikler, KodaKVKKForms, KodaTeam, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
+from .models import EventSuggestions, Blog, SuggestedSources, BagisKartlari, Yayinlarimiz, StratejikPlanVeMaliBelgeler, KoyeİlkAdimVideolar, GecmisFaaliyetler, OgretmenTopluluklariYorumlari, KoyeİlkAdimYorumlari, Pages, KodaTrainers, KodaConsultants, BiaIcerikler, KodaKVKKForms, KodaTeam, TgpAdvantures, RemoteLearning, TeachersDocuments, KodaDiaries, SuggestedSites, SuggestedSitesType, ilMilliEgitim
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 
@@ -469,3 +469,13 @@ def koye_ilk_adim_videolar(request):
 
     }
     return render(request,'koye_ilk_adim_videolar.html', ctx)
+
+
+def blog(request):
+    blogs = Blog.objects.all()
+    return render(request, 'blogs.html', {'blogs': blogs})
+
+
+def blog_detail(request, id):
+    context = Blog.objects.filter(id=id)
+    return render(request,'blog_detail.html', {'context': context})
