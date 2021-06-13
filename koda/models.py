@@ -262,7 +262,7 @@ class BagisKartlari(models.Model):
     url = models.CharField(max_length=200, null=True, blank=True)
 
 
-class Blog(models.Model):
+class Blogs(models.Model):
     title = models.CharField(max_length=500)
     header_image = models.ImageField(upload_to='blog')
     content = RichTextUploadingField(null=True,

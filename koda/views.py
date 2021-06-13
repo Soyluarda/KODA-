@@ -472,10 +472,10 @@ def koye_ilk_adim_videolar(request):
 
 
 def blog(request):
-    blogs = Blog.objects.all()
+    blogs = Blog.objects.all().order_by('-id')
     return render(request, 'blogs.html', {'blogs': blogs})
 
 
 def blog_detail(request, id):
-    context = Blog.objects.filter(id=id)
+    context = Blog.objects.get(id=id)
     return render(request,'blog_detail.html', {'context': context})

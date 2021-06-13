@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from .models import SuggestedSources, Blog, BagisKartlari, GecmisFaaliyetler, StratejikPlanVeMaliBelgeler, Yayinlarimiz, OgretmenTopluluklariYorumlari, KoyeİlkAdimVideolar, KoyeİlkAdimYorumlari, Pages, KodaConsultants, KodaTrainers, BiaIcerikler, KodaKVKKForms, KodaTeam, TgpAdvantures, EventSuggestions, KodaDiaries, SuggestedSitesType, SuggestedSites, TeachersDocuments, RemoteLearning, ilMilliEgitim
+from .models import SuggestedSources, Blogs, BagisKartlari, GecmisFaaliyetler, StratejikPlanVeMaliBelgeler, Yayinlarimiz, OgretmenTopluluklariYorumlari, KoyeİlkAdimVideolar, KoyeİlkAdimYorumlari, Pages, KodaConsultants, KodaTrainers, BiaIcerikler, KodaKVKKForms, KodaTeam, TgpAdvantures, EventSuggestions, KodaDiaries, SuggestedSitesType, SuggestedSites, TeachersDocuments, RemoteLearning, ilMilliEgitim
 
 
 from django.contrib import admin
@@ -27,4 +27,4 @@ admin.site.register(GecmisFaaliyetler)
 admin.site.register(StratejikPlanVeMaliBelgeler)
 admin.site.register(Yayinlarimiz)
 admin.site.register(BagisKartlari)
-admin.site.register(Blog)
+admin.site.register(Blogs)
